@@ -8,8 +8,8 @@
     <title>메인</title>
 
     <!-- css -->
-    <link rel="../../../static/assets/css/reset.css" href="">
-    <link rel="../../../static/assets/css/style.css" href="">
+    <link rel="stylesheet" href="../../../static/bo/css/common.css">
+    <link rel="stylesheet" href="../../../static/bo/css/main.css">
 
     <!-- fontawesome CDN -->
     <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
@@ -18,30 +18,73 @@
 </head>
 
 <body>
-    <div class="wrap"></div>
+    <div class="wrap">
+        <!-- header -->
+        <!-- <div data-include-path="../layout/header.html"></div> -->
+        <header>
+            <!-- 텝 초기화, 로그아웃 -->
+            <ul class="user-menu">
+                <li>
+                    <!-- tab 초기화 button -->
+                    <a href="javascript:favoriteTabs.reset();">탭메뉴 초기화</a>
+                </li>
+                <li>
+                    <!-- 로그아웃 button -->
+                    <a href="#" class="logout-btn">
+                        <i class="fa-solid fa-right-from-bracket"></i> 로그아웃
+                    </a>
+                </li>
+            </ul>
+        
+            <div class="nav-bar">
+                <!-- top logo : 클릭시 메인(대시보드) 화면으로 이동 -->
+                <div class="logo">
+                    <a href="../main/index.html">LOGO</a>
+                </div>
+        
+                <!-- GNB -->
+                <div class="gnb">
+                    <ul class="menus">
+                        <li>사이트</li>
+                        <li>회원</li>
+                        <li>상품</li>
+                        <li>주문</li>
+                        <li>정산</li>
+                    </ul>
+        
+                    <!-- 기타 다른 메뉴 -->
+                    <ul class="others">
+                        <li>이벤트</li>
+                        <li>쿠폰관리</li>
+                        <li>게시판</li>
+                        <li>설정</li>
+                    </ul>
+                </div>
+        
+                <!-- 상태 요약알림 : 해당 상태의 주문건, 회원, 신청건이 있을 경우 노출 -->
+                <ul class="today">
+                    <li>상품준비중 <strong class="state">9</strong></li>
+                    <li>회수요청 <strong class="state">9</strong></li>
+                    <li>승인대기 회원 <strong class="state">9</strong></li>
+                    <li>1:1문의 <strong class="state">9</strong></li>
+                    <li>진열대 신청 <strong class="state">9</strong></li>
+                </ul>
+            </div>
+        </header>
 
-    <!-- JS -->
+        <!-- section -->
+        <main></main>
 
-    <!-- library -->
-
-    <script>
-        window.addEventListener('load', function () {
-            var allElements = document.getElementsByTagName('*');
-            Array.prototype.forEach.call(allElements, function (el) {
-                var includePath = el.dataset.includePath;
-                if (includePath) {
-                    var xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4 && this.status == 200) {
-                            el.outerHTML = this.responseText;
-                        }
-                    };
-                    xhttp.open('GET', includePath, true);
-                    xhttp.send();
-                }
-            });
-        }); //includeHTML
-    </script>
+        <!-- footer -->
+        <footer>
+            <p class="copyright">copyright 2012 Soleo.Co.,Ltd. all rights reserved.</p>
+            <!-- 현재 페이지 표기 -->
+            <dl class="currt-page">
+                <dt>현재페이지</dt>
+                <dd>Page Name</dd>
+            </dl>
+        </footer>
+    </div>
 </body>
 
 </html>

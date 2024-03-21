@@ -1,5 +1,17 @@
 @charset "utf-8";
 
+:root {
+    --accent: #364FC7;
+    --red: #eb2323;
+    --blue: #364FC7;
+    --black: #212529;
+    --gray: #ced4da;
+    --lgray: #f8f9fa;
+    --dgray: #495057;
+    
+    --txt-gray: #868e96;
+}
+
 /* 스크롤바 스타일 설정 */
 /* Chrome, Safari, Edge, Opera */
 ::-webkit-scrollbar { width: 8px; } 

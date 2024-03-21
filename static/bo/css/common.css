@@ -1,10 +1,50 @@
 @charset "utf-8";
 
-:root {
-    --accent: #364FC7;
-    --red: #eb2323;
-    --blue: #364FC7;
-    --gray: #ced4da;
-    --lgray: #f8f9fa;
-    --dgray: #868e96;
-}
+@import url(../../assets/css/reset.css);
+@import url(../../assets/css/style.css);
+
+/* common layout */
+.wrap {min-width: 1440px; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; color: #212529;}
+
+
+/* header */
+header {width: 100%; background-color: #fff; border-bottom: 1px solid var(--gray);}
+
+/* 텝 초기화, 로그아웃 */
+header .user-menu {height: 30px; padding: 0 40px; background-color: var(--accent); text-align: right; display: flex; justify-content: flex-end; align-items: center;}
+header .user-menu a {color: #fff; font-size: 13px; font-weight: 400; margin-left: 30px;}
+header .user-menu a i {color: #fff; font-size: 13px;}
+
+header .nav-bar {height: 60px; padding: 0 40px; display: flex; justify-content: flex-start; align-items: center; position: relative;}
+
+header .nav-bar .logo {width: 200px; height: 100%;}
+header .nav-bar .logo a {line-height: 60px; color: var(--black); font-size: 28px; font-weight: 700;}
+
+/* GNB 메뉴 */
+header .nav-bar .gnb {display: flex; justify-content: flex-start; align-items: center;}
+header .nav-bar .gnb .menus {height: 60px; padding: 0 40px 0 0; display: flex; justify-content: flex-start; align-items: center; border-right: 1px solid var(--gray);}
+header .nav-bar .gnb .menus > li {font-size: 18px; font-weight: 500; position: relative; cursor: pointer;}
+header .nav-bar .gnb .menus > li:not(:last-child) {margin-right: 40px;}
+
+/* 기타 다른 메뉴 */
+header .nav-bar .gnb .others {display: flex; justify-content: flex-start; margin-left: 40px;}
+header .nav-bar .gnb .others > li {font-size: 16px; font-weight: 500; color: var(--dgray); position: relative; cursor: pointer;}
+header .nav-bar .gnb .others > li:not(:last-child) {margin-right: 40px;}
+
+/* 상태 요약알림 */
+header .nav-bar .today {position: absolute; top: 50%; right: 40px; transform: translateY(-50%);}
+header .nav-bar .today > li {display: inline-block; font-size: 13px; font-weight: 400; color: var(--dgray)}
+header .nav-bar .today > li:not(:first-child):before {content: '|'; margin: 0 10px; font-size: 12px; vertical-align: top; color: var(--gray);}
+header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
+
+
+/* section */
+
+
+/* footer */
+footer {height: 40px; padding: 0 40px; border-top: 1px solid var(--gray); display: flex; justify-content: space-between; align-items: center;}
+footer .copyright {font-size: 12px; color: var(--txt-gray);}
+
+footer .currt-page {display: flex; justify-content: flex-end; align-items: center;}
+footer .currt-page dt {font-size: 13px; font-weight: 400; color: var(--txt-gray); margin-right: 8px;}
+footer .currt-page dd {font-size: 13px; font-weight: 400; color: var(--black);}
