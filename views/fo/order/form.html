@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/popup.css">
+
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/colorbox.css">
+    <link rel="stylesheet" href="/static/assets/css/library/selectric.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents order">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li class="current">주문결제</li>
+                </ul>
+            </div>
+
+            <div class="order-wrap">
+                <form action="" name="" id>
+                    <div class="inner">
+                        <div class="frame-left">
+                            <!-- 주문 정보 -->
+                            <div class="order-info">
+                                <h2 class="tit">주문결제</h2>
+
+                                <!-- 배송 정보 -->
+                                <div class="devy-info">
+                                    <!-- 주문자 정보 -->
+                                    <div class="order-tbl">
+                                        <h3>주문자 정보</h3>
+
+                                        <table>
+                                            <tr>
+                                                <th>주문고객</th>
+                                                <td>
+                                                    <input type="text" name="" id="" value="홍길동" disabled>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>휴대전화 <span class="ess">필수</span></th>
+                                                <td>
+                                                    <input type="text" name="" id="" value="010-1234-5678">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>이메일 <span class="ess">필수</span></th>
+                                                <td class="member-email">
+                                                    <input type="email" name="" id="" value="soleo">
+                                                    <span>@</span>
+                                                    <input type="text" name="" id="" value="soleo.kr">
+
+                                                    <select>
+                                                        <option value="">직접입력</option>
+                                                        <option value="">naver.com</option>
+                                                        <option value="">hanmail.net</option>
+                                                        <option value="">daum.net</option>
+                                                        <option value="">nate.com</option>
+                                                        <option value="">hotmail.com</option>
+                                                        <option value="">gmail.com</option>
+                                                    </select>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+
+                                    <!-- 배송지 정보 -->
+                                    <div class="order-tbl">
+                                        <h3>배송지 정보</h3>
+
+                                        <table>
+                                            <tr>
+                                                <th>배송지 확인</th>
+                                                <td>
+                                                    <ul>
+                                                        <li>
+                                                            <input type="radio" name="addrCheck" id="default" class="basic-radio" checked>
+                                                            <label for="default" class="basic-radio-label">기본 배송지</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="addrCheck" id="recent" class="basic-radio">
+                                                            <label for="recent" class="basic-radio-label">최근 배송지</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="addrCheck" id="basic" class="basic-radio">
+                                                            <label for="basic" class="basic-radio-label">주문자 정보과 동일</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="addrCheck" id="new" class="basic-radio">
+                                                            <label for="new" class="basic-radio-label">직접입력</label>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0);" class="btn select-addr">배송지 관리</a>
+                                                            <!-- <a href="javascript:void(0);" class="btn edit-addr">수정</a> -->
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>받는분</th>
+                                                <td>
+                                                    <input type="text" name="" id="" value="홍길동" disabled>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>배송지 이름</th>
+                                                <td>
+                                                    <input type="text" name="" id="" value="회사" disabled>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>주소 <span class="ess">필수</span></th>
+                                                <td class="order-addr">
+                                                    <div class="post-code">
+                                                        <input type="text" name="orderAddress" id="postCode" placeholder="우편번호" disabled>
+                                                        <button type="button" class="btn">우편번호 찾기</button>
+                                                    </div>
+                                
+                                                    <input type="text" name="orderAddress" id="Addr" placeholder="기본주소" disabled>
+                                                    <input type="text" name="orderAddress" id="AddrDtl" placeholder="상세주소">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>휴대전화 <span class="ess">필수</span></th>
+                                                <td>
+                                                    <input type="text" name="" id="" value="010-1234-5678">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>배송 시 요청사항</th>
+                                                <td>
+                                                    <input type="text" name="" id="" class="devy-msg" placeholder="요청사항을 입력해주세요">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 주문 목록 -->
+                            <div class="order-items">
+                                <!-- 공급사별 1 -->
+                                <div class="seller-group">
+                                    <!-- 공급사 정보 -->
+                                    <div class="head">
+                                        <!-- 공급사명 -->
+                                        <p class="seller-name">삼성전자</p>                                        
+                                    </div>
+
+                                    <table class="board-list">
+                                        <colgroup>
+                                            <col>
+                                            <col style="width: 140px;">
+                                            <col style="width: 80px;">
+                                            <col style="width: 140px;">
+                                        </colgroup>
+        
+                                        <thead>
+                                            <tr>
+                                                <th>상품정보</th>
+                                                <th>상품금액</th>
+                                                <th>수량</th>
+                                                <th>주문금액</th>
+                                            </tr>
+                                        </thead>
+        
+                                        <tbody>
+                                            <tr>
+                                                <!-- 상품정보 -->
+                                                <td class="prod-info">
+                                                    <div class="thumbnail">
+                                                        <a href="/views/prod/detail.html">
+                                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="prod-desc">
+                                                        <a href="/views/prod/detail.html" class="prod-name">
+                                                            Micro SDHC 카드_판매
+                                                        </a>
+            
+                                                        <ul class="opt">
+                                                            <li>256GB</li>
+                                                            <li>[+ 49,500원 추가]</li>
+                                                        </ul>
+                                                        
+                                                        <p class="inventory">남은수량 : <span>100</span></p>
+                                                    </div>
+                                                </td>
+        
+                                                <!-- 상품금액 -->
+                                                <td>72,300원</td>
+
+                                                <!-- 수량 -->
+                                                <td class="qty">1</td>
+
+                                                <!-- 주문금액 -->
+                                                <td class="market-price">72,300원</td>
+                                            </tr>
+
+                                            <tr>
+                                                <!-- 상품정보 -->
+                                                <td class="prod-info">
+                                                    <div class="thumbnail">
+                                                        <a href="/views/prod/detail.html">
+                                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="prod-desc">
+                                                        <a href="/views/prod/detail.html" class="prod-name">
+                                                            Micro SDHC 카드_판매
+                                                        </a>
+            
+                                                        <ul class="opt">
+                                                            <li>256GB</li>
+                                                            <li>[+ 49,500원 추가]</li>
+                                                        </ul>
+                                                        
+                                                        <p class="inventory">남은수량 : <span>100</span></p>
+                                                    </div>
+                                                </td>
+        
+                                                <!-- 상품금액 -->
+                                                <td>72,300원</td>
+
+                                                <!-- 수량 -->
+                                                <td class="qty">1</td>
+
+                                                <!-- 주문금액 -->
+                                                <td class="market-price">72,300원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 공급사별 2 -->
+                                <div class="seller-group">
+                                    <!-- 공급사 정보 -->
+                                    <div class="head">
+                                        <!-- 공급사명 -->
+                                        <p class="seller-name">{공급사명}</p>
+                                    </div>
+
+                                    <table class="board-list">
+                                        <colgroup>
+                                            <col>
+                                            <col style="width: 140px;">
+                                            <col style="width: 80px;">
+                                            <col style="width: 140px;">
+                                        </colgroup>
+        
+                                        <thead>
+                                            <tr>
+                                                <th>상품정보</th>
+                                                <th>상품금액</th>
+                                                <th>수량</th>
+                                                <th>주문금액</th>
+                                            </tr>
+                                        </thead>
+        
+                                        <tbody>
+                                            <tr>
+                                                <!-- 상품정보 -->
+                                                <td class="prod-info">
+                                                    <div class="thumbnail">
+                                                        <a href="/views/prod/detail.html">
+                                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="prod-desc">
+                                                        <a href="/views/prod/detail.html" class="prod-name">
+                                                            {상품명}
+                                                        </a>
+
+                                                        <!-- 옵션 내용이 없을 시 display: none -->
+                                                        <ul class="opt">
+                                                            <li>{옵션}</li>
+                                                        </ul>
+                                                        
+                                                        <p class="inventory">남은수량 : <span>100</span></p>
+                                                    </div>
+                                                </td>
+        
+                                                <!-- 상품금액 -->
+                                                <td>72,300원</td>
+
+                                                <!-- 수량 -->
+                                                <td class="qty">1</td>
+
+                                                <!-- 주문금액 -->
+                                                <td class="market-price">72,300원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 쿠폰 및 포인트 사용 -->
+                            <div class="disc-info">
+                                <h3>포인트 사용</h3>
+
+                                <table>
+                                    <tr>
+                                        <th>포인트 사용</th>
+                                        <td>
+                                            <input type="text" name="" id="" placeholder="1,000포인트부터 사용 가능">
+                                            <button type="button">전액사용</button>
+                                            <span>사용 가능한 포인트 : <strong>2,000</strong>P</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th>쿠폰 사용</th>
+                                        <td>
+                                            <input type="text" name="" id="" disabled>
+                                            <button type="button">쿠폰선택</button>
+                                            <span>사용 가능한 쿠폰 : <strong>0</strong>개</span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- 결제방법 선택 -->
+                            <div class="payment-select">
+                                <h3>결제 방법</h3>
+
+                                <ul class="payment-list">
+                                    <li class="custom-radio">
+                                        <input type="radio" name="payType" id="bankTransfer" value="bank-transfer" checked>
+                                        <label for="bankTransfer"><i class="fa-solid fa-wallet"></i> 무통장 입금</label>
+                                    </li>
+
+                                    <li class="custom-radio">
+                                        <input type="radio" name="payType" id="creditCard" value="card">
+                                        <label for="creditCard"><i class="fa-regular fa-credit-card"></i> 신용카드</label>
+                                    </li>
+
+                                    <li class="custom-radio">
+                                        <input type="radio" name="payType" id="accountTransfer" value="transfer">
+                                        <label for="accountTransfer"><i class="fa-solid fa-right-left"></i> 실시간 계좌이체</label>
+                                    </li>
+
+                                    <li class="custom-radio">
+                                        <input type="radio" name="payType" id="naverPay" value="naver">
+                                        <label for="naverPay" class="naver-pay">네이버페이</label>
+                                    </li>
+                                </ul>
+
+                                <!-- 결제방법 선택에 따른 가이드 내용 화면 전환 -->
+                                <div class="payment-detail">
+                                    <!-- 무통장입금 -->
+                                    <div class="page-desc" data-page="bank-transfer">
+                                        <dl>
+                                            <!-- 은행명 -->
+                                            <dt>입금은행</dt>
+                                            <dd>
+                                                <div class="sel-group">
+                                                    <select>
+                                                        <option value="" selected>입금은행을 선택하세요.</option>
+                                                        <option value="">기업은행</option>
+                                                        <option value="">국민은행</option>
+                                                        <option value="">농협은행</option>
+                                                        <option value="">SC제일은행</option>
+                                                        <option value="">우리은행</option>
+                                                        <option value="">하나은행</option>
+                                                        <option value="">신한은행</option>
+                                                        <option value="">우체국</option>
+                                                    </select>
+                                                </div>
+                                            </dd>
+                
+                                            <!-- 입금자명 -->
+                                            <dt>입금자명</dt>
+                                            <dd>
+                                                <input type="text" name="" id="" placeholder="입금자명">
+                                            </dd>
+                                            <!-- 현급영수증 발행여부 -->
+                                            <dt>현금영수증</dt>
+                                            <dd>
+                                                <div class="radio-group">
+                                                    <input type="radio" name="IsReqCashInv" id="yes" class="basic-radio">
+                                                    <label for="yes" class="basic-radio-label">발급신청</label>
+                
+                                                    <input type="radio" name="IsReqCashInv" id="no" class="basic-radio" checked>
+                                                    <label for="no" class="basic-radio-label">신청안함</label>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                
+                                        <ol class="guide-txt">
+                                            <li>7일 이내 미 입금 시, 주문이 자동 취소됩니다.</li>
+                                            <li>발급된 계좌에 입금자명과 금액을 정확하게 입금해주세요.</li>
+                                        </ol>
+                                    </div>
+
+                                    <!-- 신용카드 -->
+                                    <div class="page-desc" data-page="card">
+                                        <dl>
+                                            <dt>카드선택</dt>
+                                            <dd>
+                                                <select>
+                                                    <option value="" selected>카드사를 선택하세요.</option>
+                                                    <option value="">KB국민카드</option>
+                                                    <option value="">신한카드</option>
+                                                    <option value="">현대카드</option>
+                                                    <option value="">삼성카드</option>
+                                                    <option value="">우리카드</option>
+                                                    <option value="">롯데카드</option>
+                                                    <option value="">NH농협카드</option>
+                                                    <option value="">비씨카드</option>
+                                                    <option value="">씨티카드</option>
+                                                    <option value="">카카오뱅크</option>
+                                                </select>
+                                            </dd>
+                
+                                            <dt>할부선택</dt>
+                                            <dd>
+                                                <select>
+                                                    <option value="" selected>일시불</option>
+                                                    <option value="">2개월</option>
+                                                    <option value="">3개월</option>
+                                                    <option value="">4개월</option>
+                                                    <option value="">5개월</option>
+                                                    <option value="">6개월</option>
+                                                </select>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                    
+                                    <!-- 실시간 계좌이체 -->
+                                    <div class="page-desc" data-page="transfer">
+                                        <h5>실시간계좌이체 결제 안내</h5>
+                                        
+                                        <ol class="guide-txt">
+                                            <li>본인 명의의 은행 계좌를 이용해 결제하실 수 있습니다.</li>
+                                            <li>은행 점검 시간에는 결제가 불가할 수 있습니다.</li>
+                                        </ol>
+                                    </div>
+
+                                    <!-- 네이버페이 -->
+                                    <div class="page-desc" data-page="naver">
+                                        <h5>네이버페이 혜택 안내</h5>
+                                        
+                                        <ol class="guide-txt">
+                                            <li>네이버쇼핑을 통해 방문 시 1% 적립(그 외 0.2%)</li>
+                                            <li>충전포인트로 결제 시 1.5% 적립 + 소득공제</li>
+                                            <li>주문 변경 시 카드사 혜택 및 할부 적용 여부는 해당 카드사 정책에 따라 변경될 수 있습니다.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame-right order-sidebar">
+                            <!-- 주문결제 정보 -->
+                            <div class="payment-info">
+                                <h3>주문결제 금액</h3>
+
+                                <div class="order-price">
+                                    <dl>
+                                        <dt>상품금액</dt>
+                                        <dd><strong>23,650</strong>원</dd>
+                                    </dl>
+
+                                    <dl>
+                                        <dt>할인금액</dt>
+                                        <dd><strong>-2,400</strong>원</dd>
+
+                                        <dt>쿠폰할인</dt>
+                                        <dd><strong>0</strong>원</dd>
+
+                                        <dt>포인트 사용</dt>
+                                        <dd><strong>0</strong>원</dd>
+
+                                        <dt>배송비</dt>
+                                        <dd><strong>3,000</strong>원</dd>
+                                    </dl>
+
+                                    <dl class="total-price">
+                                        <dt>총 주문금액</dt>
+                                        <dd><strong>21,500</strong>원</dd>
+                                    </dl>
+                                </div>
+                                
+                                <!-- 적립예정 포인트 -->
+                                <dl class="accrual-point">
+                                    <dt>적립예정 포인트</dt>
+                                    <dd>100P</dd>
+                                </dl>
+
+                                <!-- 주문 관련 이용동의 -->
+                                <ul class="order-agree">
+                                    <li>
+                                        처리위탁 및 3자 제공 동의
+                                        <a href="javascript:void(0);" class="agree-layer">내용보기</a>
+                                    </li>
+
+                                    <li>
+                                        결제대행서비스 이용 동의
+                                        <a href="javascript:void(0);" class="agree-layer">내용보기</a>
+                                    </li>
+                            
+                                    <li>
+                                        개인정보 수집 및 이용 동의
+                                        <a href="javascript:void(0);" class="agree-layer">내용보기</a>
+                                    </li>
+                                </ul>
+
+                                <div class="chk-area">
+                                    <input type="checkbox" name="" id="consent" class="basic-chkbox">
+                                    <label for="consent" class="basic-chkbox-label">상기 필수약관을 확인하였으며 결제에 동의합니다.</label>
+                                </div>
+
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-gradient">결제하기</button>
+                                    <a href="javascript:history.back();" class="btn btn-default">돌아가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="/static/fo/pc/js/popup.js"></script>
+    <script src="/static/fo/pc/js/order.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/jquery-colorbox/jquery.colorbox-min.js"></script>
+    <script src="/static/assets/js/library/jquery-selectric/jquery.selectric.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

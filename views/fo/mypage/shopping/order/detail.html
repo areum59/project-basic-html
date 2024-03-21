@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>마이페이지 : 주문상세</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+        <!-- css -->
+        <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+        <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+        <link rel="stylesheet" href="/static/fo/pc/css/popup.css">
+
+        <!-- library css -->
+        <link rel="stylesheet" href="/static/assets/css/library/colorbox.css">
+
+        <!-- fontawesome CDN -->
+        <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- header -->
+            <div data-include-path="/views/layout/header.html"></div>
+
+            <!-- contents -->
+            <section class="contents">
+
+                <!-- page location -->
+                <div class="location">
+                    <ul>
+                        <li><a href="/views/main/index.html">Home</a></li>
+                        <li><a href="/views/mypage/index.html">마이페이지</a></li>
+                        <li class="current">주문상세</li>
+                    </ul>
+                </div>
+
+                <div class="mypage-wrap">
+                    <!-- LNB : 마이페이지 메뉴 -->
+                    <ul class="my-lnb">
+                        <li class="active">
+                            <a href="/views/mypage/shopping/order/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu01-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu01-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>주문내역</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/shopping/order/cancel-list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu11-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu11-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>취소/교환/반품</p>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="/views/mypage/wished/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu02-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu02-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>관심상품</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/benefit/point/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu03-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu03-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>포인트</p>
+                            </a>
+                        </li>
+    
+                        <!-- <li>
+                            <a href="/views/mypage/benefit/coupon/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu05-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu05-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>쿠폰</p>
+                            </a>
+                        </li> -->
+    
+                        <li>
+                            <a href="/views/mypage/post/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu12-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu12-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>내가 쓴 게시물</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/post/reviews.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu07-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu07-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>나의 리뷰</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/info/address/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu10-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu10-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>배송지 관리</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/user/regist.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu08-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu08-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>회원정보 수정</p>
+                            </a>
+                        </li>
+    
+                        <!-- <li>
+                            <a href="/views/mypage/info/withdraw/form.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu09-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu09-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>회원탈퇴</p>
+                            </a>
+                        </li> -->
+                    </ul>
+
+                    <h2 class="tit">주문 상세 정보</h2>
+
+                    <div class="order-detail">
+                        <form action="" name="" id="">
+                            <!-- 주문일 / 주문번호 -->
+                            <dl class="order-detail-head">
+                                <dt>주문일자</dt>
+                                <dd>YYYY-MM-DD hh:mm:ss</dd>
+
+                                <dt>주문번호</dt>
+                                <dd>20230418-0011406</dd>
+                            </dl>
+
+                            <!-- 구매자 정보 -->
+                            <div class="tbl-box">
+                                <h3 class="cont-tit">구매자 정보</h3>
+                                
+                                <table class="order-info-tbl">
+                                    <tr>
+                                        <th>주문자</th>
+                                        <td>홍길동</td>
+                                    </tr>
+
+                                    <th>연락처</th>
+                                    <td>
+                                        <ul>
+                                            <li>010-0000-0000</li>
+                                            <!-- 유선번호 정보가 없을 시 display: none -->
+                                            <li>031-000-0000</li>
+                                        </ul>
+                                    </td>
+
+                                    <tr>
+                                        <th>이메일</th>
+                                        <td>gildong@soleo.kr</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- 배송지 정보 -->
+                            <div class="tbl-box">
+                                <h3 class="cont-tit">배송지 정보</h3>
+                                
+                                <table class="order-info-tbl">
+                                    <tr>
+                                        <th>수취인</th>
+                                        <td>홍길동</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>연락처</th>
+                                        <td>
+                                            <ul>
+                                                <li>010-0000-0000</li>
+                                                <!-- 유선번호 정보가 없을 시 display: none -->
+                                                <li>031-000-0000</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>주소</th>
+                                        <td colspan="3">경기도 성남시 중원구 상대원동 5445, 우림라이온스밸리3차 602, 603호</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>주문메모</th>
+                                        <td>빨리 배송해주세요</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            <!-- 주문상품 정보 -->
+                            <div class="order-list-items">
+                                <!-- 공급사별 1 -->
+                                <div class="seller-group">
+                                    <!-- 공급사 정보 -->
+                                    <div class="head">
+                                        <!-- 공급사명 -->
+                                        <p class="seller-name">삼성전자</p>
+                                        <!-- 주문상태 -->
+                                        <p class="order-stat">상품준비중</p>
+                                        <!-- 주문일 -->
+                                        <p class="order-date">YYYY-MM-DD 주문</p>
+                                    </div>
+
+                                    <table class="board-list">
+                                        <colgroup>
+                                            <col>
+                                            <col style="width: 160px;">
+                                            <col style="width: 100px;">
+                                            <col style="width: 160px;">
+                                            <col style="width: 160px;">
+                                            <col style="width: 120px;">
+                                        </colgroup>
+        
+                                        <thead>
+                                            <tr>
+                                                <th>상품정보</th>
+                                                <th>상품금액</th>
+                                                <th>수량</th>
+                                                <th>할인</th>
+                                                <th>주문금액</th>
+                                                <th>주문상태</th>
+                                            </tr>
+                                        </thead>
+        
+                                        <tbody>
+                                            <tr>
+                                                <!-- 상품정보 -->
+                                                <td class="prod-info">
+                                                    <div class="thumbnail">
+                                                        <a href="/views/prod/detail.html">
+                                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="prod-desc">
+                                                        <a href="/views/prod/detail.html" class="prod-name">
+                                                            Micro SDHC 카드_판매
+                                                        </a>
+            
+                                                        <ul class="opt">
+                                                            <li>256GB</li>
+                                                            <li>[+ 49,500원 추가]</li>
+                                                        </ul>
+                                                        
+                                                        <p class="inventory">남은수량 : <span>100</span></p>
+                                                    </div>
+                                                </td>
+        
+                                                <!-- 상품금액 -->
+                                                <td>72,300원</td>
+
+                                                <!-- 수량 -->
+                                                <td class="qty">1</td>
+
+                                                <!-- 할인금액 -->
+                                                <td class="disc">0원</td>
+
+                                                <!-- 주문금액 -->
+                                                <td class="market-price">72,300원</td>
+        
+                                                <!-- 주문상태 -->
+                                                <td class="order-stat">상품준비중</td>
+                                            </tr>
+
+                                            <tr>
+                                                <!-- 상품정보 -->
+                                                <td class="prod-info">
+                                                    <div class="thumbnail">
+                                                        <a href="/views/prod/detail.html">
+                                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="prod-desc">
+                                                        <a href="/views/prod/detail.html" class="prod-name">
+                                                            Micro SDHC 카드_판매
+                                                        </a>
+            
+                                                        <ul class="opt">
+                                                            <li>256GB</li>
+                                                            <li>[+ 49,500원 추가]</li>
+                                                        </ul>
+                                                        
+                                                        <p class="inventory">남은수량 : <span>100</span></p>
+                                                    </div>
+                                                </td>
+        
+                                                <!-- 상품금액 -->
+                                                <td>72,300원</td>
+
+                                                <!-- 수량 -->
+                                                <td class="qty">1</td>
+
+                                                <!-- 할인금액 -->
+                                                <td class="disc">0원</td>
+
+                                                <!-- 주문금액 -->
+                                                <td class="market-price">72,300원</td>
+        
+                                                <!-- 주문상태 -->
+                                                <td class="order-stat">상품준비중</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- 공급사별 2 -->
+                                <div class="seller-group">
+                                    <!-- 공급사 정보 -->
+                                    <div class="head">
+                                        <!-- 공급사명 -->
+                                        <p class="seller-name">{공급사명}</p>
+                                        <!-- 주문상태 -->
+                                        <p class="order-stat">배송중</p>
+                                        <!-- 주문일 -->
+                                        <p class="order-date">YYYY-MM-DD 주문</p>
+                                    </div>
+
+                                    <table class="board-list">
+                                        <colgroup>
+                                            <col>
+                                            <col style="width: 160px;">
+                                            <col style="width: 100px;">
+                                            <col style="width: 160px;">
+                                            <col style="width: 160px;">
+                                            <col style="width: 120px;">
+                                        </colgroup>
+        
+                                        <thead>
+                                            <tr>
+                                                <th>상품정보</th>
+                                                <th>상품금액</th>
+                                                <th>수량</th>
+                                                <th>할인</th>
+                                                <th>주문금액</th>
+                                                <th>주문상태</th>
+                                            </tr>
+                                        </thead>
+        
+                                        <tbody>
+                                            <tr>
+                                                <!-- 상품정보 -->
+                                                <td class="prod-info">
+                                                    <div class="thumbnail">
+                                                        <a href="/views/prod/detail.html">
+                                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                                        </a>
+                                                    </div>
+
+                                                    <div class="prod-desc">
+                                                        <a href="/views/prod/detail.html" class="prod-name">
+                                                            {상품명}
+                                                        </a>
+
+                                                        <!-- 옵션 내용이 없을 시 display: none -->
+                                                        <ul class="opt">
+                                                            <li>{옵션}</li>
+                                                        </ul>
+                                                        
+                                                        <p class="inventory">남은수량 : <span>100</span></p>
+                                                    </div>
+                                                </td>
+        
+                                                <!-- 상품금액 -->
+                                                <td>72,300원</td>
+
+                                                <!-- 수량 -->
+                                                <td class="qty">1</td>
+
+                                                <!-- 할인금액 -->
+                                                <td class="disc">0원</td>
+
+                                                <!-- 주문금액 -->
+                                                <td class="market-price">72,300원</td>
+        
+                                                <!-- 주문상태 -->
+                                                <td class="dly-stat">배송중</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 주문금액 상세 -->
+                            <div class="tbl-box">
+                                <h3 class="cont-tit">주문 금액 상세</h3>
+
+                                <!-- 총 주문 금액 -->
+                                <div class="total-price">
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>주문금액</dt>
+                                            <dd><strong>1,236,500</strong>원</dd>
+                                        </dl>
+                                    </article>
+
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>할인금액</dt>
+                                            <dd><strong>2,400</strong>원</dd>
+                                        </dl>
+                                    </article>
+
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>배송비</dt>
+                                            <dd><strong>0</strong>원</dd>
+                                        </dl>
+                                    </article>
+
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>총 주문금액</dt>
+                                            <dd class="txt-red"><strong>1,234,100</strong>원</dd>
+                                        </dl>
+                                    </article>
+                                </div>
+
+                                <!-- 결제 정보 -->
+                                <div class="payment-info">
+                                    <dl class="txt-box">
+                                        <dt>상품금액</dt>
+                                        <dd>1,236,500원</dd>
+
+                                        <dt>배송비</dt>
+                                        <dd>0원</dd>
+                                    </dl>
+
+                                    <dl class="txt-box">
+                                        <dt>총 할인금액</dt>
+                                        <dd>2,400원</dd>
+
+                                        <dt class="indent">회원할인</dt>
+                                        <dd>0원</dd>
+
+                                        <dt class="indent">사용한 포인트</dt>
+                                        <dd>0원</dd>
+                                    </dl>
+
+                                    <div class="txt-box">
+                                        <!-- 결제 수단 -->
+                                        <h5>신용카드</h5>
+                                        <p>명세서에 soleo(으)로 표기됩니다.</p>
+
+                                        <ul class="btn-group">
+                                            <li>
+                                                <a href="javascript:void(0);" class="btn btn-basic">거래명세서</a>
+                                            </li>
+                                            <li>
+                                                <!-- click : 신용카드 영수증 윈도우 팝업 open / 신용카드 결제시에만 display: block -->
+                                                <a href="javascript:void(0);" class="btn btn-basic">카드매출 전표</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="btn-area">
+                                <a href="/views/mypage/shopping/order/list.html" class="btn btn-gradient">주문목록 보기</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- footer -->
+            <div data-include-path="/views/layout/footer.html"></div>
+        </div>
+
+        <!-- JS -->
+        <script src="/static/fo/pc/js/common.js"></script>
+        <script src="/static/fo/pc/js/contents.js"></script>
+        <script src="/static/fo/pc/js/popup.js"></script>
+
+        <!-- library -->
+        <script src="/static/assets/js/library/jquery-colorbox/jquery.colorbox-min.js"></script>
+
+        <script>
+            window.addEventListener('load', function () {
+                var allElements = document.getElementsByTagName('*');
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open('GET', includePath, true);
+                        xhttp.send();
+                    }
+                });
+            }); //includeHTML
+        </script>
+    </body>
+</html>

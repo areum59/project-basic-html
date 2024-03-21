@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/popup.css">
+
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/selectric.css">
+    <link rel="stylesheet" href="/static/assets/css/library/colorbox.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- page location -->
+        <div class="location">
+            <ul>
+                <li><a href="/views/main/index.html">HOME</a></li>
+                <li class="current">회원가입</li>
+            </ul>
+        </div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <div class="join-area">
+                <form action="" name="" id="">
+                    <div class="signup">
+                        <h2 class="tit">회원가입</h2>
+                        
+                        <!-- 회원가입 정보 입력 form -->
+                        <ul class="form-wrap">
+                            <li>
+                                <div class="inp-group">
+                                    <label for="userId">아이디 <span class="ess">필수</span></label>
+                                    <input type="text" name="" id="userId" placeholder="4~16자 이상 영문 또는 숫자만 사용 가능">
+                                    <!-- error message -->
+                                    <div class="error-msg">아이디를 확인해주세요 6~30자 이내 영문, 숫자, 특수문자만 가능합니다.</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="inp-group">
+                                    <label for="userPw">비밀번호 <span class="ess">필수</span></label>
+                                    <input type="text" name="" id="userPw" placeholder="6~16자 영문, 숫자, 특수문자 1개 이상씩 혼용 필수">
+                                    <!-- error message -->
+                                    <div class="error-msg">비밀번호를 입력해 주세요 6~16자 영문, 숫자, 특수문자 1개 이상 사용 가능합니다.</div>
+                                </div> 
+                                
+                                <div class="inp-group">
+                                    <input type="text" name="" id="userPwChk" placeholder="비밀번호 확인">
+                                    <!-- error message -->
+                                    <div class="error-msg">비밀번호가 일치하지 않습니다.</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="inp-group">
+                                    <label for="userName">이름 <span class="ess">필수</span></label>
+                                    <input type="text" name="" id="userName">
+                                    <!-- error message -->
+                                    <div class="error-msg">error message text</div>
+                                </div>
+                            </li>
+                            
+
+                            <li>
+                                <div class="inp-group">
+                                    <label for="phone">휴대전화</label>
+                                    <input type="text" name="" id="phone" placeholder="‘하이픈(-)’ 없이 숫자만 입력">
+                                    <!-- error message -->
+                                    <div class="error-msg">error message text</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <ul class="inp-group">
+                                    <li>
+                                        <label for="eMail">이메일 <span class="ess">필수</span></label>
+                                        <input type="text" name="" id="eMail" class="input-email-1" placeholder="이메일 주소">
+                                        @
+                                        <input type="text" name="" id="" class="input-email-2">
+                                    </li>
+                            
+                                    <li>
+                                        <select>
+                                            <option value="">직접입력</option>
+                                            <option value="">naver.com</option>
+                                            <option value="">daum.net</option>
+                                            <option value="">hanmail.net</option>
+                                            <option value="">nate.com</option>
+                                            <option value="">empas.com</option>
+                                        </select>
+                                    </li>
+                            
+                                    <li>
+                                        <a href="javascript:void(0);" class="btn btn-dark">이메일 주소 중복체크</a>
+                                        <a href="javascript:void(0);" class="btn btn-dark" style="display: none;">이메일 주소 초기화</a>
+                                    </li>
+                                </ul>
+                            
+                                <!-- error message -->
+                                <div class="error-msg">error message text</div>
+                            </li>
+
+                            <li>
+                                <div class="inp-group">
+                                    <label for="referrerId">추천인 아이디 <span class="ess">필수</span></label>
+                                    <input type="text" name="" id="referrerId">
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- 약관 동의 -->
+                        <div class="chk-area">
+                            <div class="chk-box">
+                                <input type="checkbox" name="" id="selectAll" class="basic-chkbox" checked>
+                                <label for="selectAll" class="basic-chkbox-label">전체동의</label>
+                            </div>
+
+                            <div class="chk-box">
+                                <input type="checkbox" name="" id="consent1" class="basic-chkbox">
+                                <label for="consent1" class="basic-chkbox-label">이용약관에 동의 <span class="txt-red">필수</span></label>
+
+                                <!-- 약관내용 자세히 보기 : click > 팝업 오픈 -->
+                                <a href="#" class="view-more fr open-terms">내용보기</a>
+                            </div>
+                            <div class="chk-box">
+                                <input type="checkbox" name="" id="consent2" class="basic-chkbox">
+                                <label for="consent2" class="basic-chkbox-label">개인정보 수집 및 이용 항목에 동의 <span class="txt-red">필수</span></label>
+
+                                <!-- 약관내용 자세히 보기 : click > 팝업 오픈 -->
+                                <a href="#" class="view-more fr open-privacy">내용보기</a>
+                            </div>
+                            <div class="chk-box">
+                                <input type="checkbox" name="" id="consent3" class="basic-chkbox">
+                                <label for="consent3" class="basic-chkbox-label">마케팅이용약관 동의 <span class="txt-gray">선택</span></label>
+
+                                <!-- 약관내용 자세히 보기 : click > 팝업 오픈 -->
+                                <a href="#" class="view-more fr open-marketing">내용보기</a>
+                            </div>
+                            
+                            <!-- error message -->
+                            <div class="error-msg">필수 약관에 동의해주세요.</div>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-gradient">가입하기</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+    
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+        <!-- /footer -->
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="/static/fo/pc/js/popup.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/jquery-selectric/jquery.selectric.min.js"></script>
+    <script src="/static/assets/js/library/jquery-colorbox/jquery.colorbox-min.js"></script>
+
+    <script>
+        /** 
+         * jQuery Selectric
+         * selectbox 라이브러리 실행
+         */
+        if ($(".selectric").length == 0) {
+            $('select').selectric().on('selectric-init', function() {
+                $('select').selectric();
+            });
+        }
+
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

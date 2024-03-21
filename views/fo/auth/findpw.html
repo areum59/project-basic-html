@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 찾기</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li class="current">로그인</li>
+                </ul>
+            </div>
+            
+            <div class="login-area">
+                <form action="" name="" id="">
+                    <div class="account">
+                        <h2 class="tit">비밀번호 찾기</h2>
+
+                        <ul class="find-list">
+                            <!-- 휴대폰번호로 찾기 -->
+                            <li class="phone-sec radio-toggle">
+                                <input type="radio" name="find" id="phoneNum" class="basic-radio toggle-radio" checked>
+                                <label for="phoneNum" class="basic-radio-label toggle-label">휴대전화로 찾기</label>
+                            
+                                <div class="toggle-cont">
+                                    <div class="inp-group">
+                                        <input type="text" name="" id="" placeholder="이름 2자 이상 입력">
+                                        <!-- error : 값이 입력되지 않은 경우 display block -->
+                                        <div class="error-msg">이름을 입력해주세요.</div>
+                                    </div>
+                            
+                                    <button type="button" class="btn btn-gradient">휴대폰 인증</button>
+                                </div>
+                            </li>
+                            
+                            <!-- 메일 주소로 찾기 -->
+                            <li class="email-sec radio-toggle">
+                                <input type="radio" name="find" id="emailAddr" class="basic-radio toggle-radio">
+                                <label for="emailAddr" class="basic-radio-label toggle-label">이메일로 찾기</label>
+                            
+                                <div class="toggle-cont">
+                                    <div class="inp-group">
+                                        <input type="text" name="" id="" placeholder="이름 2자 이상 입력">
+                                    </div>
+                            
+                                    <div class="inp-group">
+                                        <input type="email" name="" id="" placeholder="이메일 주소">
+                                    </div>
+                            
+                                    <button type="submit" class="btn btn-gradient">확인</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

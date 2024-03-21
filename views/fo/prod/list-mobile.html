@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 목록</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/assets/css/reset.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/common.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/style.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/prod/style.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/contents.css">
+    
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/slick.css">
+    <link rel="stylesheet" href="/static/assets/css/library/slick-theme.css">
+    <link rel="stylesheet" href="/static/assets/css/library/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/library/owl.theme.default.min.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <div data-include-path="/views/layout/header-mobile.html"></div>
+
+    <!-- page title -->
+    <div class="prod-list page-title">
+        <a href="javascript:window.history.back();">이전페이지</a>
+        <h2>상품 목록</h2>
+    </div>
+
+    <!-- prod-menu -->
+    <div class="prod-menu-wrap">
+        <ul class="prod-menu owl-carousel owl-theme">
+            <li class="active"><a href="javascript:void(0);">TV & Video</a></li>
+            <li><a href="javascript:void(0);">홈 오디오</a></li>
+            <li><a href="javascript:void(0);">카메라 용품</a></li>
+            <li><a href="javascript:void(0);">가전 제품</a></li>
+            <li><a href="javascript:void(0);">핸드폰 용품</a></li>
+        </ul>
+    </div>
+
+    <!-- container -->
+    <div class="container">
+        <!-- contents -->
+        <section class="contents">
+            <!-- banner -->
+            <div class="banner-callus">
+                <a href="/e_come/views/prod/detail.html"><img src="/static/fo/pc/img/slider/h1_s2.jpg" alt="" class="img-responsive"></a>
+            </div>
+
+             <!-- 상단 필터 -->
+            <div class="filter-head">
+                <!-- 총 게시물  -->
+                <p class="shown-item">
+                    총 <span>17개</span>의 상품
+                </p>
+
+                <div class="layout-rt">
+                    <!-- 정렬 -->
+                    <div class="sorting">
+                        <select>
+                            <option value="">기본 정렬</option>
+                            <option value="">최신순</option>
+                            <option value="">인기 판매순</option>
+                            <option value="">평점 높은순</option>
+                            <option value="">낮은 가격순</option>
+                            <option value="">높은 가격순</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-tabs">
+                        <!-- 게시물 미리보기 타입 선택 -->
+                        <ul>
+                            <li rel="prod-grid-1" class="active">
+                                <i class="fa-solid fa-border-all"></i>
+                            </li>
+                            <li rel="prod-grid-2">
+                                <i class="fa-solid fa-list"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prod-item-wrap prod-grid" id="prod-grid-1">
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/sound3.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio Kardon Onyx Studio</a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price"><span>125,000원</span></div>
+                                </div>
+                                <div class="product-bottom-group">
+                                    <a href="#" class="cart-icon">
+                                        <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="wishlist-icon">
+                                        <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="compare-icon">
+                                        <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/sound.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio</a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price"><span>125,000원</span></div>
+                                </div>
+                                <div class="product-bottom-group">
+                                    <a href="#" class="cart-icon">
+                                        <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="wishlist-icon">
+                                        <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="compare-icon">
+                                        <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/pd2.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio</a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price"><span>125,000원</span></div>
+                                </div>
+                                <div class="product-bottom-group">
+                                    <a href="#" class="cart-icon">
+                                        <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="wishlist-icon">
+                                        <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="compare-icon">
+                                        <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/sound2.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio Kardon Onyx Studio</a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price"><span>125,000원</span></div>
+                                </div>
+                                <div class="product-bottom-group">
+                                    <a href="#" class="cart-icon">
+                                        <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="wishlist-icon">
+                                        <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="compare-icon">
+                                        <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/pd3.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio</a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price"><span>125,000원</span></div>
+                                </div>
+                                <div class="product-bottom-group">
+                                    <a href="#" class="cart-icon">
+                                        <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="wishlist-icon">
+                                        <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="compare-icon">
+                                        <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/samsung3.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio</a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price"><span>125,000원</span></div>
+                                </div>
+                                <div class="product-bottom-group">
+                                    <a href="#" class="cart-icon">
+                                        <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="wishlist-icon">
+                                        <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="compare-icon">
+                                        <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/pd4.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio</a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price"><span>125,000원</span></div>
+                                </div>
+                                <div class="product-bottom-group">
+                                    <a href="#" class="cart-icon">
+                                        <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="wishlist-icon">
+                                        <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="compare-icon">
+                                        <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/macbook2.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio Kardon Onyx Studio</a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price"><span>125,000원</span></div>
+                                </div>
+                                <div class="product-bottom-group">
+                                    <a href="#" class="cart-icon">
+                                        <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="wishlist-icon">
+                                        <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                                    </a>
+                                    <a href="#" class="compare-icon">
+                                        <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="btn-showmore">Show more<i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+
+            <div class="prod-item-wrap2 prod-grid" id="prod-grid-2">
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/tplink.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio </a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price">125,000원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-btn">
+                        <a href="#" class="cart-icon">
+                            <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                        </a>
+                        <a href="#" class="wishlist-icon">
+                            <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                        </a>
+                        <a href="#" class="compare-icon">
+                            <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/usb.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio </a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price">125,000원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-btn">
+                        <a href="#" class="cart-icon">
+                            <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                        </a>
+                        <a href="#" class="wishlist-icon">
+                            <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                        </a>
+                        <a href="#" class="compare-icon">
+                            <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/logitech.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio </a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price">125,000원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-btn">
+                        <a href="#" class="cart-icon">
+                            <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                        </a>
+                        <a href="#" class="wishlist-icon">
+                            <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                        </a>
+                        <a href="#" class="compare-icon">
+                            <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-inner">
+                        <div class="product-img">
+                            <a href="/e_come/views/prod/detail-mobile.html"><img src="/static/fo/assets/img/product/phone5.jpg" alt="" class="img-reponsive"></a>
+                        </div>
+                        <div class="product-info">
+                            <div class="element-list">
+                                <p class="product-cate">Audio Speakers</p>
+                                <h3 class="product-title"><a href="/e_come/views/prod/detail-mobile.html">Harman Kardon Onyx Studio </a></h3>
+                                <div class="product-bottom">
+                                    <div class="product-price">125,000원</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod-btn">
+                        <a href="#" class="cart-icon">
+                            <img src="/static/fo/assets/img/common/icon-cart2.png" alt="">
+                        </a>
+                        <a href="#" class="wishlist-icon">
+                            <img src="/static/fo/assets/img/common/icon-heart2.png" alt="">
+                        </a>
+                        <a href="#" class="compare-icon">
+                            <img src="/static/fo/assets/img/common/icon-compare.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#" class="btn-showmore">Show more<i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+        </section>
+    </div>
+    
+    <!-- footer -->
+    <div data-include-path="/views/layout/footer-mobile.html"></div>
+
+    <!-- JS -->
+    <script src="/static/fo/mo/js/main.js"></script>
+    <script src="/static/fo/mo/js/common.js"></script>
+    <script src="/static/fo/mo/js/prod.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/slick-slide/slick.min.js"></script>
+    <script src="/static/assets/js/library/owl-wrapper/owl.carousel.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

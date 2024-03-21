@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 목록</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+            
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li class="current">장바구니</li>
+                </ul>
+            </div>
+
+            <div class="cart-wrap">
+                <form action="" name="" id="">
+                    <div class="inner">
+                        <h2 class="tit">장바구니</h2>
+
+                        <!-- 장바구니 목록 -->
+                        <div class="cart-items">
+                            <!-- 상품 전체 선택 : 공급사 구분없이 장바구니 내 모든 상품 선택 -->
+                            <div class="list-chk">
+                                <input type="checkbox" name="" id="selectAll" class="basic-chkbox">
+                                <label for="selectAll" class="basic-chkbox-label">전체선택</label>
+    
+                                <!-- 관심상품 등록 / 상품 삭제 button -->
+                                <ul class="btn-group">
+                                    <li>
+                                        <button type="button" class="btn btn-basic wished">관심상품 등록</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn btn-basic">선택상품 삭제</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- 공급사별 목록 1 -->
+                            <div class="seller-group">
+                                <div class="seller-chk">
+                                    <!-- 공급사 상품 전체 선택 checkbox -->
+                                    <input type="checkbox" name="" id="deller1" class="basic-chkbox">
+                                    <label for="deller1" class="basic-chkbox-label">{공급사명}</label>
+
+                                    <!-- 배송비 안내 -->
+                                    <div class="devy-fee">
+                                        주문 합계 금액이 <strong>50,000원</strong> 이상일 경우 배송비 무료
+                                    </div>
+                                </div>
+        
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 40px;">
+                                        <col style="width: 100px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col style="width: 100px;">
+                                        <col style="width: 160px;">
+                                        <col style="width: 160px;">
+                                        <col style="width: 80px;">
+                                        <col style="width: 40px;">
+                                    </colgroup>
+                    
+                                    <thead>
+                                        <tr>
+                                            <th>선택</th>
+                                            <th colspan="2">상품정보</th>
+                                            <th>상품금액</th>
+                                            <th>수량</th>
+                                            <th>할인</th>
+                                            <th>주문금액</th>
+                                            <th>적립</th>
+                                            <th>삭제</th>
+                                        </tr>
+                                    </thead>
+                    
+                                    <!-- 배송비에 따른 상품 목록 -->
+                                    <tbody>
+                                        <tr>
+                                            <td class="txt-c">
+                                                <!-- 상품 선택 -->
+                                                <input type="checkbox" name="" id="cart-list1" class="basic-chkbox">
+                                                <label for="cart-list1" class="basic-chkbox-label"></label>
+                                            </td>
+                    
+                                            <!-- 상품컷 -->
+                                            <td>
+                                                <a href="/views/prod/detail.html" class="thumbnail">
+                                                    <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                                </a>
+                                            </td>
+                    
+                                            <td class="valign-top">
+                                                <!-- 상품명 -->
+                                                <a href="/views/prod/detail.html" class="prod-name">카시오 컬러계산기(MS-20UC/그린)</a>
+                    
+                                                <!-- 옵션 -->
+                                                <ul class="opt">
+                                                    <li><span>[옵션]</span> 기본 옵션</li>
+                                                </ul>
+
+                                                <!-- 재고량 -->
+                                                <dl class="inventory">
+                                                    <dt>남은 수량</dt>
+                                                    <dd>777</dd>
+                                                </dl>
+                                            </td>
+                    
+                                            <!-- 상품금액 -->
+                                            <td class="txt-c">23,650원</td>
+                                            
+                                            <!-- 수량 -->
+                                            <td>
+                                                <div class="qty-opt">
+                                                    <a href="javascript:void(0);" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></a>
+                                                    <input type="number" class="qty" min="1" value="1">
+                                                    <a href="javascript:void(0);" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></a>
+                                                </div>
+                                            </td>
+                    
+                                            <!-- 할인금액 -->
+                                            <td class="disc txt-c">2,400원</td>
+                    
+                                            <!-- 주문금액 -->
+                                            <td class="market-price txt-c">21,500원</td>
+                    
+                                            <!-- 적립 포인트 -->
+                                            <td class="point txt-c">0P</td>
+                    
+                                            <td class="txt-c">
+                                                <!-- 리스트 삭제 -->
+                                                <a href="javascript:void(0);" class="remove">
+                                                    <i class="fa-regular fa-circle-xmark"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- 총 주문 금액 -->
+                                <div class="sum-box">
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>상품금액</dt>
+                                            <dd><strong>21,500</strong>원</dd>
+                                        </dl>
+                                    </article>
+                            
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>할인금액</dt>
+                                            <dd><strong>2,400</strong>원</dd>
+                                        </dl>
+                                    </article>
+                            
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>배송비</dt>
+                                            <dd><strong>3,000</strong>원</dd>
+                                        </dl>
+                                    </article>
+                            
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>총 결제금액</dt>
+                                            <dd class="txt-red"><strong>21,500</strong>원</dd>
+                                        </dl>
+                                    </article>
+
+                                    <div class="btn-box">
+                                        <a href="/views/order/form.html" class="btn btn-default">선택상품 주문하기</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 공급사별 목록 2 -->
+                            <div class="seller-group">
+                                <div class="seller-chk">
+                                    <!-- 공급사 상품 전체 선택 checkbox -->
+                                    <input type="checkbox" name="" id="deller2" class="basic-chkbox">
+                                    <label for="deller2" class="basic-chkbox-label">{공급사명}</label>
+
+                                    <!-- 배송비 안내 -->
+                                    <div class="devy-fee">
+                                        주문 합계 금액이 <strong>50,000원</strong> 이상일 경우 배송비 무료
+                                    </div>
+                                </div>
+        
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 40px;">
+                                        <col style="width: 100px;">
+                                        <col>
+                                        <col style="width: 160px;">
+                                        <col style="width: 100px;">
+                                        <col style="width: 160px;">
+                                        <col style="width: 160px;">
+                                        <col style="width: 80px;">
+                                        <col style="width: 40px;">
+                                    </colgroup>
+                    
+                                    <thead>
+                                        <tr>
+                                            <th>선택</th>
+                                            <th colspan="2">상품정보</th>
+                                            <th>상품금액</th>
+                                            <th>수량</th>
+                                            <th>할인</th>
+                                            <th>주문금액</th>
+                                            <th>적립</th>
+                                            <th>삭제</th>
+                                        </tr>
+                                    </thead>
+                    
+                                    <!-- 배송비에 따른 상품 목록 -->
+                                    <tbody>
+                                        <tr>
+                                            <td class="txt-c">
+                                                <!-- 상품 선택 -->
+                                                <input type="checkbox" name="" id="cart-list2" class="basic-chkbox">
+                                                <label for="cart-list2" class="basic-chkbox-label"></label>
+                                            </td>
+                    
+                                            <!-- 상품컷 -->
+                                            <td>
+                                                <a href="/views/prod/detail.html" class="thumbnail">
+                                                    <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                                </a>
+                                            </td>
+                    
+                                            <td class="valign-top">
+                                                <!-- 상품명 -->
+                                                <a href="/views/prod/detail.html" class="prod-name">카시오 컬러계산기(MS-20UC/그린)</a>
+                    
+                                                <!-- 옵션 -->
+                                                <ul class="opt">
+                                                    <li><span>[옵션]</span> 기본 옵션</li>
+                                                    <li><span>[추가]</span> 추가 옵션</li>
+                                                </ul>
+
+                                                <!-- 재고량 -->
+                                                <dl class="inventory">
+                                                    <dt>남은 수량</dt>
+                                                    <dd>777</dd>
+                                                </dl>
+                                            </td>
+                    
+                                            <!-- 상품금액 -->
+                                            <td class="txt-c">23,650원</td>
+                                            
+                                            <!-- 수량 -->
+                                            <td>
+                                                <div class="qty-opt">
+                                                    <a href="javascript:void(0);" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></a>
+                                                    <input type="number" class="qty" min="1" value="1">
+                                                    <a href="javascript:void(0);" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></a>
+                                                </div>
+                                            </td>
+                    
+                                            <!-- 할인금액 -->
+                                            <td class="disc txt-c">2,400원</td>
+                    
+                                            <!-- 주문금액 -->
+                                            <td class="market-price txt-c">21,500원</td>
+                    
+                                            <!-- 적립 포인트 -->
+                                            <td class="point txt-c">0P</td>
+                    
+                                            <td class="txt-c">
+                                                <!-- 리스트 삭제 -->
+                                                <a href="javascript:void(0);" class="remove">
+                                                    <i class="fa-regular fa-circle-xmark"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- 총 주문 금액 -->
+                                <div class="sum-box">
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>상품금액</dt>
+                                            <dd><strong>21,500</strong>원</dd>
+                                        </dl>
+                                    </article>
+                            
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>할인금액</dt>
+                                            <dd><strong>2,400</strong>원</dd>
+                                        </dl>
+                                    </article>
+                            
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>배송비</dt>
+                                            <dd><strong>3,000</strong>원</dd>
+                                        </dl>
+                                    </article>
+                            
+                                    <article>
+                                        <dl class="price-info">
+                                            <dt>총 결제금액</dt>
+                                            <dd class="txt-red"><strong>21,500</strong>원</dd>
+                                        </dl>
+                                    </article>
+
+                                    <div class="btn-box">
+                                        <a href="/views/order/form.html" class="btn btn-default">선택상품 주문하기</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 장바구니 유의사항 -->
+                            <ol class="page-guide">
+                                <li>상품쿠폰 및 쿠폰적용은 <span>[주문결제]</span>에서 적용됩니다.</li>
+                                <li>장바구니는 접속 종료 후 14일 동안만 보관 됩니다. 더 오래 보관하고 싶은 상품은 <span>[찜목록]</span>에 담아주세요.</li>
+                                <li>도서 산간지역은 별도의 배송료가 추가될 수 있습니다.</li>
+                                <li>상품을 삭제하고 싶으실 경우 삭제할 물품을 선택하신 후, 삭제 버튼을 눌러주세요.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!-- 총 주문 금액 -->
+                    <div class="cart-total-wrap">
+                        <div class="inner">
+                            <div class="cart-total">
+                                <article>
+                                    <dl class="price-info">
+                                        <dt>상품금액</dt>
+                                        <dd><strong>21,500</strong>원</dd>
+                                    </dl>
+                                </article>
+                            
+                                <article>
+                                    <dl class="price-info">
+                                        <dt>할인금액</dt>
+                                        <dd><strong>2,400</strong>원</dd>
+                                    </dl>
+                                </article>
+                            
+                                <article>
+                                    <dl class="price-info">
+                                        <dt>배송비</dt>
+                                        <dd><strong>3,000</strong>원</dd>
+                                    </dl>
+                                </article>
+                            
+                                <article>
+                                    <dl class="price-info">
+                                        <dt>총 결제금액</dt>
+                                        <dd class="txt-red"><strong>21,500</strong>원</dd>
+                                    </dl>
+                                </article>
+                            </div>
+
+                            <!-- 총 주문하기 (주문 상품 수) -->
+                            <div class="btn-box">
+                                <a href="/views/order/form.html" class="btn btn-outline">총 주문하기 <span>N</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+
+    <script>
+        // $(window).scroll(function() {
+        //     if ($(window).scrollTop() >= 100) {
+        //         $('.cart-wrap .cart-total-wrap').addClass('floating');
+        //     } else {
+        //         $('.cart-wrap .cart-total-wrap').removeClass('floating');
+        //     }
+        // });
+    </script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

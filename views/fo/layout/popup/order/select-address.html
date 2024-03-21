@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배송지 관리 팝업</title>
+</head>
+<body>
+    <div class="layer-inner">
+        <!-- popup 타이틀 -->
+        <div class="layer-head">
+            <h2>배송지 관리</h2>
+        </div>
+
+        <!-- popup 내용 -->
+        <div class="layer-cont order-agree">
+            <form action="" name="" id="">
+                <ul class="addr-mgmt">
+                    <li>
+                        <!-- 배송지명 / 수령인  -->
+                        <div class="user-info">
+                            <input type="radio" name="select" id="selectDevy1" class="basic-radio" checked>
+                            <label for="selectDevy1" class="basic-radio-label">홍길동<span>회사</span></label>
+                        </div>
+
+                        <!-- 주소 -->
+                        <p class="addr">경기도 성남시 중원구 상대원동 5445, 우림라이온스밸리3차 602, 603호</p>
+
+                        <!-- 휴대전화/전화번호 -->
+                        <ul class="phone-num">
+                            <li>010-0000-0000</li>
+                            <!-- 전화번호 : 내용이 없을 시 display: none -->
+                            <li>031-1234-5678</li>
+                        </ul>
+
+                        <!-- 관리 -->
+                        <ul class="mgmt-btns">
+                            <li><button type="button" class="btn edit-addr">수정</button></li>
+                            <li><a href="javascript:void(0);" class="btn del-addr">삭제</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <!-- 배송지명 / 수령인  -->
+                        <div class="user-info">
+                            <input type="radio" name="select" id="selectDevy2" class="basic-radio">
+                            <label for="selectDevy2" class="basic-radio-label">홍길동<span>집</span></label>
+                        </div>
+
+                        <!-- 주소 -->
+                        <p class="addr">경기도 성남시 중원구 상대원동 5445, 우림라이온스밸리3차 602, 603호</p>
+
+                        <!-- 휴대전화/전화번호 -->
+                        <ul class="phone-num">
+                            <li>010-0000-0000</li>
+                            <!-- 전화번호 : 내용이 없을 시 display: none -->
+                            <li>031-1234-5678</li>
+                        </ul>
+
+                        <!-- 관리 -->
+                        <ul class="mgmt-btns">
+                            <li><button type="button" class="btn edit-addr">수정</button></li>
+                            <li><a href="javascript:void(0);" class="btn del-addr">삭제</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="btn-group">
+                    <button type="button" class="btn close-pop">취소</button>
+                    <button type="submit" class="btn btn-gradient save-addr">확인</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객센터 : 1:1 문의하기</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/popup.css">
+
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/selectric.css">
+    <link rel="stylesheet" href="/static/assets/css/library/colorbox.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="/views/cscenter/faq/list.html">고객센터</a></li>
+                    <li class="current">1:1 문의하기</li>
+                </ul>
+            </div>
+
+            <div class="cs-wrap">
+                <!-- 광고 배너 -->
+                <a href="#" class="ad-bnr">
+                    <img src="/static/fo/assets/img/banner/advertising_banner.jpg" alt="">
+                </a>
+
+                <form action="" name="" id="">
+                    <!-- tab menu -->
+                    <ul class="tab-area">
+                        <li>
+                            <a href="/views/cscenter/notice/list.html">공지사항</a>
+                        </li>
+                        <li>
+                            <a href="/views/cscenter/faq/list.html">자주 묻는 FAQ</a>
+                        </li>
+                        <li class="currt-page">
+                            <a href="/views/cscenter/contact/insert.html">1:1 문의하기</a>
+                        </li>
+                    </ul>
+
+                    <!-- 문의하기 form -->
+                    <!-- 로그아웃 상태 일 경우 "로그인"을 거친 후 해당 페이지로 진입 -->
+                    <div class="board-form">
+                        <table class="board-view">
+                            <colgroup>
+                                <col style="width: 50%;">
+                                <col style="width: 50%;">
+                            </colgroup>
+
+                            <tr>
+                                <td>
+                                    <p>작성자 <span class="ess">필수</span></p>
+                                    <input type="text" name="" id="">
+                                </td>
+
+                                <td>
+                                    <p>연락처 <span class="ess">필수</span></p>
+                                    <input type="text" name="" id="" placeholder="‘하이픈(-)’ 없이 숫자만 입력">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <p>제목 <span class="ess">필수</span></p>
+                                    <div class="inp-group">
+                                        <select name="" id="">
+                                            <option value="">문의 유형 선택</option>
+                                            <option value="">상품관련</option>
+                                            <option value="">취소/교환/반품</option>
+                                            <option value="">배송 관련</option>
+                                            <option value="">품절/재입고</option>
+                                            <option value="">주문/결제</option>
+                                            <option value="">회원 관련</option>
+                                            <option value="">포인트</option>
+                                            <option value="">기타</option>
+                                        </select>
+
+                                        <input type="text" name="" id="" placeholder="제목을 입력해주세요">
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <p>주문 상품</p>
+                                    <div class="inp-group">
+                                        <input type="text" name="" id="" placeholder="주문한 상품을 선택해주세요." disabled>
+                                        <a href="javascript:void(0);" class="btn btn-dark prod-search">주문상품 검색</a>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <p>문의 내용 <span class="ess">필수</span></p>
+
+                                    <textarea name="" id="" placeholder="문의 내용을 입력하세요"></textarea>
+                                </td>
+                            </tr>
+
+                            <!-- file upload 영역 -->
+                            <tr>
+                                <td colspan="2">
+                                    <p>파일 첨부</p>
+
+                                    <ul class="file-uploader">
+                                        <li>
+                                            <button type="button" id="fileButton" class="file-btn">파일 선택</button>
+                                            <input type="file" id="fileInput" class="file-inp">
+                                            <div class="file-image">
+                                                <img class="prev-image" src="/static/fo/assets/img/common/cscenter/image-prev.png" alt="Preview">
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <button type="button" id="fileButton" class="file-btn">파일 선택</button>
+                                            <input type="file" id="fileInput" class="file-inp">
+                                            <div class="file-image">
+                                                <img class="prev-image" src="/static/fo/assets/img/common/cscenter/image-prev.png" alt="Preview">
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <button type="button" id="fileButton" class="file-btn">파일 선택</button>
+                                            <input type="file" id="fileInput" class="file-inp">
+                                            <div class="file-image">
+                                                <img class="prev-image" src="/static/fo/assets/img/common/cscenter/image-prev.png" alt="Preview">
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                    <!-- 파일 첨부 최대 수와 용량은 정해지지 않았음. -->
+                                    <div class="info-msg">최대 15MB 이하의 JPG, PNG, GIF, BMP 파일 3장까지 첨부 가능합니다.</div>
+                                </td>
+                            </tr>
+                        </table>
+                    
+                        <ul class="btn-group">
+                            <li>
+                                <a href="javascript:window.history.back();" class="btn btn-default">취소하기</a>
+                            </li>
+                            <li>
+                                <button type="submit" class="btn btn-gradient">문의하기</button>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="/static/fo/pc/js/cscenter.js"></script>
+    <script src="/static/fo/pc/js/popup.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/jquery-selectric/jquery.selectric.min.js"></script>
+    <script src="/static/assets/js/library/jquery-colorbox/jquery.colorbox-min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+
+</body>

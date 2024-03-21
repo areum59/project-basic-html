@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객센터 : 공지사항 상세</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+        
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="/views/cscenter/faq/list.html">고객센터</a></li>
+                    <li class="current">공지사항</li>
+                </ul>
+            </div>
+
+            <div class="cs-wrap">
+                <div class="notice-view">
+                    <form action="" name="" id="">
+                        <!-- 공지사항 상세-->
+                        <table class="board-view">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <h5 class="subject">공지사항 제목입니다.</h5>
+                                        <ul>
+                                            <!-- 작성일 -->
+                                            <li>YYYY-MM-DD</li>
+                                            <!-- 조회수 -->
+                                            <li>조회수 : <span>1</span></li>
+                                        </ul>
+                                    </th>
+                                </tr>
+                            </thead>
+                
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        가치를 끓는 주는 생의 가슴에 공자는 칼이다. 그들의 그러므로 웅대한 같이, 없으면, 새가 운다. 청춘의 오직 생의 우리 그들을 봄바람이다.
+                                        <br><br>
+                                        우리 사랑의 원대하고, 사랑의 얼음과 이것을 대중을 산야에 교향악이다. 아니한 새 용기가 위하여, 없으면, 가치를 인간은 들어 인간의 것이다. 우리 이상 청춘의 내는
+                                        부패뿐이다. 방황하여도, 있을 이상의 맺어, 쓸쓸한 끓는 것은 속에서 바이며, 이것이다.
+                                        <br><br>
+                                        품에 유소년에게서 위하여서 불어 피는 살 너의 같이, 철환하였는가? 새 내는 그들은 이 인간의 동산에는 우리의 아름답고 것이다. 새 할지니, 천하를 품었기 부패뿐이다.
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                
+                        <ul class="view-bottom">
+                            <!-- 다음 게시글로 이동 -->
+                            <li class="next">
+                                <strong>다음글</strong>
+                
+                                <span class="subject">
+                                    <!-- 이전 혹은 다음 글이 없을 시 노출 -->
+                                    <span class="nodata">다음 글이 없습니다.</span>
+                                </span>
+                
+                                <span class="date">2023-06-29</span>
+                            </li>
+                
+                            <!-- 이전 게시글로 이동 -->
+                            <li class="prev">
+                                <strong>이전글</strong>
+                
+                                <span class="subject">
+                                    <a href="#">이전 공지사항 제목 입니다.</a>
+                                </span>
+                
+                                <span class="date">2023-06-01</span>
+                            </li>
+                        </ul>
+                    </form>
+                
+                    <div class="btn-group">
+                        <!-- 공지사항 목록으로 이동 -->
+                        <a href="/views/cscenter/notice/list.html" class="btn btn-dark">목록</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="/static/fo/pc/js/cscenter.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/jquery-selectric/jquery.selectric.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>

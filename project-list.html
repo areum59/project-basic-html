@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./static/assets/css/project-list.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>프로젝트명 작업리스트</h1>
+
+            <!-- etc link -->
+            <ul class="etc-link">
+                <li>
+                    <ul class="screen-type">
+                        <li rel="web" class="active">Web</li>
+                        <li rel="mo">Mobile</li>
+                        <li rel="admin">Admin</li>
+                    </ul>
+                </li>
+                <li>
+                    <!-- figma design URL -->
+                    <a href="#" target="_blank">Figma Design</a>
+                </li>
+            </ul>
+        </header>
+
+        <section id="web" class="tab-pane">
+            <div class="state-wrap">
+                <ul class="state">
+                    <li>전체</li>
+                    <li class="number all"></li>
+                    <li>진행중</li>
+                    <li class="number ing"></li>
+                    <li>완료</li>
+                    <li class="number end"></li>
+                    <li>진행률</li>
+                    <li class="number percent"></li>
+                </ul>
+            </div>
+
+            <table class="working-list">
+                <colgroup>
+                    <col style="width:3%;">
+                    <col style="width:5%;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width:15%;">
+                    <col style="width:6%;">
+                    <col style="width:6%;">
+                    <col style="width:8%;">
+                    <col style="width:15%;">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>진행상태</th>
+                        <th>Depth1</th>
+                        <th>Depth2</th>
+                        <th>Depth3</th>
+                        <th>Depth4</th>
+                        <th>Depth5</th>
+                        <th>File Directory (URL)</th>
+                        <th>담당자</th>
+                        <th>완료일</th>
+                        <th>화면 ID</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="mo" class="tab-pane">
+            <div class="state-wrap">
+                <ul class="state">
+                    <li>전체</li>
+                    <li class="number all"></li>
+                    <li>진행중</li>
+                    <li class="number ing"></li>
+                    <li>완료</li>
+                    <li class="number end"></li>
+                    <li>진행률</li>
+                    <li class="number percent"></li>
+                </ul>
+            </div>
+
+            <table class="working-list">
+                <colgroup>
+                    <col style="width:3%;">
+                    <col style="width:5%;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width:15%;">
+                    <col style="width:6%;">
+                    <col style="width:6%;">
+                    <col style="width:8%;">
+                    <col style="width:15%;">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>진행상태</th>
+                        <th>Depth1</th>
+                        <th>Depth2</th>
+                        <th>Depth3</th>
+                        <th>Depth4</th>
+                        <th>Depth5</th>
+                        <th>File Directory (URL)</th>
+                        <th>담당자</th>
+                        <th>완료일</th>
+                        <th>화면 ID</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="admin" class="tab-pane">
+            <div class="state-wrap">
+                <ul class="state">
+                    <li>전체</li>
+                    <li class="number all"></li>
+                    <li>진행중</li>
+                    <li class="number ing"></li>
+                    <li>완료</li>
+                    <li class="number end"></li>
+                    <li>진행률</li>
+                    <li class="number percent"></li>
+                </ul>
+            </div>
+
+            <table class="working-list">
+                <colgroup>
+                    <col style="width:3%;">
+                    <col style="width:5%;">
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col>
+                    <col style="width:15%;">
+                    <col style="width:6%;">
+                    <col style="width:6%;">
+                    <col style="width:8%;">
+                    <col style="width:15%;">
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>진행상태</th>
+                        <th>Depth1</th>
+                        <th>Depth2</th>
+                        <th>Depth3</th>
+                        <th>Depth4</th>
+                        <th>Depth5</th>
+                        <th>File Directory (URL)</th>
+                        <th>담당자</th>
+                        <th>완료일</th>
+                        <th>화면 ID</th>
+                        <th>비고</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr></tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="./static/assets/js/project-list/project-list.js"></script>
+</body>
+
+</html>

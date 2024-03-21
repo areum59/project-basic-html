@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>마이페이지 : 포인트</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+        <!-- css -->
+        <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+        <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+        <!-- library css -->
+        <link rel="stylesheet" href="/static/assets/css/library/jquery-ui.min.css">
+        <link rel="stylesheet" href="/static/assets/css/library/datepicker.css">
+
+        <!-- fontawesome CDN -->
+        <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- jQuery UI - v1.12.0 -->
+        <script src="/static/assets/js/library/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- header -->
+            <div data-include-path="/views/layout/header.html"></div>
+
+            <!-- contents -->
+            <section class="mypage contents inner">
+
+                <!-- page location -->
+                <div class="location">
+                    <ul>
+                        <li><a href="/views/main/index.html">Home</a></li>
+                        <li><a href="/views/mypage/index.html">마이페이지</a></li>
+                        <li class="current">주문내역</li>
+                    </ul>
+                </div>
+
+                <div class="mypage-wrap">
+                    <!-- LNB : 마이페이지 메뉴 -->
+                    <ul class="my-lnb">
+                        <li>
+                            <a href="/views/mypage/shopping/order/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu01-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu01-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>주문내역</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/shopping/order/cancel-list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu11-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu11-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>취소/교환/반품</p>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="/views/mypage/wished/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu02-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu02-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>관심상품</p>
+                            </a>
+                        </li>
+    
+                        <li class="active">
+                            <a href="/views/mypage/benefit/point/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu03-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu03-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>포인트</p>
+                            </a>
+                        </li>
+    
+                        <!-- <li>
+                            <a href="/views/mypage/benefit/coupon/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu05-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu05-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>쿠폰</p>
+                            </a>
+                        </li> -->
+    
+                        <li>
+                            <a href="/views/mypage/post/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu12-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu12-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>내가 쓴 게시물</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/post/reviews.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu07-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu07-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>나의 리뷰</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/info/address/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu10-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu10-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>배송지 관리</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/user/regist.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu08-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu08-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>회원정보 수정</p>
+                            </a>
+                        </li>
+    
+                        <!-- <li>
+                            <a href="/views/mypage/info/withdraw/form.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu09-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu09-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>회원탈퇴</p>
+                            </a>
+                        </li> -->
+                    </ul>
+
+                    <h2 class="tit">포인트</h2>
+
+                    <form action="" name="" id="">
+                        <!-- 기간조회 -->
+                        <div class="search-detail">
+                            <h3>조회기간</h3>
+
+                            <!-- 날짜 선택 -->
+                            <div class="date-check">
+                                <div class="date-picker">
+                                    <input type="text" name="" id="startDate" class="datepicker inp">
+                                    ~
+                                    <input type="text" name="" id="endDate" class="datepicker inp">
+                                </div>
+
+                                <!-- 월 선택 -->
+                                <div class="month-filter">
+                                    <ul class="tabs">
+                                        <li>
+                                            <input type="radio" name="monthType" id="7day">
+                                            <label for="7day">7일</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="monthType" id="1" checked>
+                                            <label for="1">1개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="monthType" id="3">
+                                            <label for="3">3개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="monthType" id="6">
+                                            <label for="6">6개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="monthType" id="12">
+                                            <label for="12">12개월</label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <button type="submit" class="btn btn-gradient">조회하기</button>
+                            </div>
+                        </div>
+
+                        <!-- 포인트 적립/사용 내역 -->
+                        <div class="point-list">
+                            <dl class="user-point">
+                                <dt>보유한 포인트</dt>
+                                <dd>1,000P</dd>
+
+                                <dt>소멸 예정인 포인트</dt>
+                                <dd>0P</dd>
+                            </dl>
+
+                            <table class="board-list">
+                                <colgroup>
+                                    <col style="width: 200px;">
+                                    <col style="width: 200px;">
+                                    <col>
+                                    <col style="width: 260px;">
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th>적립일</th>
+                                        <th>적립내용</th>
+                                        <th>유효기간</th>
+                                        <th>포인트</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <!-- 적립일 -->
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <!-- 유효기간 -->
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <!-- 적립내용 -->
+                                        <td>구매에 대한 적립금</td>
+                                        <!-- 포인트 -->
+                                        <td class="point"><span class="earn">500P</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <td>구매에 대한 적립금</td>
+                                        <td class="point"><span class="earn">500P</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <td>2023년 12월 31일 소멸</td>
+                                        <td class="point"><span class="use">-500P</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <td>구매에 대한 적립금</td>
+                                        <td class="point"><span class="earn">500P</span></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <td class="date">YYYY-MM-DD</td>
+                                        <td>상품구매시 사용한 적립금</td>
+                                        <td class="point"><span class="use">-2,000P</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </form>
+
+                    <!-- 유의사항 -->
+                    <div class="notice-txt">
+                        <h3>유의 사항</h3>
+                        <ol>
+                            <li>상품주문후 포인트는 예정금으로 있다가 배송출발시 적립이 됩니다.</li>
+                            <li>상품을 반품, 취소, 환불시 포인트는 환불되지 않습니다.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/datepicker/datepicker-set.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>

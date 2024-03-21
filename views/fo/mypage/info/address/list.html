@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 : 배송지 관리</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+        
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/popup.css">
+
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/colorbox.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="/views/mypage/index.html">마이페이지</a></li>
+                    <li class="current">배송지 관리</li>
+                </ul>
+            </div>
+
+            <div class="mypage-wrap">
+                <!-- LNB : 마이페이지 메뉴 -->
+                <ul class="my-lnb">
+                    <li>
+                        <a href="/views/mypage/shopping/order/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu01-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu01-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>주문내역</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/views/mypage/shopping/order/cancel-list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu11-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu11-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>취소/교환/반품</p>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/views/mypage/wished/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu02-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu02-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>관심상품</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/views/mypage/benefit/point/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu03-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu03-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>포인트</p>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="/views/mypage/benefit/coupon/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu05-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu05-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>쿠폰</p>
+                        </a>
+                    </li> -->
+
+                    <li>
+                        <a href="/views/mypage/post/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu12-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu12-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>내가 쓴 게시물</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/views/mypage/post/reviews.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu07-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu07-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>나의 리뷰</p>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="/views/mypage/info/address/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu10-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu10-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>배송지 관리</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/views/user/regist.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu08-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu08-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>회원정보 수정</p>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="/views/mypage/info/withdraw/form.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu09-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu09-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>회원탈퇴</p>
+                        </a>
+                    </li> -->
+                </ul>
+
+                <h2 class="tit">배송지 관리</h2>
+
+                <!-- 배송지 목록 -->
+                <form action="" name="" id="">
+                    <div class="addr-list">
+                        <p class="info-msg">배송지는 최대 <strong>30개</strong>까지 가능합니다.</p>
+                
+                        <table class="board-list">
+                            <colgroup>
+                                <col style="width: 60px;">
+                                <col style="width: 160px;">
+                                <col style="width: 140px;">
+                                <col>
+                                <col style="width: 160px;">
+                                <col style="width: 160px;">
+                                <col style="width: 120px;">
+                            </colgroup>
+                
+                            <thead>
+                                <tr>
+                                    <th>선택</th>
+                                    <th>배송지명</th>
+                                    <th>수령인</th>
+                                    <th>주소</th>
+                                    <th>휴대전화</th>
+                                    <th>전화번호</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                
+                            <tbody>
+                                <tr>
+                                    <!-- 선택 -->
+                                    <td class="txt-c">
+                                        <input type="radio" name="address" id="addr1" class="basic-radio">
+                                        <label for="addr1" class="basic-radio-label"></label>
+                                    </td>
+                                    <!-- 배송지명 -->
+                                    <td class="txt-c">집</td>
+                                    <!-- 수령인 -->
+                                    <td class="txt-c">홍길동</td>
+                                    <!-- 주소 -->
+                                    <td>
+                                        경기도 성남시 중원구 상대원동 5445, 우림라이온스밸리3차 602, 603호
+                                    </td>
+                                    <!-- 휴대전화 -->
+                                    <td class="txt-c">010-0000-0000</td>
+                                    <!-- 전화번호 : 내용이 없을 시 '하이픈(-)' 표기 -->
+                                    <td class="txt-c">-</td>
+                                    <!-- 관리 -->
+                                    <td>
+                                        <ul class="mgmt-btns">
+                                            <li><a href="javascript:void(0);" class="btn edit-addr">수정</a></li>
+                                            <li><a href="javascript:void(0);" class="btn del-addr">삭제</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                
+                                <tr>
+                                    <!-- 선택 -->
+                                    <td class="txt-c">
+                                        <input type="radio" name="address" id="addr2" class="basic-radio" checked>
+                                        <label for="addr2" class="basic-radio-label"></label>
+                                    </td>
+                                    <!-- 배송지명 -->
+                                    <td class="txt-c">회사</td>
+                                    <!-- 수령인 -->
+                                    <td class="txt-c">홍길동</td>
+                                    <!-- 주소 -->
+                                    <td>
+                                        <!-- 기본 배송지로 설정 된 경우에만 노출. -->
+                                        <span class="txt-red">[기본배송지]</span>&ensp;
+                                        경기도 성남시 중원구 상대원동 5445, 우림라이온스밸리3차 602, 603호
+                                    </td>
+                                    <!-- 휴대전화 -->
+                                    <td class="txt-c">010-0000-0000</td>
+                                    <!-- 전화번호 : 내용이 없을 시 '하이픈(-)' 표기 -->
+                                    <td class="txt-c">031-123-4567</td>
+                                    <!-- 관리 -->
+                                    <td>
+                                        <ul class="mgmt-btns">
+                                            <li><a href="javascript:void(0);" class="btn edit-addr">수정</a></li>
+                                            <li><a href="javascript:void(0);" class="btn del-addr">삭제</a></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="btn-group">
+                            <!-- click : 배송지 추가 팝업 오픈 -->
+                            <a href="javascript:;" class="btn btn-default add-addr">새 배송지 추가 +</a>
+                            <button type="button" class="btn btn-gradient">기본 배송지로 설정</button>
+                        </div>
+
+                        <!-- pagination -->
+                        <!-- control 버튼 비활성 시 class neme 'disabled' 추가  -->
+                        <div class="paging">
+                            <ul>
+                                <!-- start -->
+                                <li class="control start disabled">처음</li>
+                                <!-- Prev -->
+                                <li class="control prev">이전</li>
+                        
+                                <li class="index current">1</li>
+                                <li class="index">2</li>
+                                <li class="index">3</li>
+                                <li class="index">4</li>
+                                <li class="index">5</li>
+                                <li class="index">6</li>
+                                <li class="index">7</li>
+                                <li class="index">8</li>
+                                <li class="index">9</li>
+                                <li class="index">10</li>
+                        
+                                <!-- Next -->
+                                <li class="control next">다음</li>
+                                <!-- End -->
+                                <li class="control end disabled">끝</li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="/static/fo/pc/js/popup.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/jquery-colorbox/jquery.colorbox-min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>

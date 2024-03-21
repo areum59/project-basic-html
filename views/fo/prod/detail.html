@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/popup.css">
+
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/library/colorbox.css">
+    <link rel="stylesheet" href="/static/assets/css/library/selectric.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="/views/prod/list.html">1Depth</a></li>
+                    <li class="current">2Depth</li>
+                </ul>
+            </div>
+
+            <div class="shop-wrap">
+                <div class="frame-left">
+                    <form action="" name="" id="">
+                        <!-- 인기상품 목록 -->
+                        <div class="popular-item">
+                            <h3>인기 제품</h3>
+            
+                            <ul class="prod-list owl-carousel">
+                                <!-- slide 1page -->
+                                <li class="items">
+                                    <div class="item">
+                                        <a href="/views/prod/detail.html" class="thumbnail">
+                                            <img src="/static/fo/assets/img/product/thumbnail/gh100_blue.jpg" alt="">
+                                        </a>
+            
+                                        <div class="prod-desc">
+                                            <a href="/views/prod/detail.html" class="prod-name">
+                                                온라인 어학용 헤드셋(GH100/블루/긱스타)
+                                            </a>
+                                            <p class="price">22,000원</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="item">
+                                        <a href="/views/prod/detail.html" class="thumbnail">
+                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                        </a>
+            
+                                        <div class="prod-desc">
+                                            <a href="/views/prod/detail.html" class="prod-name">
+                                                카시오 컬러계산기(MS-20UC/그린)
+                                            </a>
+                                            <p class="price">21,500원</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="item">
+                                        <a href="/views/prod/detail.html" class="thumbnail">
+                                            <img src="/static/fo/assets/img/product/thumbnail/bt7000.jpg" alt="">
+                                        </a>
+            
+                                        <div class="prod-desc">
+                                            <a href="/views/prod/detail.html" class="prod-name">
+                                                피아톤 블루투스이어폰 볼트BOLT(BT700/블랙)
+                                            </a>
+                                            <p class="price">150,000원</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="item">
+                                        <a href="/views/prod/detail.html" class="thumbnail">
+                                            <img src="/static/fo/assets/img/product/thumbnail/te_303n.jpg" alt="">
+                                        </a>
+            
+                                        <div class="prod-desc">
+                                            <a href="/views/prod/detail.html" class="prod-name">
+                                                온습도계 (TE-303N/CAS)
+                                            </a>
+                                            <p class="price">28,200원</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="item">
+                                        <a href="/views/prod/detail.html" class="thumbnail">
+                                            <img src="/static/fo/assets/img/product/thumbnail/362-1.jpg" alt="">
+                                        </a>
+            
+                                        <div class="prod-desc">
+                                            <a href="/views/prod/detail.html" class="prod-name">
+                                                스테들러 트리플러스형광펜 노랑(362-1/4.0mm)
+                                            </a>
+                                            <p class="price">1,600원</p>
+                                        </div>
+                                    </div>
+                                </li>
+            
+                                <!-- slide 2page -->
+                                <li class="items">
+                                    <div class="item">
+                                        <a href="/views/prod/detail.html" class="thumbnail">
+                                            <img src="/static/fo/assets/img/product/thumbnail/s294.jpg" alt="">
+                                        </a>
+            
+                                        <div class="prod-desc">
+                                            <a href="/views/prod/detail.html" class="prod-name">
+                                                스마트독 브릿지(블랙/투명글라스/S294)
+                                            </a>
+                                            <p class="price">36,500원</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+            
+                        <!-- side banner -->
+                        <a href="#" class="side-bnr">
+                            <img src="/static/fo/assets/img/banner/aside_banner.jpg" alt="">
+                        </a>
+                    </form>
+                </div>
+
+                <div class="frame-right">
+                    <div class="detail-top">
+                        <!-- 상품 이미지 미리보기 -->
+                        <div class="frame-wrap">
+                            <!-- 상품 대표 이미지 -->
+                            <div id="cup" class="big-frame">
+                                <img src="/static/fo/assets/img/product/thumbnail/sony.jpg" alt="" class="big">
+                            </div>
+    
+                            <!-- 썸네일 최대 수량 기획단계에서 조정 : 6개 이상도 가능 -->
+                            <ul class="small-frame">
+                                <li>
+                                    <img src="/static/fo/assets/img/product/thumbnail/sony2.jpg" alt="" class="small">
+                                </li>
+                                <li>
+                                    <img src="/static/fo/assets/img/product/thumbnail/sony3.jpg" alt="" class="small">
+                                </li>
+                                <li>
+                                    <img src="/static/fo/assets/img/product/thumbnail/sony4.jpg" alt="" class="small">
+                                </li>
+                                <li>
+                                    <img src="/static/fo/assets/img/product/thumbnail/sony2.jpg" alt="" class="small">
+                                </li>
+                                <li>
+                                    <img src="/static/fo/assets/img/product/thumbnail/sony3.jpg" alt="" class="small">
+                                </li>
+                                <li>
+                                    <img src="/static/fo/assets/img/product/thumbnail/sony4.jpg" alt="" class="small">
+                                </li>
+                                <li>
+                                    <img src="/static/fo/assets/img/product/thumbnail/sony2.jpg" alt="" class="small">
+                                </li>
+                                <li>
+                                    <img src="/static/fo/assets/img/product/thumbnail/sony3.jpg" alt="" class="small">
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <!-- 상품 정보 -->
+                        <div class="opt-wrap">
+                            <form action="" name="" id="">
+                                <!-- 브랜드명 -->
+                                <p class="brand-name">SONY</p>
+
+                                <!-- 상품명 -->
+                                <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+
+                                <!-- 평점 외 -->
+                                <div class="rating-box">
+                                    <!-- 별점 -->
+                                    <div class="rating-point">
+                                        <span style="width: 80%"></span>
+                                    </div>
+
+                                    <!-- etc -->
+                                    <ul>
+                                        <!-- 평점 (리뷰 등록 수) -->
+                                        <li class="score">
+                                            <p>4.0점 <span>999</span></p>
+                                        </li>
+
+                                        <!-- 해당 상품 판매된 수 -->
+                                        <li class="purchase">
+                                            <p>구매건수 <span>999</span></p>
+                                        </li>
+                                        
+                                        <!-- 관심상품 등록된 수 -->
+                                        <li class="wished-num">
+                                            <p>관심상품 등록 <span>77</span></p>
+                                        </li>
+                                        
+                                        <!-- 상품 등록일 -->
+                                        <li>
+                                            <p>등록일 <span>YYYY. MM.</span></p>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                
+                                <!-- 상품금액 -->
+                                <ul class="price">
+                                    <li class="market-price">1,336,500원</li>
+                                    <li class="disc-rate">10%</li>
+                                    <li class="selling">1,215,000원</li>
+                                </ul>
+
+                                <!-- 상품 옵션 정보 -->
+                                <div class="info-detail">
+                                    <div class="prod-info">
+                                        <dl class="point">
+                                            <dt>포인트</dt>
+                                            <dd>0P</dd>
+                                        </dl>
+
+                                        <dl class="devy-fee">
+                                            <dt>배송비</dt>
+                                            <dd>3,000원 <span class="info-msg txt-red">50,000원 이상 구매시 무료</span></dd>
+                                        </dl>
+
+                                        <dl class="prod-opt">
+                                            <dt>선택사항</dt>
+                                            <dd>
+                                                <select>
+                                                    <option value="">옵션을 선택해 주세요.</option>
+                                                    <option value="">블랙</option>
+                                                    <option value="">레드</option>
+                                                    <option value="">화이트</option>
+                                                </select>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+
+                                <!-- 선택 옵션 list : 옵션 선택 전까지는 display: none -->
+                                <div id="DivBuyList" class="sel-opt">
+                                    <ul>
+                                        <li id="" rel="">
+                                            <!-- 선택한 옵션 정보 -->
+                                            <div class="opt-info">
+                                                <p class="opt">블랙</p>
+                                                <h5 class="price"><strong>1,215,000</strong>원</h5>
+                                            </div>
+
+                                            <!-- 수량 선택 -->
+                                            <div class="qty-opt">
+                                                <a href="javascript:void(0);" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></a>
+                                                <input type="number" class="qty" min="1" value="1">
+                                                <a href="javascript:void(0);" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></a>
+                                            </div>
+
+                                            <!-- 선택 삭제 -->
+                                            <a href="javascript:void(0);" class="remove">
+                                                <i class="fa-regular fa-circle-xmark"></i>
+                                            </a>
+                                        </li>
+
+                                        <li id="" rel="">
+                                            <!-- 선택한 옵션 정보 -->
+                                            <div class="opt-info">
+                                                <p class="opt">화이트</p>
+                                                <h5 class="price"><strong>1,215,000</strong>원</h5>
+                                            </div>
+
+                                            <!-- 수량 선택 -->
+                                            <div class="qty-opt">
+                                                <a href="javascript:void(0);" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></a>
+                                                <input type="number" class="qty" min="1" value="1">
+                                                <a href="javascript:void(0);" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></a>
+                                            </div>
+
+                                            <!-- 선택 삭제 -->
+                                            <a href="javascript:void(0);" class="remove">
+                                                <i class="fa-regular fa-circle-xmark"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="btn-area">
+                                    <!-- 상품 바로 구매하기 -->
+                                    <a href="javascript:void(0);" class="btn btn-gradient buy">바로구매</a>
+                                    
+                                    <!-- 장바구니 담기 -->
+                                    <a href="javascript:void(0);" class="add-cart">장바구니 담기</a>
+
+                                    <!-- 관심상품 아이콘 -->
+                                    <div class="wishlist">
+                                        <button type="button" class="wish-chk">관심상품 등록</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- 상세 설명 -->
+                    <div class="detail-wrap">
+                        <ul class="tabs">
+                            <li rel="prod-tab-1" class="active">상세설명</li>
+                            <li rel="prod-tab-2">리뷰<span>(0)</span></li>
+                            <li rel="prod-tab-3">상품정보</li>
+                            <li rel="prod-tab-4">교환/반품 정보</li>
+                        </ul>
+
+                        <div class="tab-cont">
+                            <div id="prod-tab-1" class="tab-pane">
+                                <!-- 상세 설명 -->
+                                <div class="detail-explain">
+                                    상세페이지 이미지 삽입시<br>
+                                    가로 980(px) X 세로 N
+                                </div>
+                            </div>
+
+                            <!-- 리뷰 : 기획 및 디자인 미정 -->
+                            <div id="prod-tab-2" class="tab-pane">
+                                리뷰내용
+                            </div>
+                            
+                            <!-- 상품정보 제공고시 : 기획 및 디자인 미정 -->
+                            <div id="prod-tab-3" class="tab-pane">
+                                상품정보 제공고시
+                            </div>
+
+                            <!-- 교환, 반품 등의 정보 : 기획 및 디자인 미정 -->
+                            <div id="prod-tab-4" class="tab-pane">
+                                교환, 반춤 정보
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="frame-wide">
+                    <!-- 추천 상품 slider -->
+                    <div class="recs-slide-wrap">
+                        <h3>이런 상품은 어떠세요?</h3>
+
+                        <ul class="recs-slide prod-list owl-carousel">
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <ul class="price-info">
+                                            <!-- 상품금액 -->
+                                            <li class="price">
+                                                1,215,000원 <span class="market-price">1,336,500원</span>
+                                            </li>
+                                            <!-- 할인율 -->
+                                            <li class="disc-rate"><strong>10</strong>%</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <ul class="price-info">
+                                            <!-- 상품금액 -->
+                                            <li class="price">
+                                                1,215,000원 <span class="market-price">1,336,500원</span>
+                                            </li>
+                                            <!-- 할인율 -->
+                                            <li class="disc-rate"><strong>10</strong>%</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <ul class="price-info">
+                                            <!-- 상품금액 -->
+                                            <li class="price">
+                                                1,215,000원 <span class="market-price">1,336,500원</span>
+                                            </li>
+                                            <!-- 할인율 -->
+                                            <li class="disc-rate"><strong>10</strong>%</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <ul class="price-info">
+                                            <!-- 상품금액 -->
+                                            <li class="price">
+                                                1,215,000원 <span class="market-price">1,336,500원</span>
+                                            </li>
+                                            <!-- 할인율 -->
+                                            <li class="disc-rate"><strong>10</strong>%</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <ul class="price-info">
+                                            <!-- 상품금액 -->
+                                            <li class="price">
+                                                1,215,000원 <span class="market-price">1,336,500원</span>
+                                            </li>
+                                            <!-- 할인율 -->
+                                            <li class="disc-rate"><strong>10</strong>%</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <ul class="price-info">
+                                            <!-- 상품금액 -->
+                                            <li class="price">
+                                                1,215,000원 <span class="market-price">1,336,500원</span>
+                                            </li>
+                                            <!-- 할인율 -->
+                                            <li class="disc-rate"><strong>10</strong>%</li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="/static/fo/pc/js/contents.js"></script>
+    <script src="/static/fo/pc/js/popup.js"></script>
+    <script src="/static/fo/pc/js/prod.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/owl-wrapper/owl.carousel.min.js"></script>
+    <script src="/static/assets/js/library/jquery-colorbox/jquery.colorbox-min.js"></script>
+    <script src="/static/assets/js/library/jquery-selectric/jquery.selectric.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

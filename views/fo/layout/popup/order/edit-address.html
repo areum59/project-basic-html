@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배송지 수정 팝업</title>
+</head>
+<body>
+    <div class="layer-inner">
+        <!-- popup 타이틀 -->
+        <div class="layer-head">
+            <h2>배송지 수정</h2>
+        </div>
+
+        <!-- popup 내용 -->
+        <div class="layer-cont order-agree">
+            <form action="" name="" id="">
+                <ul class="addr-edit">
+                    <li>
+                        <div class="custom-input">
+                            <p>배송지명 <span class="ess">필수</span></p>
+                            <input type="text" name="" id="" value="회사">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="custom-input">
+                            <p>받는사람 <span class="ess">필수</span></p>
+                            <input type="text" name="" id="" value="홍길동">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="custom-input">
+                            <p>주소 <span class="ess">필수</span></p>
+                            <div class="post-code">
+                                <input type="text" name="orderAddress" id="postCode" value="13403" disabled="">
+                                <button type="button">우편번호 찾기</button>
+                            </div>
+                            <input type="text" name="orderAddress" id="Addr" value="경기도 성남시 중원구 상대원동 5445" disabled="">
+                            <input type="text" name="orderAddress" id="AddrDtl" value="우림라이온스밸리3차 602, 603호">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="custom-input">
+                            <p>휴대전화 <span class="ess">필수</span></p>
+                            <input type="text" name="" id="" value="010-0000-0000">
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="custom-input">
+                            <p>전화번호</p>
+                            <input type="text" name="" id="" value="031-123-4567">
+                        </div>
+                    </li>
+
+                    <li>
+                        <!-- 기본 배송지로 설절되어 있는경우 default: checked -->
+                        <input type="checkbox" name="" id="defaultAddress" class="basic-chkbox" checked>
+                        <label for="defaultAddress" class="basic-chkbox-label">기본 배송지로 등록</label>
+                    </li>
+                </ul>
+
+                <div class="btn-group">
+                    <button type="button" class="btn close-pop">취소</button>
+                    <button type="submit" class="btn btn-gradient save-addr">확인</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

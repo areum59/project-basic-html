@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>마이페이지 : 최근 본 상품</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+        
+        <!-- css -->
+        <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+        <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+        <!-- library css -->
+        <link rel="stylesheet" href="/static/assets/css/library/owl.carousel.min.css">
+
+        <!-- fontawesome CDN -->
+        <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- header -->
+            <div data-include-path="/views/layout/header.html"></div>
+
+            <!-- contents -->
+            <section class="contents">
+
+                <!-- page location -->
+                <div class="location">
+                    <ul>
+                        <li><a href="/views/main/index.html">Home</a></li>
+                        <li><a href="/views/mypage/index.html">마이페이지</a></li>
+                        <li class="current">최근 본 상품</li>
+                    </ul>
+                </div>
+
+                <div class="mypage-wrap">
+                    <!-- LNB : 마이페이지 메뉴 -->
+                    <ul class="my-lnb">
+                        <li>
+                            <a href="/views/mypage/shopping/order/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu01-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu01-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>주문내역</p>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="/views/mypage/wished/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu02-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu02-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>관심상품</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/mypage/benefit/point/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu03-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu03-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>포인트</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/mypage/benefit/coupon/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu05-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu05-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>쿠폰</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/mypage/post/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu07-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu07-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>내가 쓴 게시물</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/mypage/info/address/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu10-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu10-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>배송지 관리</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/user/regist.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu08-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu08-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>회원정보 수정</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/mypage/info/withdraw/form.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu09-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu09-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>회원탈퇴</p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h2 class="tit">최근 본 상품</h2>
+
+                    <!-- 최근 본 상품 : slider -->
+                    <div class="viewed-item">
+                        <h3>최근 본 상품</h3>
+
+                        <ul class="viewed-slide prod-list owl-carousel">
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <p class="price">1,215,000원</p>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <p class="price">1,215,000원</p>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <p class="price">1,215,000원</p>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <p class="price">1,215,000원</p>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <p class="price">1,215,000원</p>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="item">
+                                <a href="/views/prod/detail.html" class="thumnail">
+                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                </a>
+
+                                <div class="prod-desc">
+                                    <div class="txt-box">
+                                        <!-- 브랜드명 -->
+                                        <p class="brand-name">SONY</p>
+                                        <!-- 상품명 -->
+                                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+                                        <!-- 상품금액 -->
+                                        <p class="price">1,215,000원</p>
+                                    </div>
+
+                                    <!-- mouse hover -->
+                                    <ul class="hover-box">
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box quick-view">
+                                                <img src="/static/fo/assets/img/common/enlargement-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!-- 관심상품 아이콘 -->
+                                            <div class="icon-box wishlist">
+                                                <button type="button" class="wish-chk">관심상품 등록</button>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);" class="icon-box cart">
+                                                <img src="/static/fo/assets/img/common/cart-plus-icon.png" alt="">
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- footer -->
+            <div data-include-path="/views/layout/footer.html"></div>
+        </div>
+
+        <!-- JS -->
+        <script src="/static/fo/pc/js/common.js"></script>
+        <script src="/static/fo/pc/js/mypage.js"></script>
+
+        <!-- library -->
+        <script src="/static/assets/js/library/owl-wrapper/owl.carousel.min.js"></script>
+
+        <script>
+            window.addEventListener('load', function () {
+                var allElements = document.getElementsByTagName('*');
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open('GET', includePath, true);
+                        xhttp.send();
+                    }
+                });
+            }); //includeHTML
+        </script>
+</body>
+</html>

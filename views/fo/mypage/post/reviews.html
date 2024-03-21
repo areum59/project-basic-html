@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나의 리뷰</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+        
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/popup.css">
+
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/colorbox.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="/views/mypage/index.html">마이페이지</a></li>
+                    <li class="current">나의 리뷰</li>
+                </ul>
+            </div>
+
+            <div class="mypage-wrap">
+                <!-- LNB : 마이페이지 메뉴 -->
+                <ul class="my-lnb">
+                    <li>
+                        <a href="/views/mypage/shopping/order/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu01-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu01-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>주문내역</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/views/mypage/shopping/order/cancel-list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu11-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu11-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>취소/교환/반품</p>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/views/mypage/wished/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu02-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu02-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>관심상품</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/views/mypage/benefit/point/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu03-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu03-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>포인트</p>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="/views/mypage/benefit/coupon/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu05-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu05-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>쿠폰</p>
+                        </a>
+                    </li> -->
+
+                    <li>
+                        <a href="/views/mypage/post/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu12-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu12-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>내가 쓴 게시물</p>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="/views/mypage/post/reviews.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu07-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu07-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>나의 리뷰</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/views/mypage/info/address/list.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu10-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu10-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>배송지 관리</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/views/user/regist.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu08-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu08-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>회원정보 수정</p>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="/views/mypage/info/withdraw/form.html">
+                            <div class="menu-icons">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu09-off.png" alt="off">
+                                <img src="/static/fo/assets/img/common/mypage/mypage-menu09-on.png" alt="on" class="hover-image">
+                            </div>
+                            <p>회원탈퇴</p>
+                        </a>
+                    </li> -->
+                </ul>
+
+                <h2 class="tit">나의 리뷰</h2>
+
+                <!-- 리뷰 목록 -->
+                <div class="managing-reviews">
+                    <ul class="tab-area">
+                        <li>
+                            <a href="javascript:void(0);" onclick="showScreen(1)">작성 가능한 리뷰 <strong>(1)</strong></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="showScreen(2)">작성한 리뷰 <strong>(1)</strong></a>
+                        </li>
+                    </ul>
+
+                    <div class="result-area">
+                        <!-- screen 1 : 작성 가능한 리뷰-->
+                        <div class="screen writable">
+                            <h5>
+                                <span class="txt-black">1개</span>의 리뷰를 작성하면, <span>1,000 포인트</span>를 받을 수 있습니다.
+                            </h5>
+                            <p>배송이 완료된 상품만 목록에 노출됩니다.</p>
+
+                            <div class="pending">
+                                <ul class="inner">
+                                    <li>
+                                        <!-- 구매한 상품 썸네일 -->
+                                        <a href="/views/prod/detail.html" class="thumbnail">
+                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                        </a>
+
+                                        <!-- 상품 정보 -->
+                                        <div class="detail">
+                                            <ul class="date-guide">
+                                                <li><span>YYYY-MM-DD</span>에 구매</li>
+                                                <li>작성 기한 <span>YYYY-MM-DD</span>까지 <strong>(D-57)</strong></li>
+                                            </ul>
+
+                                            <a href="views/prod/detail.html" class="prod-name">
+                                                카시오 컬러계산기(MS-20UC/그린)
+                                            </a>
+
+                                            <!-- 옵션 -->
+                                            <ul class="opt">
+                                                <li><span>[옵션]</span> 기본 옵션</li>
+                                                <li><span>[추가]</span> 추가 옵션</li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- 리뷰 작성하기 -->
+                                        <div class="action">
+                                            <!-- 후기 작성 popu open -->
+                                            <a href="javascript:;" class="btn btn-gradient add-review">리뷰 작성하기</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- screen 2 : 작성한 리뷰 -->
+                        <div class="screen writed">
+                            <h5>
+                                <span class="txt-black">1개</span>의 리뷰를 작성하였습니다.
+                            </h5>
+
+                            <div class="item">
+                                <ul class="inner">
+                                    <li>
+                                        <!-- 구매한 상품 썸네일 -->
+                                        <a href="/views/prod/detail.html" class="thumbnail">
+                                            <img src="/static/fo/assets/img/product/thumbnail/casio_calculator.jpg" alt="">
+                                        </a>
+
+                                        <!-- 상품 정보 -->
+                                        <div class="detail">
+                                            <a href="/views/prod/detail.html" class="prod-name">
+                                                카시오 컬러계산기(MS-20UC/그린)
+                                            </a>
+
+                                            <div class="rating-point">
+                                                <span style="width: 80%"></span>
+                                            </div>
+
+                                            <!-- 작성한 리뷰 내용 -->
+                                            <div class="review">
+                                                <!-- 리뷰 내용의 첫 줄만 미리보기 -->
+                                                <div class="show-intro">
+                                                    <span>시와 이런 차 별 다 무덤 어머님, 있습니다. 아스라히 이름과, 우는 내 아이들의 아침이 언덕 있습니다.</span>
+                                                    <button type="button" class="view-more">더보기</button>
+                                                </div>
+
+                                                <!-- 리뷰 본문 -->
+                                                <div class="hideen">
+                                                    <!-- 옵션 -->
+                                                    <ul class="opt">
+                                                        <li><span>[옵션]</span> 기본 옵션</li>
+                                                        <li><span>[추가]</span> 추가 옵션</li>
+                                                    </ul>
+
+                                                    <div class="lcontent">
+                                                        시와 이런 차 별 다 무덤 어머님, 있습니다. 아스라히 이름과, 우는 내 아이들의 아침이 언덕 있습니다.<br>
+                                                        그리고 아름다운 못 북간도에 아스라히 지나고 내 있습니다.<br>
+                                                        별 하나 파란 이름을 책상을 듯합니다. 이런 차 동경과 하나에 이름을 나의 밤을 까닭입니다.<br>
+                                                        때 하나 그러나 내린 하나에 위에도 추억과 까닭입니다. 어머니 노새, 써 없이 어머니, 우는 있습니다. 다 이 하나에 불러 어머니 까닭입니다.<br>
+                                                        가슴속에 아이들의 봄이 당신은 새워 별 이름자를 풀이 이름과, 있습니다. 나는 동경과 잠, 이름과 있습니다.
+
+                                                        <!-- 작성 날짜 -->
+                                                        <p class="date">YYYY-MM-DD</p>
+                                                    </div>
+
+                                                    <button type="button" class="hide-more">리뷰 접기</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="/static/fo/pc/js/mypage.js"></script>
+    <script src="/static/fo/pc/js/popup.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/jquery-colorbox/jquery.colorbox-min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>

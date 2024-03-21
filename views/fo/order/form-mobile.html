@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문/결제</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/assets/css/reset.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/common.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/style.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/contents.css">
+    
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/slick.css">
+    <link rel="stylesheet" href="/static/assets/css/library/slick-theme.css">
+    <link rel="stylesheet" href="/static/assets/css/library/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/library/owl.theme.default.min.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <div data-include-path="/views/layout/header-mobile.html"></div>
+
+    <!-- page title -->
+    <div class="page-title">
+        <a href="javascript:window.history.back();">이전페이지</a>
+        <h2>주문/결제</h2>
+    </div>
+
+    <!-- container -->
+    <div class="container">
+        <!-- contents -->
+        <section class="order contents">
+            <div class="top_cont">
+                <div class="order-login">
+                    <div class="icon-box">
+                        <img src="/static/fo/assets/img/common/co-login.png" alt="">
+                        <ul class="order-txt">
+                            <li>기존 고객이신가요?</li>
+                            <li><a class="show-order js-showlogin">로그인하시려면 여기를 클릭해주세요.</a></li>
+                        </ul>
+                    </div>
+                    <form class="myaccount js-openlogin">
+                        <p>이전에 저희 쇼핑몰에서 쇼핑하셨다면, 아래 상자에 세부 정보를 입력해주세요. 새로운 고객이시라면, 청구 및 배송 섹션으로 진행해주세요.</p>
+                        <div class="form-group ">
+                            <label for="exampleInputEmail1">사용자명 또는 이메일 주소를 입력해주세요 *</label>
+                            <input type="email" class="form-account" id="exampleInputEmail1">
+                        </div>
+                        <div class="form-group ">
+                            <label for="exampleInputPassword1">비밀번호를 입력해주세요 *</label>
+                            <input type="password" class="form-account" id="exampleInputPassword1">
+                        </div>
+                        <div class="form-check ">
+                            <button type="submit" class="form-account-btn">Login</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="order-cp">
+                    <div class="icon-box">
+                        <img src="/static/fo/assets/img/common/co-coupon.png" alt="">
+                        <ul class="order-txt">
+                            <li>쿠폰이 있으신가요?</li>
+                            <li><a class="show-order js-showcp">쿠폰 코드를 입력해주세요.</a></li>
+                        </ul>
+                    </div>
+                    <form class="form_coupon js-opencp">
+                        <input type="email" value="" placeholder="Coupon code" name="EMAIL" id="mail" class="">
+                        <div class="input-icon">
+                            <img src="/static/fo/assets/img/common/coupon-icon.png" alt="">
+                        </div>
+                        <button id="subscribe" class="cp-btn" type="submit">
+                            쿠폰 적용하기
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- order-form -->
+            <form>
+                <div class="order-box">
+                    <!-- billing details -->
+                    <div class="order-cont">
+                        <div class="billing-details">
+                            <div class="cmt-title">
+                                <h1 class="page-title">배송 정보</h1>
+                            </div>
+                            <div class="form-customer">
+                                <div class="form-group first-name">
+                                    <label>성 <span class="important">*</span></label>
+                                    <input type="text" class="form-account">
+                                </div>
+                                <div class="form-group last-name">
+                                    <label>이름 <span class="important">*</span></label>
+                                    <input type="text" class="form-account">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputcompany" class=" control-label">회사명</label>
+                                    <input type="text" id="inputcompany" class="form-account">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputcountry1" class=" control-label">나라명 <span class="important">*</span></label>
+                                    <input type="text" id="inputcountry1" class="form-account">
+                                </div>                                    
+                                <div class="form-group">
+                                    <label for="inputstreet" class=" control-label">주소 <span class="important">*</span></label>
+                                    <input type="text" id="inputstreet" class="form-account">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputpostcode" class=" control-label">우편번호</label>
+                                    <input type="text" id="inputpostcode" class="form-account">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputfState" class=" control-label">상세주소 <span class="important">*</span></label>
+                                    <input type="text" id="inputfState" class="form-account">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputphone" class=" control-label">핸드폰 번호 <span class="important">*</span></label>
+                                    <input type="text" id="inputphone" class="form-account">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputemail" class=" control-label">이메일 주소 <span class="important">*</span></label>
+                                    <input type="text" id="inputemail" class="form-account">
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input">
+                                        <span>계정을 생성하시겠습니까?</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shipping-details">
+                            <div class="cmt-title">
+                                <h1 class="page-title">추가 정보</h1>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    <span>다른 주소로 배송하시겠습니까?</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputfState" class="control-label">추가 사항</label>
+                                <textarea id="message" class="form-note" placeholder="주문에 대한 메모나 배송에 대한 특별한 요청 사항이 있다면 입력해주세요."></textarea>
+                            </div>
+                        </div>
+                        <div class="user-order">
+                            <div class="cmt-title">
+                                <h1 class="page-title">주문 정보</h1>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="shop_table">
+                                    <colgroup>
+                                        <col style="width:40%">
+                                        <col style="width:60%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr class="co-name">
+                                            <th>제품</th>
+                                            <td>Harman Kardon Onyx  Studio  x 1</td>
+                                        </tr>
+                                        <tr class="co-price">
+                                            <th>금액</th>
+                                            <td>1,125,000원</td>
+                                        </tr>
+                                        <tr class="cart-subtotal">
+                                            <th>주문 금액</th>
+                                            <td>1,125,000원</td>
+                                        </tr>
+                                        <tr class="cart-shipping">
+                                            <th>배송비</th>
+                                            <td>
+                                                <ul class="shipping">
+                                                    <li>
+                                                        <input name="shipping" type="radio" value="Flat" id="radio1" checked="checked">
+                                                        <label for="radio1">기본 배송비 : 3,500원</label>
+                                                    </li>
+                                                    <li>
+                                                        <input name="shipping" type="radio" value="Free" id="radio2">
+                                                        <label for="radio2">무료 배송</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr class="order-total">
+                                            <th>총 주문금액</th>
+                                            <td>1,250,000원</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <ul class="payment">
+                                <li>
+                                    <input name="payment" type="radio" value="Direct" id="radio3" >
+                                    <label for="radio3">계좌이체</label>
+                                </li>
+                                <li>
+                                    <input name="payment" type="radio" value="Check" id="radio4">
+                                    <label for="radio4">카드결제</label>
+                                </li>
+                                <li>
+                                    <input name="payment" type="radio" value="Cash" id="radio5">
+                                    <label for="radio5">착불 결제</label>
+                                </li>
+                                <li>
+                                    <input name="payment" type="radio" value="Paypal" id="radio6">
+                                    <label for="radio6">PayPal 결제<a class="co-pp" href=""><img src="/static/fo/pc/img/payment/pp.jpg" alt=""></a></label>
+                                    
+                                </li>
+                            </ul>
+                            
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input">
+                                    <span><a href="javascript:void(0);" class="term">약관 및 조건 </a>에 동의하십니까? </span>
+                                </label>
+                            </div>
+                            <div class="order-btn">
+                                <a href="#" class="btn-submit">주문 하기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+    </div>
+    
+    <!-- footer -->
+    <div data-include-path="/views/layout/footer-mobile.html"></div>
+
+    <!-- JS -->
+    <script src="/static/fo/mo/js/main.js"></script>
+    <script src="/static/fo/mo/js/common.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/slick-slide/slick.min.js"></script>
+    <script src="/static/assets/js/library/owl-wrapper/owl.carousel.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세페이지</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/assets/css/reset.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/common.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/style.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/prod/style.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/contents.css">
+    
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/slick.css">
+    <link rel="stylesheet" href="/static/assets/css/library/slick-theme.css">
+    <link rel="stylesheet" href="/static/assets/css/library/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/library/owl.theme.default.min.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <div data-include-path="/views/layout/header-mobile.html"></div>
+
+    <!-- page title -->
+    <div class="page-title">
+        <a href="javascript:window.history.back();">이전페이지</a>
+        <h2>상품 상세페이지</h2>
+    </div>
+
+    <!-- container -->
+    <div class="container">
+        <!-- contents -->
+        <section class="contents">
+            <div class="detail-img">
+                <div class="prod-main">
+                    <div class="product-col">
+                        <div class="img active">
+                            <img src="/static/fo/pc/img/single/sony.jpg" alt="photo" class="img-reponsive big">
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-thum">
+                    <div class="thum-wrap owl-carousel owl-theme owl-loaded owl-drag">
+                        <a href="javascript:void(0);" class="thum-images">
+                            <img src="/static/fo/pc/img/single/sony.jpg" alt="photo" class="img-reponsive small">
+                        </a>
+                        <a href="javascript:void(0);" class="thum-images">
+                            <img src="/static/fo/pc/img/single/sony2.jpg" alt="photo" class="img-reponsive small">
+                        </a>
+                        <a href="javascript:void(0);" class="thum-images">
+                            <img src="/static/fo/pc/img/single/sony3.jpg" alt="photo" class="img-reponsive small">
+                        </a>
+                        <a href="javascript:void(0);" class="thum-images">
+                            <img src="/static/fo/pc/img/single/sony4.jpg" alt="photo" class="img-reponsive small">
+                        </a>
+                        <a href="javascript:void(0);" class="thum-images">
+                            <img src="/static/fo/pc/img/single/sony2.jpg" alt="photo" class="img-reponsive small">
+                        </a>
+                        <a href="javascript:void(0);" class="thum-images">
+                            <img src="/static/fo/pc/img/single/sony3.jpg" alt="photo" class="img-reponsive small">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="prod-info">
+                <p class="product-cate">Audio Speakers</p>
+                <div class="product-rating">
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <span class="star"></span>
+                    <div class="number-rating">( 896 reviews )</div>
+                </div>
+                <h3 class="product-title"><a href="#">울트라 와이어리스 S50 헤드폰</a></h3>
+                <div class="product-price">
+                    <span>1,250,000원</span>
+                </div>
+                <div class="availability">
+                    <p class="product-inventory"> <label>재고 확인 : </label><span>주문 가능</span></p>
+                </div>
+                <div class="product-brand">
+                    <p>Brand :</p>
+                    <img src="/static/fo/pc/img/single/sony_brand.png" alt="">
+                </div>
+                <div class="product-num">
+                    <label>상품번호 :</label><span> 8900105789430</span>
+                </div>
+                <div class="product-desc">
+                    <p class="desc-info">합리적으로 보이는 lorem Ipsum을 생성하기 위해 소수의 모델 문장 구조와 결합된 over 사전을 사용합니다.</p>
+                    <ul class="desc-list">
+                        <li>블루투스에 직접 연결</li> 
+                        <li>배터리 표시등</li> 
+                        <li>DPI 선택: 2600/2000/1600/1200/800</li> 
+                        <li>Windows를 실행하는 컴퓨터</li> 
+                    </ul>
+                </div>
+                <div class="color-group">
+                    <label>Color :</label>
+                    <a href="#" class="circle black"></a>
+                    <a href="#" class="circle red"></a>
+                    <a href="#" class="circle gray"></a>
+                </div>
+
+                <div class="prod-btn-group">
+                    <div class="cart-btn-group">
+                        <div class="e-quantity">
+                            <input min="1" value="1" type="number" class="qty">
+                            <a href="javascript:void(0);" class="quantity-plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </a>
+                            <a href="javascript:void(0);" class="quantity-minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                <i class="fa-solid fa-caret-left"></i>
+                            </a>
+                        </div>
+                        <a href="#" class="add-cart">장바구니 담기</a>
+                    </div>
+                    <a href="#" class="e-btn">
+                        <span class="icon-wishlist"></span>
+                    </a>
+                    <a href="#" class="e-btn">
+                        <span class="icon-compare"></span>
+                    </a>
+                </div>
+
+                <div class="product-tags">
+                    <label>Tags :</label>
+                    <a href="#">헤드폰,</a>
+                    <a href="#">음질,</a>
+                    <a href="#">블루투스</a>
+                </div>
+            </div>
+
+            <!-- prod-detail-info -->
+            <div class="prod-detail-info">
+                <div class="detail-tabs-wrap">
+                    <ul class="detail-tabs">
+                        <li rel="tab1">
+                            <a>제품 설명</a>
+                        </li>
+                        <li rel="tab2">
+                            <a>제품 사양</a>
+                        </li>
+                        <li rel="tab3">
+                            <a>제품 리뷰</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane active">
+                        <div class="entry-content">
+                            <img src="/static/fo/pc/img/single/des_3.jpg" alt="">
+                            <div class="entry-inside">
+                                <div class="entry-element">
+                                    <div class="entry-info">
+                                        <h3>Extra Bass의 파워</h3>
+                                        <p>독자가 콘텐츠 페이지의 레이아웃을 볼 때 읽을 수 있는 콘텐츠 페이지로 인해 주의가 산만해진다는 것은 오래 전부터 확립된 사실입니다. Lorem Ipsum을 사용하는 요점은 Lorem Ipsum을 사용하는 것과는 달리 문자의 정규 분포가 다소 정규 분포를 갖는다는 것입니다.</p>
+                                    </div>
+                                </div>
+
+                                <div class="entry-element">
+                                    <div class="entry-info">
+                                        <h3>편안한 음질</h3>
+                                        <p>독자가 콘텐츠 페이지의 레이아웃을 볼 때 읽을 수 있는 콘텐츠 페이지로 인해 주의가 산만해진다는 것은 오래 전부터 확립된 사실입니다. Lorem Ipsum을 사용하는 요점은 Lorem Ipsum을 사용하는 것과는 달리 문자의 정규 분포가 다소 정규 분포를 갖는다는 것입니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tab2" class="tab-pane">
+                    
+                    </div>
+                    <div id="tab3" class="tab-pane ">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- Q&A -->
+            <div class="e-qa">
+                <div class="cmt-title"><h1>고객 질문 및 답변</h1></div>
+                <div class="e-qa-cont">
+                    <div class="qa-element">
+                        <div class="qa-quest">
+                            <span class="qa-icon">Q</span>
+                            <h3>sonos one은 sonos play1과 스테레오 쌍으로 연결됩니까?</h3>
+                        </div>
+                        <div class="qa-answer">
+                            <p>플레이어가 원하는 구성으로 그룹화되어 있는 한 Sonos One 또는 에코 장치에서 Alexa에게 음악을 시작하도록 요청할 수 있으며 Sonos 그룹 전체에서 재생이 시작됩니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa-element">
+                        <div class="qa-quest">
+                            <span class="qa-icon">Q</span>
+                            <h3>블루투스가 가능한 제품인가요?</h3>
+                        </div>
+                        <div class="qa-answer">
+                            <p>소수의 모범 문장 구조와 결합된 라틴어 단어를 사용하여 합리적으로 보이는 Lorem Ipsum을 생성합니다. 따라서 생성된 Lorem Ipsum은 항상 반복, 주입된 유머가 없습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa-element">
+                        <div class="qa-quest">
+                            <span class="qa-icon">Q</span>
+                            <h3>sonos one은 sonos play1과 스테레오 쌍으로 연결됩니까?</h3>
+                        </div>
+                        <div class="qa-answer">
+                            <p>사용 가능한 Lorem Ipsum 구절에는 많은 변형이 있지만 대부분은 주입된 유머 또는 보이지 않는 무작위 단어로 인해 어떤 형태로든 변경되었습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa-element">
+                        <div class="qa-quest">
+                            <span class="qa-icon">Q</span>
+                            <h3>"sonos one" 사운드의 음질은 ?</h3>
+                        </div>
+                        <div class="qa-answer">
+                            <p>사용 가능한 Lorem Ipsum 구절에는 많은 변형이 있지만 대부분은 주입된 유머 또는 보이지 않는 무작위 단어로 인해 어떤 형태로든 변경되었습니다.</p>
+                        </div>
+                    </div>
+                    <div class="qa-element">
+                        <div class="qa-quest">
+                            <span class="qa-icon">Q</span>
+                            <h3>아이패드도 호환이 될까요?</h3>
+                        </div>
+                        <div class="qa-answer">
+                            <p>휴대폰에 최적화 되어있어 타기기(노트북,태플릿PC 등) 호환은 권장하지 않습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa-element">
+                        <div class="qa-quest">
+                            <span class="qa-icon">Q</span>
+                            <h3>"sonos one" 사운드의 음질은 ?</h3>
+                        </div>
+                        <div class="qa-answer">
+                            <p>사용 가능한 Lorem Ipsum 구절에는 많은 변형이 있지만 대부분은 주입된 유머 또는 보이지 않는 무작위 단어로 인해 어떤 형태로든 변경되었습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa-element">
+                        <div class="qa-quest">
+                            <span class="qa-icon">Q</span>
+                            <h3>블루투스가 가능한 제품인가요?</h3>
+                        </div>
+                        <div class="qa-answer">
+                            <p>소수의 모범 문장 구조와 결합된 라틴어 단어를 사용하여 합리적으로 보이는 Lorem Ipsum을 생성합니다. 따라서 생성된 Lorem Ipsum은 항상 반복, 주입된 유머가 없습니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="qa-element">
+                        <div class="qa-quest">
+                            <span class="qa-icon">Q</span>
+                            <h3>sonos one은 sonos play1과 스테레오 쌍으로 연결됩니까?</h3>
+                        </div>
+                        <div class="qa-answer">
+                            <p>사용 가능한 Lorem Ipsum 구절에는 많은 변형이 있지만 대부분은 주입된 유머 또는 보이지 않는 무작위 단어로 인해 어떤 형태로든 변경되었습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn-qa">더 많은 답변 보기<i class="fa-solid fa-chevron-down"></i></a>
+                <form class="form_newsletter" action="#" method="post">
+                    <input type="text" value="" placeholder="제품에 대한 질문이 있습니까?" class="newsletter-input form-control">
+                    <button class="btn-submit">
+                        보내기
+                    </button>
+                </form>
+            </div>
+        </section>
+    </div>
+    
+    <!-- footer -->
+    <div data-include-path="/views/layout/footer-mobile.html"></div>
+
+    <!-- JS -->
+    <script src="/static/fo/mo/js/main.js"></script>
+    <script src="/static/fo/mo/js/common.js"></script>
+    <script src="/static/fo/mo/js/prod-details.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/slick-slide/slick.min.js"></script>
+    <script src="/static/assets/js/library/owl-wrapper/owl.carousel.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

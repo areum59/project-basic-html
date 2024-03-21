@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기획전 목록</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li class="current">기획전</li>
+                </ul>
+            </div>
+
+            <div class="promo-wrap">
+                <form action="" name="" id="">
+                    <!-- 종료된 이벤트는 리스트에서 노출되지 않는다. -->
+                    <!-- 이벤트 당첨자 발표는 공지사항 게시판에서 확인 가능. -->
+                    <ul class="promo-list">
+                        <li>
+                            <!-- 해당 기획전 상품이 있는 리스트 페이지로 이동 -->
+                            <a href="/views/prod/promotion/promotion-list.html">
+                                <!-- 이벤트 썸네일 : 460x260 -->
+                                <div class="thumnail">
+                                    <img src="/static/fo/assets/img/product/thumbnail_450x260.jpg" alt="">
+                                </div>
+
+                                <div class="promo-desc">
+                                    <h3 class="subject">
+                                        기획전 제목입니다. 기획전 제목입니다. 기획전 제목입니다. 기획전 제목입니다.
+                                    </h3>
+                                    <p class="date">YYYY.MM.DD ~ YYYY.MM.DD</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/prod/promotion/promotion-list.html">
+                                <div class="thumnail">
+                                    <img src="/static/fo/assets/img/product/thumbnail_450x260.jpg" alt="">
+                                </div>
+
+                                <div class="promo-desc">
+                                    <h3 class="subject">
+                                        기획전 제목입니다. 기획전 제목입니다. 기획전 제목입니다. 기획전 제목입니다.
+                                    </h3>
+                                    <p class="date">YYYY.MM.DD ~ YYYY.MM.DD</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/prod/promotion/promotion-list.html">
+                                <div class="thumnail">
+                                    <img src="/static/fo/assets/img/product/thumbnail_450x260.jpg" alt="">
+                                </div>
+
+                                <div class="promo-desc">
+                                    <h3 class="subject">
+                                        기획전 제목입니다. 기획전 제목입니다. 기획전 제목입니다. 기획전 제목입니다.
+                                    </h3>
+                                    <p class="date">YYYY.MM.DD ~ YYYY.MM.DD</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="/views/prod/promotion/promotion-list.html">
+                                <div class="thumnail">
+                                    <img src="/static/fo/assets/img/product/thumbnail_450x260.jpg" alt="">
+                                </div>
+
+                                <div class="promo-desc">
+                                    <h3 class="subject">
+                                        기획전 제목입니다. 기획전 제목입니다. 기획전 제목입니다. 기획전 제목입니다.
+                                    </h3>
+                                    <p class="date">YYYY.MM.DD ~ YYYY.MM.DD</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- pagination -->
+                    <!-- control 버튼 비활성 시 class neme 'disabled' 추가  -->
+                    <div class="paging">
+                        <ul>
+                            <!-- start -->
+                            <li class="control start disabled">처음</li>
+                            <!-- Prev -->
+                            <li class="control prev">이전</li>
+                    
+                            <li class="index current">1</li>
+                            <li class="index">2</li>
+                            <li class="index">3</li>
+                            <li class="index">4</li>
+                            <li class="index">5</li>
+                            <li class="index">6</li>
+                            <li class="index">7</li>
+                            <li class="index">8</li>
+                            <li class="index">9</li>
+                            <li class="index">10</li>
+                    
+                            <!-- Next -->
+                            <li class="control next">다음</li>
+                            <!-- End -->
+                            <li class="control end disabled">끝</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>

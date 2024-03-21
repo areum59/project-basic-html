@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li class="current">로그인</li>
+                </ul>
+            </div>
+            
+            <div class="login-area">
+                <form action="" name="" id="">
+                    <div class="account">
+                        <h2 class="tit">Login</h2>
+
+                        <div class="inp-group">
+                            <label>아이디 <span class="ess">필수</span></label>
+                            <input type="text" name="" id="" placeholder="아이디 또는 이메일을 입력해주세요.">
+                        </div>
+
+                        <div class="inp-group">
+                            <label>비밀번호 <span class="ess">필수</span></label>
+                            <input type="password" name="" id="" placeholder="비밀번호를 입력해주세요.">
+                        </div>
+
+                        <div class="chk-area">
+                            <div class="chk-box">
+                                <input type="checkbox" name="saveId" id="saveId" class="basic-chkbox" checked>
+                                <label for="saveId" class="basic-chkbox-label">아이디 저장</label>
+                            </div>
+                            
+                            <ul class="sep-list">
+                                <li><a href="/views/auth/findid.html">아이디 찾기</a></li>
+                                <li><a href="/views/auth/findpw.html">비밀번호 찾기</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-group">
+                            <button type="submit" class="btn btn-gradient">로그인</button>
+                            <a href="/views/auth/signup/form.html" class="btn btn-basic">회원가입</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

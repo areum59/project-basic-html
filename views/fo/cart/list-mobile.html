@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 목록</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/assets/css/reset.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/common.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/style.css">
+    <link rel="stylesheet" href="/static/fo/mo/css/contents.css">
+    
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/slick.css">
+    <link rel="stylesheet" href="/static/assets/css/library/slick-theme.css">
+    <link rel="stylesheet" href="/static/assets/css/library/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/assets/css/library/owl.theme.default.min.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <div data-include-path="/views/layout/header-mobile.html"></div>
+
+    <!-- page title -->
+    <div class="page-title">
+        <a href="javascript:window.history.back();">이전페이지</a>
+        <h2>장바구니 목록</h2>
+    </div>
+
+    <!-- container -->
+    <div class="container">
+        <!-- contents -->
+        <section class="cart contents">
+            <div class="cart-cont-wrap">
+                <div class="cart-cont">
+                    <div class="cmt-title">
+                        <h1 class="page-title">장바구니</h1>
+                    </div>
+                    <div class="cart-wrap">
+                        <!-- 담은 상품 전체 선택/삭제 -->
+                        <div class="all-select">
+                            <div class="all-checkbox checkbox-default">
+                                <input type="checkbox" id="selectAll">
+                                <label for="selectAll"><span></span>전체 선택</label>
+                            </div>
+                            
+                            <!-- button : 선택한 리스트 삭제 -->
+                            <a href="javascript:;" class="delete-btn">선택 삭제</a>
+                        </div>
+    
+                        <div class="cart-items">
+                            <ul>
+                                <li>
+                                    <!-- 상품컷 -->
+                                    <div class="thumbnail">
+                                        <div class="all-checkbox checkbox-default">
+                                            <input type="checkbox" id="prod1">
+                                            <label for="prod1"><span></span></label>
+                                        </div>
+    
+                                        <a href="/e_come/views/prod/detail.html">
+                                            <img src="/static/fo/assets/img/product/sound2.jpg" alt="">
+                                        </a>
+                                    </div>
+                        
+                                    <!-- 상품 정보 -->
+                                    <div class="prod-info">
+                                        <div class="prod-top">
+                                            <!-- 상품명 -->
+                                            <a href="#" class="prod-name">
+                                                Harman Kardon Onyx Studio
+                                            </a>
+                                            <a href="#" class="btn-del"><i class="fa-solid fa-xmark"></i></a>
+                                        </div>
+    
+                                        <!-- 상품금액 -->
+                                        <p class="price">119,800원</p>
+                        
+                                        <td class="bcart-quantity">
+                                            <div class="single-product-info">
+                                                <div class="e-quantity">
+                                                    <input type="number" min="1" value="1" class="qty">
+                                                    <a href="javascript:void(0);" class="quantity-plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"><i class="fa-solid fa-caret-right"></i></a>
+                                                    <a href="javascript:void(0);" class="quantity-minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"><i class="fa-solid fa-caret-left"></i></a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </div>
+                                </li>
+    
+                                <!-- 보관한 상품이 없을경우 display: block -->
+                                <li class="nodata" style="display: none;">
+                                    장바구니에 담긴 상품이 없습니다.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="table-cart-bottom">
+                        <form class="form_coupon" action="#" method="post">
+                            <input type="email" value="" placeholder="쿠폰 코드를 입력하세요" name="EMAIL" id="mail" class="newsletter-input form-control">
+                            <div class="input-icon">
+                                <img src="/static/fo/assets/img/common/coupon-icon.png" alt="">
+                            </div>
+                            <button class="button_mini" type="submit">
+                                쿠폰 적용하기
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="cart-total">
+                    <div class="cmt-title">
+                        <h1 class="page-title">총 합계</h1>
+                    </div>
+                    <table class="shop_table">
+                        <colgroup>
+                            <col style="width:40%">
+                            <col style="width:60%">
+                        </colgroup>
+
+                        <tbody>
+                            <tr class="cart-subtotal">
+                                <th>주문 금액</th>
+                                <td>1,250,000원</td>
+                            </tr>
+                            <tr class="cart-shipping">
+                                <th>배송비</th>
+                                <td class="td">
+                                    <ul class="shipping">
+                                        <li>
+                                            <input type="radio" name="gender" value="Flat" id="radio1" checked="checked">
+                                            <label for="radio1">기본 배송비 : 3,500원</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="gender" value="Free" id="radio2">
+                                            <label for="radio2">무료 배송</label>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="calcu">배송비 안내</a>
+                                </td>
+                            </tr>
+                            <tr class="order-total">
+                                <th>총 주문금액</th>
+                                <td>1,250,000원</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cart-total-bottom">
+                        <a href="#" class="btn-submit">상품 주문</a>
+                    </div>
+                    <div class="sign-in-divider">
+                        <span>or</span>
+                    </div>
+                    <div class="pp-checkout">
+                        <a href="#"><img src="/static/fo/pc/img/payment/checkoutpp.jpg" alt="" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- footer -->
+    <div data-include-path="/views/layout/footer-mobile.html"></div>
+
+    <!-- JS -->
+    <script src="/static/fo/mo/js/main.js"></script>
+    <script src="/static/fo/mo/js/common.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/slick-slide/slick.min.js"></script>
+    <script src="/static/assets/js/library/owl-wrapper/owl.carousel.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>

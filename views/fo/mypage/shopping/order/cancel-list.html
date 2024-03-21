@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>마이페이지 : 취소/교환/반품</title>
+
+        <!-- favicon -->
+        <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+        
+        <!-- css -->
+        <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+        <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+        <link rel="stylesheet" href="/static/fo/pc/css/popup.css">
+
+        <!-- library css -->
+        <link rel="stylesheet" href="/static/assets/css/library/colorbox.css">
+        <link rel="stylesheet" href="/static/assets/css/library/jquery-ui.min.css">
+        <link rel="stylesheet" href="/static/assets/css/library/datepicker.css">
+
+        <!-- fontawesome CDN -->
+        <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <!-- jQuery UI - v1.12.0 -->
+        <script src="/static/assets/js/library/jquery-ui.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <!-- header -->
+            <div data-include-path="/views/layout/header.html"></div>
+
+            <!-- contents -->
+            <section class="contents">
+
+                <!-- page location -->
+                <div class="location">
+                    <ul>
+                        <li><a href="/views/main/index.html">Home</a></li>
+                        <li><a href="/views/mypage/index.html">마이페이지</a></li>
+                        <li class="current">취소/교환/반품</li>
+                    </ul>
+                </div>
+
+                <div class="mypage-wrap">
+                    <!-- LNB : 마이페이지 메뉴 -->
+                    <ul class="my-lnb">
+                        <li>
+                            <a href="/views/mypage/shopping/order/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu01-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu01-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>주문내역</p>
+                            </a>
+                        </li>
+    
+                        <li class="active">
+                            <a href="/views/mypage/shopping/order/cancel-list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu11-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu11-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>취소/교환/반품</p>
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="/views/mypage/wished/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu02-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu02-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>관심상품</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/benefit/point/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu03-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu03-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>포인트</p>
+                            </a>
+                        </li>
+    
+                        <!-- <li>
+                            <a href="/views/mypage/benefit/coupon/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu05-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu05-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>쿠폰</p>
+                            </a>
+                        </li> -->
+    
+                        <li>
+                            <a href="/views/mypage/post/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu12-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu12-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>내가 쓴 게시물</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/post/reviews.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu07-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu07-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>나의 리뷰</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/mypage/info/address/list.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu10-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu10-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>배송지 관리</p>
+                            </a>
+                        </li>
+    
+                        <li>
+                            <a href="/views/user/regist.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu08-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu08-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>회원정보 수정</p>
+                            </a>
+                        </li>
+    
+                        <!-- <li>
+                            <a href="/views/mypage/info/withdraw/form.html">
+                                <div class="menu-icons">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu09-off.png" alt="off">
+                                    <img src="/static/fo/assets/img/common/mypage/mypage-menu09-on.png" alt="on" class="hover-image">
+                                </div>
+                                <p>회원탈퇴</p>
+                            </a>
+                        </li> -->
+                    </ul>
+
+                    <h2 class="tit">취소/교환/반품 내역</h2>
+
+                    <form action="" name="" id="">
+                        <!-- 기간조회 -->
+                        <div class="search-detail">
+                            <h3>조회기간</h3>
+
+                            <!-- 날짜 선택 -->
+                            <div class="date-check">
+                                <div class="date-picker">
+                                    <input type="text" name="" id="startDate" class="datepicker inp">
+                                    ~
+                                    <input type="text" name="" id="endDate" class="datepicker inp">
+                                </div>
+
+                                <!-- 월 선택 -->
+                                <div class="month-filter">
+                                    <ul class="tabs">
+                                        <li>
+                                            <input type="radio" name="monthType" id="7day">
+                                            <label for="7day">7일</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="monthType" id="1" checked>
+                                            <label for="1">1개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="monthType" id="3">
+                                            <label for="3">3개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="monthType" id="6">
+                                            <label for="6">6개월</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="monthType" id="12">
+                                            <label for="12">12개월</label>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <button type="submit" class="btn btn-gradient">조회하기</button>
+                            </div>
+
+                            <div class="type-filter">
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="cancelStatType" id="selectAll" class="basic-chkbox" checked>
+                                        <label for="selectAll" class="basic-chkbox-label">전체</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="cancelStatType" id="chk1" class="basic-chkbox">
+                                        <label for="chk1" class="basic-chkbox-label">취소</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="cancelStatType" id="chk2" class="basic-chkbox">
+                                        <label for="chk2" class="basic-chkbox-label">교환</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="cancelStatType" id="chk3" class="basic-chkbox">
+                                        <label for="chk3" class="basic-chkbox-label">반품</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 주문 취소 내역 -->
+                        <div class="cancel-list">
+                            <h3 class="cont-tit">취소/교환/반품 진행상태</h3>
+
+                            <p class="info-txt"><strong>홍길동</strong>님이 주문한 내역입니다.</p>
+
+                            <div class="cancel-list-items">
+                                <!-- 공급사별 group -->
+                                <div class="seller-group">
+                                    <!-- 공급사 정보 -->
+                                    <div class="head">
+                                        <!-- 공급사명 -->
+                                        <p class="seller-name">삼성전자</p>
+                                        <!-- 진행상태 -->
+                                        <p class="cancel-stat">반품접수</p>
+                                        <!-- 주문일 -->
+                                        <p class="order-date">YYYY-MM-DD 주문</p>
+                                    </div>
+                                
+                                    <!-- 주문 상품 내용 -->
+                                    <div class="prod-info-area">
+                                        <ul class="list-bundle">
+                                            <li>
+                                                <a href="/views/prod/detail.html" class="thumnail">
+                                                    <img src="/static/fo/assets/img/product/sound3.jpg" alt="">
+                                                </a>
+                                
+                                                <div class="prod-desc">
+                                                    <!-- 상품명 -->
+                                                    <a href="/views/prod/detail.html" class="prod-name">Micro SDHC 카드_판매</a>
+                                
+                                                    <!-- 상품금액 -->
+                                                    <p class="amount"><strong>30,000</strong>원</p>
+
+                                                    <!-- 주문 수량 / 옵션명 -->
+                                                    <ul class="opt">
+                                                        <li>주문수량 : <span>1</span></li>
+                                                        <li>256GB (+ 49,500원 추가)</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                
+                                        <!-- button area -->
+                                        <div class="btn-group">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0);" class="btn btn-basic case-detail">취소/교환/반품 정보</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/views/mypage/shopping/order/cancel-detail.html" class="btn btn-default">주문상세</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- 유의사항 -->
+                    <div class="notice-txt">
+                        <h3>유의 사항</h3>
+                        <ol>
+                            <li>[주문상세] 버튼을 클릭하시면, 주문상세 내역을 확인하실 수 있습니다.</li>
+                        </ol>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- footer -->
+            <div data-include-path="/views/layout/footer.html"></div>
+        </div>
+
+        <!-- JS -->
+        <script src="/static/fo/pc/js/common.js"></script>
+        <script src="/static/fo/pc/js/popup.js"></script>
+
+        <!-- library -->
+        <script src="/static/assets/js/library/jquery-colorbox/jquery.colorbox-min.js"></script>
+        <script src="/static/assets/js/library/datepicker/datepicker-set.js"></script>
+
+        <script>
+            window.addEventListener('load', function () {
+                var allElements = document.getElementsByTagName('*');
+                Array.prototype.forEach.call(allElements, function (el) {
+                    var includePath = el.dataset.includePath;
+                    if (includePath) {
+                        var xhttp = new XMLHttpRequest();
+                        xhttp.onreadystatechange = function () {
+                            if (this.readyState == 4 && this.status == 200) {
+                                el.outerHTML = this.responseText;
+                            }
+                        };
+                        xhttp.open('GET', includePath, true);
+                        xhttp.send();
+                    }
+                });
+            }); //includeHTML
+        </script>
+    </body>
+</html>

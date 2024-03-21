@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세 미리보기 팝업</title>
+</head>
+<body>
+    <div class="layer-inner">
+        <!-- popup 내용 -->
+        <div class="layer-cont shop-wrap">
+            <div class="detail-top">
+                <!-- 상품 이미지 미리보기 -->
+                <div class="frame-wrap">
+                    <!-- 상품 대표 이미지 -->
+                    <div id="cup" class="big-frame">
+                        <img src="/static/fo/assets/img/product/thumbnail/sony.jpg" alt="" class="big">
+                    </div>
+
+                    <!-- 썸네일 최대 수량 기획단계에서 조정 : 6개 이상도 가능 -->
+                    <ul class="small-frame">
+                        <li>
+                            <img src="/static/fo/assets/img/product/thumbnail/sony2.jpg" alt="" class="small">
+                        </li>
+                        <li>
+                            <img src="/static/fo/assets/img/product/thumbnail/sony3.jpg" alt="" class="small">
+                        </li>
+                        <li>
+                            <img src="/static/fo/assets/img/product/thumbnail/sony4.jpg" alt="" class="small">
+                        </li>
+                        <li>
+                            <img src="/static/fo/assets/img/product/thumbnail/sony2.jpg" alt="" class="small">
+                        </li>
+                        <li>
+                            <img src="/static/fo/assets/img/product/thumbnail/sony3.jpg" alt="" class="small">
+                        </li>
+                        <li>
+                            <img src="/static/fo/assets/img/product/thumbnail/sony4.jpg" alt="" class="small">
+                        </li>
+                        <li>
+                            <img src="/static/fo/assets/img/product/thumbnail/sony2.jpg" alt="" class="small">
+                        </li>
+                        <li>
+                            <img src="/static/fo/assets/img/product/thumbnail/sony3.jpg" alt="" class="small">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 상품 정보 -->
+                <div class="opt-wrap">
+                    <form action="" name="" id="">
+                        <!-- 브랜드명 -->
+                        <p class="brand-name">SONY</p>
+
+                        <!-- 상품명 -->
+                        <h5 class="prod-name">하만 카돈 오닉스 스튜디오</h5>
+
+                        <!-- 평점 외 -->
+                        <div class="rating-box">
+                            <!-- 별점 -->
+                            <div class="rating-point">
+                                <span style="width: 80%"></span>
+                            </div>
+
+                            <!-- etc -->
+                            <ul>
+                                <!-- 평점 (리뷰 등록 수) -->
+                                <li class="score">
+                                    <p>4.0점 <span>999</span></p>
+                                </li>
+
+                                <!-- 해당 상품 판매된 수 -->
+                                <li class="purchase">
+                                    <p>구매건수 <span>999</span></p>
+                                </li>
+                                
+                                <!-- 관심상품 등록된 수 -->
+                                <li class="wished-num">
+                                    <p>관심상품 등록 <span>77</span></p>
+                                </li>
+                                
+                                <!-- 상품 등록일 -->
+                                <li>
+                                    <p>등록일 <span>YYYY. MM.</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <!-- 상품금액 -->
+                        <ul class="price">
+                            <li class="market-price">1,336,500원</li>
+                            <li class="disc-rate">10%</li>
+                            <li class="selling">1,215,000원</li>
+                        </ul>
+
+                        <!-- 상품 옵션 정보 -->
+                        <div class="info-detail">
+                            <div class="prod-info">
+                                <dl class="point">
+                                    <dt>포인트</dt>
+                                    <dd>0P</dd>
+                                </dl>
+
+                                <dl class="devy-fee">
+                                    <dt>배송비</dt>
+                                    <dd>3,000원 <span class="info-msg txt-red">50,000원 이상 구매시 무료</span></dd>
+                                </dl>
+
+                                <dl class="prod-opt">
+                                    <dt>선택사항</dt>
+                                    <dd>
+                                        <select>
+                                            <option value="">옵션을 선택해 주세요.</option>
+                                            <option value="">블랙</option>
+                                            <option value="">레드</option>
+                                            <option value="">화이트</option>
+                                        </select>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <!-- 선택 옵션 list : 옵션 선택 전까지는 display: none -->
+                        <div id="DivBuyList" class="sel-opt">
+                            <ul>
+                                <li id="" rel="">
+                                    <!-- 선택한 옵션 정보 -->
+                                    <div class="opt-info">
+                                        <p class="opt">블랙</p>
+                                        <h5 class="price"><strong>1,215,000</strong>원</h5>
+                                    </div>
+
+                                    <!-- 수량 선택 -->
+                                    <div class="qty-opt">
+                                        <a href="javascript:void(0);" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></a>
+                                        <input type="number" class="qty" min="1" value="1">
+                                        <a href="javascript:void(0);" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></a>
+                                    </div>
+
+                                    <!-- 선택 삭제 -->
+                                    <a href="javascript:void(0);" class="remove">
+                                        <i class="fa-regular fa-circle-xmark"></i>
+                                    </a>
+                                </li>
+
+                                <li id="" rel="">
+                                    <!-- 선택한 옵션 정보 -->
+                                    <div class="opt-info">
+                                        <p class="opt">화이트</p>
+                                        <h5 class="price"><strong>1,215,000</strong>원</h5>
+                                    </div>
+
+                                    <!-- 수량 선택 -->
+                                    <div class="qty-opt">
+                                        <a href="javascript:void(0);" class="minus" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"></a>
+                                        <input type="number" class="qty" min="1" value="1">
+                                        <a href="javascript:void(0);" class="plus" onclick="this.parentNode.querySelector('input[type=number]').stepUp()"></a>
+                                    </div>
+
+                                    <!-- 선택 삭제 -->
+                                    <a href="javascript:void(0);" class="remove">
+                                        <i class="fa-regular fa-circle-xmark"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="btn-area">
+                            <!-- 상품 바로 구매하기 -->
+                            <a href="javascript:void(0);" class="btn btn-gradient buy">바로구매</a>
+                            
+                            <!-- 장바구니 담기 -->
+                            <a href="javascript:void(0);" class="add-cart">장바구니 담기</a>
+
+                            <!-- 관심상품 아이콘 -->
+                            <div class="wishlist">
+                                <button type="button" class="wish-chk">관심상품 등록</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 상품 이미지 미리보기
+        let bigPic = document.querySelector(".big");
+        let smallPics = document.querySelectorAll(".small");
+
+        for (var i = 0; i < smallPics.length; i++) {
+            smallPics[i].addEventListener("click", chagePic);
+        }
+        function chagePic() {
+            var newPic = this.src;
+            bigPic.setAttribute("src", newPic);
+        }
+    </script>
+</body>
+</html>

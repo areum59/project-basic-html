@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회사소개</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li class="current">회사소개</li>
+                </ul>
+            </div>
+
+            <div class="about-wrap">
+                <div class="store-photo">
+                    <img src="/static/fo/assets/img/about/about_1.jpg" alt="">
+                </div>
+
+                <h2 class="tit">사무용품 스토어용 Commerce</h2>
+                
+                <div class="store-desc">
+                    <div class="cont-box left-desc">
+                        <h3>우리의 비젼</h3>
+
+                        <p>
+                            보이는 그들의 이상 얼마나 불어 그들의 부패뿐이다. 눈이 있는 놀이 용기가 꽃이 청춘이 없으면, 황금시대다.
+                            천자만홍이 이상, 그들은 긴지라 얼음이 가치를 풍부하게 그들은 만물은 피다. 그들에게 가지에 살았으며, 옷을 열락의 끝에 것이다.
+                            인간은 공자는 소금이라 가슴이 얼음 이것이다. 같지 만물은 되려니와, 듣는다.
+                            유소년에게서 황금시대의 지혜는 힘있다. 살았으며, 있을 위하여 소담스러운 산야에 있는 힘차게 약동하다.
+                            얼마나 구하지 영락과 이상, 물방아 구하지 같이 관현악이며, 쓸쓸하랴? 못할 평화스러운 가는 같은 것이다.
+                        </p>
+
+                        <div class="photo">
+                            <img src="/static/fo/assets/img/about/about_2.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="cont-box right-desc">
+                        <h3>우리의 비젼</h3>
+
+                        <p>
+                            놀이 보배를 지혜는 속에서 찾아 사라지지 모래뿐일 얼마나 약동하다. 보는 속잎나고, 웅대한 심장의 봄바람이다. 자신과 같은 놀이 밝은 청춘의 봄바람이다.
+                            그들은 천고에 들어 우리는 열매를 그들의 동력은 교향악이다. 희망의 가슴이 얼음에 날카로우나 철환하였는가?
+                            얼마나 대고, 구하지 동력은 그리하였는가? 그들은 천하를 구할 가치를 창공에 구하지 싸인 아니더면, 생생하며, 아름다우냐?
+                            것은 무엇을 위하여 그들에게 피가 평화스러운 가치를 것이다. 끓는 그들의 우는 밥을 것이다.
+                        </p>
+
+                        <div class="photo">
+                            <img src="/static/fo/assets/img/about/about_3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>

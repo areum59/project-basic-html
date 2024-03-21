@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고객센터 : 공지사항 목록</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+
+    <!-- library css -->
+    <link rel="stylesheet" href="/static/assets/css/library/selectric.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="/views/layout/header.html"></div>
+
+        <!-- contents -->
+        <section class="contents">
+
+            <!-- page location -->
+            <div class="location">
+                <ul>
+                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="/views/cscenter/faq/list.html">고객센터</a></li>
+                    <li class="current">공지사항</li>
+                </ul>
+            </div>
+
+            <div class="cs-wrap">
+                <!-- 광고 배너 -->
+                <a href="#" class="ad-bnr">
+                    <img src="/static/fo/assets/img/banner/advertising_banner.jpg" alt="">
+                </a>
+
+                <form action="" name="" id="">
+                    <!-- tab menu -->
+                    <ul class="tab-area">
+                        <li class="currt-page">
+                            <a href="/views/cscenter/notice/list.html">공지사항</a>
+                        </li>
+                        <li>
+                            <a href="/views/cscenter/faq/list.html">자주 묻는 FAQ</a>
+                        </li>
+                        <li>
+                            <a href="/views/cscenter/contact/insert.html">1:1 문의하기</a>
+                        </li>
+                    </ul>
+
+                    <!-- 공지사항 내 검색 -->
+                    <div class="search-detail">
+                        <div class="inp-group">
+                            <div class="custom-select">
+                                <select name="" id="">
+                                    <option value="전체">전체</option>
+                                    <option value="제목">제목</option>
+                                    <option value="내용">내용</option>
+                                </select>
+                            </div>
+                            <input type="text" name="" id="" class="search-inp" placeholder="검색어를 입력해주세요.">
+                            <button type="submit" class="btn btn-gradient">검색하기</button>
+                        </div>
+                    </div>
+
+                    <!-- 목록 -->
+                    <div class="notice-list">
+                        <ul class="board-list-tbl">
+                            <li>
+                                <a href="/views/cscenter/notice/detail.html">
+                                    <ol class="info">
+                                        <li class="num">3</li> 
+                                        <li class="date">YYYY-MM-DD</li>
+                                        <li class="hit">77</li>
+                                    </ol>
+
+                                    <div class="subject">
+                                        공지사항 제목 입니다. 한 줄 이상의 텍스트는 '...' 처리 됩니다.
+                                    </div>
+
+                                    <div class="cont">
+                                        차 무성할 이런 자랑처럼 별이 어머니, 어머님, 하늘에는 별 듯합니다. 마리아 내일 애기 이름과, 나는 하나의 이름과, 까닭입니다.
+                                        오면 않은 토끼, 언덕 이름을 당신은 이름과 이름을 까닭입니다. 무성할 아이들의 어머니, 이름과 새겨지는 아무 위에도 거외다.
+                                        이국 별빛이 무덤 봅니다.
+                                        밤을 풀이 불러 거외다. 하나에 슬퍼하는 않은 어머님, 했던 봅니다.
+                                        다 강아지, 사람들의 있습니다. 밤이 경, 다 이름자를 어머님, 봄이 별 봅니다. 아침이 써 내린 추억과 무덤 벌써 묻힌 있습니다.
+                                        어머니, 가을 딴은 못 애기 별들을 듯합니다.
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/views/cscenter/notice/detail.html">
+                                    <ol class="info">
+                                        <li class="num">2</li> 
+                                        <li class="date">YYYY-MM-DD</li>
+                                        <li class="hit">77</li>
+                                    </ol>
+
+                                    <div class="subject">
+                                        공지사항 제목 입니다.
+                                    </div>
+
+                                    <div class="cont">
+                                        아이들의 별 소녀들의 내 나는 지나가는 봅니다. 않은 당신은 이 내린 까닭입니다.
+                                        무성할 노루, 까닭이요, 이 새겨지는 거외다. 다 까닭이요, 아무 계집애들의 이름을 부끄러운 봅니다. 내린 했던 어머님, 가난한 버리었습니다.
+                                        파란 가득 이름과 까닭이요, 아름다운 거외다. 가을 별 오면 잠, 나의 둘 이름과 위에 까닭입니다.
+                                        것은 이네들은 지나가는 릴케 다 내 동경과 봅니다. 하나의 겨울이 계절이 했던 까닭입니다.
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/views/cscenter/notice/detail.html">
+                                    <ol class="info">
+                                        <li class="num">1</li> 
+                                        <li class="date">YYYY-MM-DD</li>
+                                        <li class="hit">77</li>
+                                    </ol>
+
+                                    <div class="subject">
+                                        공지사항 제목 입니다.
+                                    </div>
+
+                                    <div class="cont">
+                                        아이들의 별 소녀들의 내 나는 지나가는 봅니다. 않은 당신은 이 내린 까닭입니다.
+                                        무성할 노루, 까닭이요, 이 새겨지는 거외다. 다 까닭이요, 아무 계집애들의 이름을 부끄러운 봅니다. 내린 했던 어머님, 가난한 버리었습니다.
+                                        파란 가득 이름과 까닭이요, 아름다운 거외다. 가을 별 오면 잠, 나의 둘 이름과 위에 까닭입니다.
+                                        것은 이네들은 지나가는 릴케 다 내 동경과 봅니다. 하나의 겨울이 계절이 했던 까닭입니다.
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- pagination -->
+                    <!-- control 버튼 비활성 시 class neme 'disabled' 추가  -->
+                    <div class="paging">
+                        <ul>
+                            <!-- start -->
+                            <li class="control start disabled">처음</li>
+                            <!-- Prev -->
+                            <li class="control prev disabled">이전</li>
+                    
+                            <li class="index current">1</li>
+                    
+                            <!-- Next -->
+                            <li class="control next disabled">다음</li>
+                            <!-- End -->
+                            <li class="control end disabled">끝</li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="/views/layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="/static/fo/pc/js/cscenter.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/jquery-selectric/jquery.selectric.min.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>
