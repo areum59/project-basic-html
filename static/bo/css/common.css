@@ -23,13 +23,26 @@ header .nav-bar .logo a {line-height: 60px; color: var(--black); font-size: 28px
 /* GNB 메뉴 */
 header .nav-bar .gnb {display: flex; justify-content: flex-start; align-items: center;}
 header .nav-bar .gnb .menus {height: 60px; padding: 0 40px 0 0; display: flex; justify-content: flex-start; align-items: center; border-right: 1px solid var(--gray);}
-header .nav-bar .gnb .menus > li {font-size: 18px; font-weight: 500; position: relative; cursor: pointer;}
+header .nav-bar .gnb .menus > li {line-height: 60px; font-size: 18px; font-weight: 500; position: relative;}
+header .nav-bar .gnb .menus > li > p {cursor: pointer;}
+header .nav-bar .gnb .menus > li > .linked {font-size: 18px; font-weight: 500; color: var(--black);}
 header .nav-bar .gnb .menus > li:not(:last-child) {margin-right: 40px;}
+header .nav-bar .gnb .menus > li:hover .depth2 {opacity: 1; visibility: visible; transform: scaleY(1);}
+
+header .nav-bar .gnb .menus .depth2 {transform-origin: top; transform: scaleY(0); opacity: 0; visibility: hidden; transition: all 0.3s; background-color: #fff; border: 1px solid var(--gray); position: absolute; top: 60px; left: 0; padding: 15px;}
+header .nav-bar .gnb .menus .depth2 ul {min-width: 140px;}
+header .nav-bar .gnb .menus .depth2 ul li {cursor: default; line-height: 1.2;}
+header .nav-bar .gnb .menus .depth2 ul li > span {display: block; font-size: 17px; font-weight: 500; color: var(--accent); margin-bottom: 4px;}
+header .nav-bar .gnb .menus .depth2 ul li > a {font-size: 15px; font-weight: 400; color: var(--dgray);}
+
+header .nav-bar .gnb .menus .coulm:not(:last-child) {border-right: 1px solid var(--gray); margin-right: 15px;}
 
 /* 기타 다른 메뉴 */
-header .nav-bar .gnb .others {display: flex; justify-content: flex-start; margin-left: 40px;}
-header .nav-bar .gnb .others > li {font-size: 16px; font-weight: 500; color: var(--dgray); position: relative; cursor: pointer;}
+header .nav-bar .gnb .others {margin-left: 40px;}
+header .nav-bar .gnb .others > li {font-size: 16px; font-weight: 400; color: var(--dgray); position: relative; cursor: pointer;}
 header .nav-bar .gnb .others > li:not(:last-child) {margin-right: 40px;}
+header .nav-bar .gnb .others .depth2 ul li > span {display: block; font-size: 16px; font-weight: 500; color: var(--black); margin-bottom: 4px;}
+header .nav-bar .gnb .others .depth2 ul li > a {font-size: 14px; font-weight: 400; color: var(--dgray);}
 
 /* 상태 요약알림 */
 header .nav-bar .today {position: absolute; top: 50%; right: 40px; transform: translateY(-50%);}
@@ -39,7 +52,7 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 
 
 /* section */
-
+section {width: 100%; padding: 40px;}
 
 /* footer */
 footer {height: 40px; padding: 0 40px; border-top: 1px solid var(--gray); display: flex; justify-content: space-between; align-items: center;}
