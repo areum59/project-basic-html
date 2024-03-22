@@ -52,12 +52,11 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 
 
 /* section */
-section {width: 100%; padding: 40px;}
+.sect {width: 100%;}
+.lnb {border: 1px solid red; width: 220px; height: calc(100vh - 132px);}
+
+.container {border: 1px solid blue; width: 100%; height: calc(100vh - 132px); padding: 20px;}
 
 /* footer */
-footer {height: 40px; padding: 0 40px; border-top: 1px solid var(--gray); display: flex; justify-content: space-between; align-items: center;}
-footer .copyright {font-size: 12px; color: var(--txt-gray);}
-
-footer .currt-page {display: flex; justify-content: flex-end; align-items: center;}
-footer .currt-page dt {font-size: 13px; font-weight: 400; color: var(--txt-gray); margin-right: 8px;}
-footer .currt-page dd {font-size: 13px; font-weight: 400; color: var(--black);}
+footer {padding: 0 40px; border-top: 1px solid var(--gray);}
+footer .copyright {line-height: 40px; font-size: 12px; color: var(--txt-gray); text-align: right;}
