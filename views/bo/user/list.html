@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회원 관리</title>
+    <title>목록(검색) 페이지</title>
 
     <!-- css -->
     <link rel="stylesheet" href="../../../static/bo/css/common.css">
@@ -16,7 +16,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div class="wrap">
+    <div class="container">
         <!-- header -->
         <div data-include-path="../layout/header.html"></div>
 
@@ -26,29 +26,28 @@
                 <!-- sub page lnb -->
                 <div class="lnb">
                     <div class="menus">
-                        <div class="accordion-title">회원</div>
+                        <div class="accordion-title">상품</div>
                         <ul class="panel">
-                            <li><a href="#">회원관리</a></li>
-                            <li><a href="#">휴면회원 관리</a></li>
-                            <li><a href="#">탈퇴회원 관리</a></li>
+                            <li><a href="#">상품 관리</a></li>
+                            <li><a href="#">상품 등록</a></li>
                         </ul>
                     </div>
 
                 </div>
 
                 <!-- page contents -->
-                <div class="container">
+                <div class="page-wrap">
                     <div class="title-area">
                         <!-- page location -->
                         <div class="location">
                             <ul>
-                                <li>회원</li>
-                                <li class="current">회원관리</li>
+                                <li>상품</li>
+                                <li class="current">상품 관리</li>
                             </ul>
                         </div>
 
                         <!-- page title -->
-                        <h3 class="page-tit">회원관리</h3>
+                        <h3 class="page-tit">상품 관리</h3>
                     </div>
 
                     <!-- contents area -->
@@ -56,36 +55,153 @@
                         <form action="" id="" name="">
                             <!-- 검색 영역 -->
                             <div class="box-wrap search">
-                                <div class="box-tit">
-                                    <h3>검색</h3>
-                                    <div class="total">
-                                        <ul>
-                                            <li>총 <span>19</span></li>
-                                            <li>정상 <span>18</span></li>
-                                            <li>품절 <span>1</span></li>
-                                            <li>숨김 <span>0</span></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <fieldset>
+                                    <table>
+                                        <tr>
+                                            <th>기간</th>
+                                            <td colspan="7">
+                                                <div class="filter-date">
+                                                    <!-- 시작일 -->
+                                                    <div class="days">
+                                                        <label for="start"></label>
+                                                        <input type="date" name="" id="start" value="2022-01-01" min="2022-01-01" max="2050-12-31">
+                                                    </div>
+                                                    <!-- 종료일 -->
+                                                    <div class="days">
+                                                        <label for="end"></label>
+                                                        <input type="date" name="" id="end" value="2022-01-01" min="2022-01-01" max="2050-12-31">
+                                                    </div>
+                                                    <!-- 기간 선택 -->
+                                                    <ul class="quick-day">
+                                                        <li>
+                                                            <input type="radio" name="monthType" id="all" checked></input>
+                                                            <label for="all">전체</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="monthType" id="period1"></input>
+                                                            <label for="period1">7일</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="monthType" id="period2"></input>
+                                                            <label for="period2">15일</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="monthType" id="period3"></input>
+                                                            <label for="period3">1개월</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="monthType" id="period4"></input>
+                                                            <label for="period4">3개월</label>
+                                                        </li>
+                                                        <li>
+                                                            <input type="radio" name="monthType" id="period5"></input>
+                                                            <label for="period5">6개월</label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
 
-                                <div class="cont">
-                                    <table></table>
+                                        <tr>
+                                            <th>전시타입</th>
+                                            <td>
+                                                <select name="" id="" class="w-full">
+                                                    <option value="">전체</option>
+                                                    <option value="web">웹</option>
+                                                    <option value="mobile">모바일</option>
+                                                    <option value="app">앱 전용</option>
+                                                </select>
+                                            </td>
+
+                                            <th>브랜드</th>
+                                            <td>
+                                                <select name="" id="" class="w-full">
+                                                    <option value="">선택해주세요</option>
+                                                    <option value="brand1">Brand Name</option>
+                                                    <option value="brand2">Brand Name</option>
+                                                    <option value="brand3">Brand Name</option>
+                                                    <option value="brand4">Brand Name</option>
+                                                    <option value="brand5">Brand Name</option>
+                                                </select>
+                                            </td>
+
+                                            <th>전시상태</th>
+                                            <td>
+                                                <select name="" id="" class="w-full">
+                                                    <option value="">선택해주세요</option>
+                                                    <option value="ok">전시</option>
+                                                    <option value="no">전시하지 않음</option>
+                                                </select>
+                                            </td>
+
+                                            <th>상품분류</th>
+                                            <td>
+                                                <select name="" id="" class="w-full">
+                                                    <option value="">선택해주세요</option>
+                                                    <option value="catg1">Category Name</option>
+                                                    <option value="catg2">Category Name</option>
+                                                    <option value="catg3">Category Name</option>
+                                                    <option value="catg4">Category Name</option>
+                                                    <option value="catg5">Category Name</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>판매상태</th>
+                                            <td colspan="7">
+                                                <ul class="inp-group">
+                                                    <li>
+                                                        <input type="checkbox" name="sales" id="state1">
+                                                        <label for="state1">판매중</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="sales" id="state2">
+                                                        <label for="state2">품절</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="sales" id="state3">
+                                                        <label for="state3">승인대기</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="sales" id="state4">
+                                                        <label for="state4">승인거부</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="sales" id="state5">
+                                                        <label for="state5">판매중지</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="sales" id="state6">
+                                                        <label for="state6">단종</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="sales" id="state7">
+                                                        <label for="state7">삭제</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                    </table>
 
                                     <ul class="btn-group">
                                         <li>
-                                            <select name="" id="">
+                                            <select name="" id="" class="w120">
                                                 <option value="">상품명</option>
                                                 <option value="">상품코드</option>
                                             </select>
                                         </li>
                                         <li>
-                                            <button type="submit">검색</button>
+                                            <input type="text" name="" id="" class="w300">
                                         </li>
                                         <li>
-                                            <button type="button">초기화</button>
+                                            <button type="submit" class="btn-primary">검색</button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="btn-secondary">초기화</button>
                                         </li>
                                     </ul>
-                                </div>
+                                </fieldset>
                             </div>
 
                             <!-- Grid 영역 -->
@@ -93,7 +209,9 @@
                                 <div class="box-tit">
                                     <h3>목록 (총 <span>777</span>개)</h3>
                                     <div class="btns">
-                                        <button type="button">엑셀 다운로드</button>
+                                        <button type="button" class="btn-excel h30">
+                                            <i class="fa-regular fa-file-excel"></i> 엑셀 다운로드
+                                        </button>
                                     </div>
                                 </div>
 
@@ -101,10 +219,29 @@
                             </div>
 
                             <!-- 일괄 처리 영역 -->
-                            <div class="box-wrap batch-proc">
+                            <div class="box-wrap">
                                 <div class="box-tit"><h3>일괄 처리</h3></div>
 
-                                <div class="cont"></div>
+                                <div class="cont">
+                                    <div class="batch-proc">
+                                        <div class="flex items-center">
+                                            <p class="mr8">선택한 상품(들)의 상품상태를</p>
+
+                                            <select name="" id="" class="w200 mr8">
+                                                <option value="default">선택해주세요</option>
+                                                <option value="opt1">판매중</option>
+                                                <option value="opt2">품절</option>
+                                                <option value="opt3">승인대기</option>
+                                                <option value="opt4">승인거부</option>
+                                                <option value="opt5">판매중지</option>
+                                                <option value="opt6">단종</option>
+                                                <option value="opt7">삭제</option>
+                                            </select>
+
+                                            <button type="submit" class="btn-primary">저장</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </form>
                     </div>

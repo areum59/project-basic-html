@@ -3,8 +3,39 @@
 @import url(../../assets/css/reset.css);
 @import url(../../assets/css/style.css);
 
+
 /* common layout */
-.wrap {min-width: 1440px; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; color: #212529;}
+.container {min-width: 1440px; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; color: var(--black);}
+
+/* input, checkbox, radio style */
+input {accent-color: var(--accent);}
+input:focus {outline: none;}
+input[type="text"] {border: 1px solid var(--gray); font-size: 14px; height: 30px; padding: 0 10px;}
+input[type="date"] {border: 1px solid var(--gray); font-size: 14px; height: 30px; padding: 0 10px;}
+
+input[type="checkbox"] {width: 16px; height: 16px;}
+input[type="checkbox"] ~ label {font-size: 14px; line-height: 20px; vertical-align: top; cursor: pointer;}
+
+input[type="radio"] {width: 18px; height: 18px;}
+input[type="radio"] ~ label {font-size: 14px; line-height: 20px; vertical-align: top; cursor: pointer;}
+
+/* selectbox style */
+select {border: 1px solid var(--gray); height: 30px; padding: 0 6px;}
+select:focus {outline: none;}
+
+/* button style */
+button {cursor: pointer;}
+button:disabled {background-color: var(--lgray); color: #999; cursor: default;}
+.btn {display: block;}
+.disabled {background-color: var(--lgray); color: #999; cursor: default;}
+
+.btn-primary {background-color: var(--accent); color: #fff;}
+.btn-outline {background-color: #fff; border: 1px solid currentColor; color: var(--accent);}
+.btn-secondary {background-color: #fff; border: 1px solid var(--gray); color: var(--dgray);}
+.btn-dark {background-color: var(--black); color: #fff;}
+.btn-dark-outline {background-color: #fff; border: 1px solid currentColor; color: var(--black);}
+
+.btn-excel {padding: 0 10px; background-color: #fff; border: 1px solid var(--gray); color: var(--dgray);}
 
 
 /* header */
@@ -55,7 +86,58 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 .sect {width: 100%;}
 .lnb {border: 1px solid red; width: 220px; height: calc(100vh - 132px);}
 
-.container {border: 1px solid blue; width: 100%; height: calc(100vh - 132px); padding: 20px;}
+
+/* sub pages */
+.page-wrap {width: 100%; height: calc(100vh - 132px); background-color: var(--lgray); overflow-y: scroll;}
+
+.title-area {background-color: #fff; border-bottom: 1px solid var(--gray); padding: 15px 20px;}
+.title-area .location ul {margin-bottom: 10px;} 
+.title-area .location ul li {display: inline-block; font-size: 13px; color: var(--txt-gray);} 
+.title-area .location ul li:not(:last-child)::after {content: "\f105"; font-family: 'FontAwesome', sans-serif; color: var(--txt-gray); margin: 0 3px 0 5px;} 
+.title-area .location ul li.current {color: var(--txt-gray);}
+
+.title-area .page-tit {font-size: 22px; font-weight: 500; color: var(--black);} 
+
+
+.search fieldset {border: none;}
+.search table {width: 100%; font-size: 14px; text-align: left; table-layout: fixed;}
+.search table tr { border-bottom: 1px solid var(--gray);}
+.search table th {width: 180px; font-weight: 400; color: var(--dgray); background-color: #f9f9f9; padding: 10px 15px; letter-spacing: -1px; border-left: 1px solid #ddd;}
+.search table th:first-child {border-left: none;}
+.search table td {font-size: 13px; font-weight: 400; vertical-align: middle; padding: 10px 15px; border-left: 1px solid #ddd; color: var(--dgray);}
+.search table td:first-child { border-left: none;}
+
+.search .filter-date {display: flex; justify-content: flex-start; align-items: center;}
+.search .filter-date .days {margin-right: 8px;}
+.search .filter-date .days input {width: 140px; text-align: center;}
+.search .filter-date .days:first-child::after {content: '~'; margin: 0 2px 0 4px;}
+
+.search .filter-date .quick-day {display: flex; justify-content: flex-start; align-items: center;}
+.search .filter-date .quick-day li:not(:last-child) { margin-right: 8px; }
+.search .filter-date .quick-day input[type="radio"] {display: none;}
+.search .filter-date .quick-day label {font-size: 13px; font-weight: 400; text-align: center; cursor: pointer;}
+.search .filter-date .quick-day input[type="radio"] ~ label {display: block; width: 60px; line-height: 30px;background-color: #fff; border: 1px solid var(--gray);}
+.search .filter-date .quick-day input[type="radio"]:checked + label {border: 1px solid currentColor; color: var(--accent);}
+
+.search .inp-group {display: flex; justify-content: flex-start; align-items: center;}
+.search .inp-group li:not(:last-child) {margin-right: 15px;}
+
+.search .btn-group {display: flex; justify-content: center; align-items: center; padding: 15px;}
+.search .btn-group li:not(:last-child) {margin-right: 8px;}
+.search .btn-group button {width: 100px; height: 30px;}
+
+
+.cont-area {padding: 20px;}
+.cont-area .box-wrap {width: 100%; background-color: #fff; border: 1px solid var(--gray); }
+.cont-area .box-wrap:not(:last-child) {margin-bottom: 20px;}
+
+.box-wrap .box-tit {width: 100%; height: 45px; background-color: var(--lgray); border-bottom: 1px solid var(--gray); padding: 0 15px; display: flex; justify-content: space-between; align-items: center;}
+.box-wrap .box-tit h3 {font-size: 16px; font-weight: 500;}
+
+.box-wrap .cont {padding: 15px;}
+.cont .batch-proc {font-size: 14px;}
+.cont .batch-proc button {height: 30px; vertical-align: middle;}
+
 
 /* footer */
 footer {padding: 0 40px; border-top: 1px solid var(--gray);}
