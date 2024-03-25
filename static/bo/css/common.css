@@ -37,27 +37,45 @@ button:disabled {background-color: var(--lgray); color: #999; cursor: default;}
 
 .btn-excel {padding: 0 10px; background-color: #fff; border: 1px solid var(--gray); color: var(--dgray);}
 
+/* accodion style */
+.accordion-title { width: 100%; font-weight: 500; position: relative; cursor: pointer; } 
+.accordion-title::before {content: "\f105"; font-family: 'FontAwesome', sans-serif; color: var(--gray); position: absolute; top: 0; right: 15px; transform: rotate(-90deg); transition: all 0.3s;} 
+.accordion-title.toggle::before { transform: rotate(90deg); } 
+
 
 /* header */
-header {width: 100%; background-color: #fff; border-bottom: 1px solid var(--gray);}
+header {width: 100%; background-color: var(--lgray); border-bottom: 1px solid var(--gray);}
 
 /* 텝 초기화, 로그아웃 */
-header .user-menu {height: 30px; padding: 0 40px; background-color: var(--accent); text-align: right; display: flex; justify-content: flex-end; align-items: center;}
-header .user-menu a {color: #fff; font-size: 13px; font-weight: 400; margin-left: 30px;}
-header .user-menu a i {color: #fff; font-size: 13px;}
+header .user-menu {height: 30px; padding: 0 40px; background-color: var(--accent); text-align: right; display: flex; justify-content: flex-end;}
+
+header .user-menu .favorites {position: relative;}
+header .user-menu .favorites .accordion-title {color: #fff; font-size: 13px; font-weight: 400; margin-left: 30px; line-height: 30px;}
+header .user-menu .favorites .accordion-title::before {display: none;}
+
+header .user-menu .favorites .panel {display: none; position: absolute; background-color: #fff; border: 1px solid var(--gray); width: 180px; padding: 15px; right: 0; z-index: 1;}
+header .user-menu .favorites .panel ul li {font-size: 14px; text-align: left; color: var(--dgray); line-height: 1.6;}
+header .user-menu .favorites .panel .unlink {text-align: center; font-size: 13px; color: var(--txt-gray);}
+header .user-menu .favorites .panel .link > a {text-align: left; font-size: 14px; font-weight: 500; color: var(--dgray); margin-left: 0; line-height: 1;}
+
+header .user-menu .favorites .btn {text-align: center; font-size: 13px; margin-top: 10px; line-height: 26px; transition: all 0.2s;}
+header .user-menu .favorites .btn:hover {background-color: var(--lgray);}
+
+header .user-menu .logout a {color: #fff; font-size: 13px; font-weight: 400; margin-left: 30px; line-height: 30px;}
+header .user-menu .logout i {color: #fff; font-size: 13px;}
 
 header .nav-bar {height: 60px; padding: 0 40px; display: flex; justify-content: flex-start; align-items: center; position: relative;}
-
 header .nav-bar .logo {width: 200px; height: 100%;}
 header .nav-bar .logo a {line-height: 60px; color: var(--black); font-size: 28px; font-weight: 700;}
 
 /* GNB 메뉴 */
 header .nav-bar .gnb {display: flex; justify-content: flex-start; align-items: center;}
-header .nav-bar .gnb .menus {height: 60px; padding: 0 40px 0 0; display: flex; justify-content: flex-start; align-items: center; border-right: 1px solid var(--gray);}
+header .nav-bar .gnb .menus {height: 60px; padding: 0 40px 0 0; display: flex; justify-content: flex-start; align-items: center;}
 header .nav-bar .gnb .menus > li {line-height: 60px; font-size: 18px; font-weight: 500; position: relative;}
 header .nav-bar .gnb .menus > li > p {cursor: pointer;}
 header .nav-bar .gnb .menus > li > .linked {font-size: 18px; font-weight: 500; color: var(--black);}
 header .nav-bar .gnb .menus > li:not(:last-child) {margin-right: 40px;}
+header .nav-bar .gnb .menus > li:hover * {color: var(--accent);}
 header .nav-bar .gnb .menus > li:hover .depth2 {opacity: 1; visibility: visible; transform: scaleY(1);}
 
 header .nav-bar .gnb .menus .depth2 {transform-origin: top; transform: scaleY(0); opacity: 0; visibility: hidden; transition: all 0.3s; background-color: #fff; border: 1px solid var(--gray); position: absolute; top: 60px; left: 0; padding: 15px;}
@@ -69,7 +87,6 @@ header .nav-bar .gnb .menus .depth2 ul li > a {font-size: 15px; font-weight: 400
 header .nav-bar .gnb .menus .coulm:not(:last-child) {border-right: 1px solid var(--gray); margin-right: 15px;}
 
 /* 기타 다른 메뉴 */
-header .nav-bar .gnb .others {margin-left: 40px;}
 header .nav-bar .gnb .others > li {font-size: 16px; font-weight: 400; color: var(--dgray); position: relative; cursor: pointer;}
 header .nav-bar .gnb .others > li:not(:last-child) {margin-right: 40px;}
 header .nav-bar .gnb .others .depth2 ul li > span {display: block; font-size: 16px; font-weight: 500; color: var(--black); margin-bottom: 4px;}
@@ -84,7 +101,14 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 
 /* section */
 .sect {width: 100%;}
-.lnb {border: 1px solid red; width: 220px; height: calc(100vh - 132px);}
+
+/* sub page LNB */
+.lnb {width: 220px; height: calc(100vh - 132px); background-color: var(--lgray); border-right: 1px solid var(--gray);}
+.lnb .accordion-title {width: 100%; padding: 0 20px; line-height: 36px; font-size: 15px; border-bottom: 1px solid var(--gray); position: relative;}
+
+.lnb .panel {padding: 10px 20px; background-color: #fff; border-bottom: 1px solid var(--gray);}
+.lnb .panel ul > li {font-size: 14px; line-height: 24px;}
+.lnb .panel ul > li a {color: var(--dgray);}
 
 
 /* sub pages */
@@ -140,5 +164,5 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 
 
 /* footer */
-footer {padding: 0 40px; border-top: 1px solid var(--gray);}
+footer {padding: 0 40px; background-color: var(--lgray); border-top: 1px solid var(--gray);}
 footer .copyright {line-height: 40px; font-size: 12px; color: var(--txt-gray); text-align: right;}

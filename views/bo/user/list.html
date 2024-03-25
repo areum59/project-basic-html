@@ -25,14 +25,37 @@
             <div class="flex">
                 <!-- sub page lnb -->
                 <div class="lnb">
-                    <div class="menus">
-                        <div class="accordion-title">상품</div>
-                        <ul class="panel">
+                    <div class="accordion-title">상품</div>
+                    <div class="panel">
+                        <ul>
                             <li><a href="#">상품 관리</a></li>
                             <li><a href="#">상품 등록</a></li>
                         </ul>
                     </div>
-
+                
+                    <div class="accordion-title">재고현황</div>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="#">기간별 재고현황</a></li>
+                            <li><a href="#">월별 재고현황</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="accordion-title">상품정보</div>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="#">상품정보 관리</a></li>
+                            <li><a href="#">상품분류 관리</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="accordion-title">브랜드</div>
+                    <div class="panel">
+                        <ul>
+                            <li><a href="#">브랜드 관리</a></li>
+                            <li><a href="#">브랜드 등록</a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- page contents -->
@@ -238,7 +261,7 @@
                                                 <option value="opt7">삭제</option>
                                             </select>
 
-                                            <button type="submit" class="btn-primary">저장</button>
+                                            <button type="submit" class="btn-primary w80">저장</button>
                                         </div>
                                     </div>
                                 </div>
@@ -253,6 +276,9 @@
         <div data-include-path="../layout/footer.html"></div>
     </div>
 
+    <!-- JS -->
+    <script src="../../../static/bo/js/common.js"></script>
+    
     <script>
         window.addEventListener('load', function () {
             var allElements = document.getElementsByTagName('*');

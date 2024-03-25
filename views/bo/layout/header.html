@@ -1,14 +1,28 @@
 <header>
     <!-- 텝 초기화, 로그아웃 -->
     <ul class="user-menu">
-        <li>
+        <li class="favorites">
             <!-- tab 초기화 button -->
-            <a href="javascript:favoriteTabs.reset();">탭메뉴 초기화</a>
+            <a href="javascript:void();" class="accordion-title">
+                <i class="fa-solid fa-star"></i>&ensp;즐겨찾기
+            </a>
+
+            <div class="panel">
+                <ul>
+                    <li class="link"><a href="../main/index.html">대시보드</a></li>
+                    <li class="link"><a href="../user/list.html">사이트 관리</a></li>
+                    <!-- 등록된 즐겨찾기가 없는 경우에만 노출 -->
+                    <!-- <li class="unlink">등록된 메뉴가 없습니다.</li> -->
+                </ul>
+
+                <!-- 등록된 즐겨찾기가 있는 경우에만 노출 -->
+                <a href="javascript:void(0);" class="btn btn-secondary">즐겨찾기 초기화</a>
+            </div>
         </li>
-        <li>
+        <li class="logout">
             <!-- 로그아웃 button -->
-            <a href="#" class="logout-btn">
-                <i class="fa-solid fa-right-from-bracket"></i> 로그아웃
+            <a href="javascript:void();">
+                <i class="fa-solid fa-right-from-bracket"></i>&ensp;로그아웃
             </a>
         </li>
     </ul>
