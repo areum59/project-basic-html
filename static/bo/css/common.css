@@ -5,7 +5,8 @@
 
 
 /* common layout */
-.container {min-width: 1440px; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; color: var(--black);}
+* {font-family: 'Noto Sans KR', sans-serif;}
+.container {min-width: 1440px; overflow: hidden; color: var(--black);}
 
 /* input, checkbox, radio style */
 input {accent-color: var(--accent);}
@@ -16,7 +17,7 @@ input[type="date"] {border: 1px solid var(--gray); font-size: 14px; height: 30px
 input[type="checkbox"] {width: 16px; height: 16px;}
 input[type="checkbox"] ~ label {font-size: 14px; line-height: 20px; vertical-align: top; cursor: pointer;}
 
-input[type="radio"] {width: 18px; height: 18px;}
+input[type="radio"] {width: 17px; height: 17px;}
 input[type="radio"] ~ label {font-size: 14px; line-height: 20px; vertical-align: top; cursor: pointer;}
 
 /* selectbox style */
@@ -26,7 +27,7 @@ select:focus {outline: none;}
 /* button style */
 button {cursor: pointer;}
 button:disabled {background-color: var(--lgray); color: #999; cursor: default;}
-.btn {display: block;}
+.btn {display: inline-block;}
 .disabled {background-color: var(--lgray); color: #999; cursor: default;}
 
 .btn-primary {background-color: var(--accent); color: #fff;}
@@ -40,7 +41,15 @@ button:disabled {background-color: var(--lgray); color: #999; cursor: default;}
 /* accodion style */
 .accordion-title { width: 100%; font-weight: 500; position: relative; cursor: pointer; } 
 .accordion-title::before {content: "\f105"; font-family: 'FontAwesome', sans-serif; color: var(--gray); position: absolute; top: 0; right: 15px; transform: rotate(-90deg); transition: all 0.3s;} 
-.accordion-title.toggle::before { transform: rotate(90deg); } 
+.accordion-title.toggle::before { transform: rotate(90deg); }
+
+/* error message */
+.error-txt {font-size: 12px; font-weight: 400; color: var(--red); margin-top: 8px;}
+.error-txt::before {content: '\f06a'; font-family: 'FontAwesome'; margin-right: 4px;}
+
+/* info message */
+.info-txt {font-size: 12px; font-weight: 400; color: var(--txt-gray); margin-top: 8px;}
+.info-txt::before {content: '\f06a'; font-family: 'FontAwesome'; margin-right: 4px;}
 
 
 /* header */
@@ -129,6 +138,7 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 .title-area .page-tit .add-quickon { display: none; }
 
 
+/* 검색 */
 .search fieldset {border: none;}
 .search table {width: 100%; font-size: 14px; text-align: left; table-layout: fixed;}
 .search table tr { border-bottom: 1px solid var(--gray);}
@@ -157,16 +167,37 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 .search .btn-group button {width: 100px; height: 30px;}
 
 
+/* contents area */
 .cont-area {padding: 20px;}
 .cont-area .box-wrap {width: 100%; background-color: #fff; border: 1px solid var(--gray); }
 .cont-area .box-wrap:not(:last-child) {margin-bottom: 20px;}
 
-.box-wrap .box-tit {width: 100%; height: 45px; background-color: var(--lgray); border-bottom: 1px solid var(--gray); padding: 0 15px; display: flex; justify-content: space-between; align-items: center;}
-.box-wrap .box-tit h3 {font-size: 16px; font-weight: 500;}
+.cont-area .box-wrap .box-tit {width: 100%; height: 45px; background-color: var(--lgray); padding: 0 15px; display: flex; justify-content: space-between; align-items: center;}
+.cont-area .box-wrap .box-tit h3 {font-size: 16px; font-weight: 500;}
 
-.box-wrap .cont {padding: 15px;}
-.cont .batch-proc {font-size: 14px;}
-.cont .batch-proc button {height: 30px; vertical-align: middle;}
+.cont-area .box-wrap .cont {padding: 15px;}
+.cont-area .box-wrap .cont .batch-proc {font-size: 14px;}
+.cont-area .box-wrap .cont .batch-proc button {height: 30px; vertical-align: middle;}
+
+.cont-area .box-wrap .cont .essential::after {content: '필수'; width: 30px; display: inline-block; background: #fff; height: 20px; line-height: 20px; font-size: 11px; border: 1px solid #ff0000; text-align: center; color: #ff0000; margin-left: 8px;}
+
+.cont-area .btn-group {text-align: center;}
+.cont-area .btn-group .btn {width: 160px; line-height: 40px; vertical-align: top;}
+.cont-area .btn-group .btn:not(:last-child) {margin-right: 6px;}
+
+
+/* insert, deltail form */
+.deltails .accordion-title {border-bottom: none;}
+.deltails .accordion-title::before {top: 15px; right: 20px; color: var(--dgray);}
+.deltails .panel {padding: 0 !important; border-top: 1px solid var(--gray);}
+
+.deltails .tbl {width: 100%; font-size: 14px; text-align: left; table-layout: fixed;}
+.deltails .tbl tr:not(:last-child) {border-bottom: 1px solid var(--gray);}
+.deltails .tbl th {width: 180px; font-weight: 400; color: var(--dgray); text-align: left; background-color: #f9f9f9; padding: 10px 15px; letter-spacing: -1px; border-right: 1px solid #ddd;}
+.deltails .tbl td {font-weight: 400; height: 40px; padding: 10px 15px;}
+
+.deltails .inp-group {display: flex; justify-content: flex-start; align-items: center;}
+.deltails .inp-group li:not(:last-child) {margin-right: 15px;}
 
 
 /* footer */

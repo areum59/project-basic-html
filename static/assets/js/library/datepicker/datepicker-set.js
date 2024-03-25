@@ -1,7 +1,7 @@
 // Date Picker(데이트픽커)
 // jQuery-ui
 $(function () {
-  $("#startDate, #endDate").datepicker({});
+  $("#startDate, #endDate").datepicker();
 
   var today = new Date();
   var startDate = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());  // 오늘 날짜를 기준으로 1개월 이전 날짜 표기

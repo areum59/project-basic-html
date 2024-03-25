@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="../../../static/bo/css/common.css">
     <link rel="stylesheet" href="../../../static/bo/css/contents.css">
 
+    <!-- library css -->
+    <link rel="stylesheet" href="../../../static/assets/css/library/datepicker.css">
+
     <!-- fontawesome CDN -->
     <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI - v1.12.0 -->
+    <script src="/static/assets/js/library/jquery-ui.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -56,23 +61,24 @@
                     <div class="cont-area">
                         <!-- 상품 등록 form -->
                         <form action="" id="" name="">
-                            <div class="box-wrap">
+                            <div class="box-wrap deltails">
                                 <div class="box-tit accordion-title">
                                     <h3>상품 기본 정보</h3>
                                 </div>
 
                                 <div class="cont panel">
-                                    <table class="basic-tbl">
+                                    <table class="tbl">
                                         <tr>
                                             <th>상품 ID</th>
-                                            <td><p class="txt-red">자동입력</p></td>
+                                            <!-- ID 자동입력 -->
+                                            <td>OCPO80</td>
                                         </tr>
 
                                         <tr>
                                             <th class="essential">상품명</th>
                                             <td>
-                                                <input type="text" name="" id="">
-                                                <p class="info-txt">상품명은 최대 50자까지 입력 가능합니다.</p>
+                                                <input type="text" name="" id="" class="w600" maxlength="50" placeholder="상품명은 최대 50자까지 입력 가능합니다.">
+                                                <p class="error-txt">Error ​Message</p>
                                             </td>
                                         </tr>
                                         
@@ -103,19 +109,21 @@
                                         <tr>
                                             <th class="essential">상품분류</th>
                                             <td>
-                                                <option value="">선택해주세요</option>
+                                                <select name="" id="" class="w300">
+                                                    <option value="">선택해주세요</option>
                                                     <option value="catg1">Category Name</option>
                                                     <option value="catg2">Category Name</option>
                                                     <option value="catg3">Category Name</option>
                                                     <option value="catg4">Category Name</option>
                                                     <option value="catg5">Category Name</option>
+                                                </select>
                                             </td>
                                         </tr>
 
                                         <tr>
                                             <th>브랜드</th>
                                             <td>
-                                                <select name="" id="">
+                                                <select name="" id="" class="w300">
                                                     <option value="">선택해주세요</option>
                                                     <option value="brand1">Brand Name</option>
                                                     <option value="brand2">Brand Name</option>
@@ -145,7 +153,13 @@
                                         <!-- 판매기간 제한 여부가 적용되지 않는경우 display: none -->
                                         <tr>
                                             <th>판매기간 설정</th>
-                                            <td><!-- datepicker area --></td>
+                                            <td>
+                                                <div class="date-picker">
+                                                    <input type="text" name="" id="startDate" class="datepicker inp">
+                                                    <span>~</span>
+                                                    <input type="text" name="" id="endDate" class="datepicker inp">
+                                                </div>
+                                            </td>
                                         </tr>
 
                                         <tr>
@@ -201,7 +215,51 @@
                                 </div>
                             </div>
 
-                            <div class="btn-group"></div>
+                            <div class="box-wrap deltails">
+                                <div class="box-tit accordion-title">
+                                    <h3>상품 이미지 정보</h3>
+                                </div>
+
+                                <div class="cont panel">
+                                    <table class="tbl">
+                                        <tr>
+                                            <th class="essential">이미지 등록 방법</th>
+                                            <td>
+                                                <ul class="inp-group">
+                                                    <li>
+                                                        <input type="radio" name="imgRegType" id="cd1">
+                                                        <label for="cd1">대표 이미지</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="imgRegType" id="cd2">
+                                                        <label for="cd2">개별 이미지</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="imgRegType" id="cd3">
+                                                        <label for="cd3">외부 URL</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>이미지 등록</th>
+                                            <td>
+                                                <p class="info-txt">
+                                                    등록 가능한 이미지 확장자는 gif, jpg, pnG이며, 추가이미지는 최대 4장까지 등록 가능합니다.
+                                                    업로드 가능 이미지 크기는 590 x 590(px), 용량 5mb 이하 입니다.
+                                                    만약 590 * 590 보다 클 경우 강제로 리사이즈 되며 화질 저하가 있을 수 있습니다.
+                                                </p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="btn-group">
+                                <a href="../prod/list.html" class=" btn btn-secondary">리스트</a>
+                                <button type="submit" class="btn btn-primary">등록</button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -214,6 +272,9 @@
 
     <!-- JS -->
     <script src="../../../static/bo/js/common.js"></script>
+
+    <!-- library -->
+    <script src="/static/assets/js/library/datepicker/datepicker-set.js"></script>
     
     <script>
         window.addEventListener('load', function () {
