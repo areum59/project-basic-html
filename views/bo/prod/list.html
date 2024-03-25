@@ -24,39 +24,7 @@
         <section class="sect">
             <div class="flex">
                 <!-- sub page lnb -->
-                <div class="lnb">
-                    <div class="accordion-title">상품</div>
-                    <div class="panel">
-                        <ul>
-                            <li><a href="#">상품 관리</a></li>
-                            <li><a href="#">상품 등록</a></li>
-                        </ul>
-                    </div>
-                
-                    <div class="accordion-title">재고현황</div>
-                    <div class="panel">
-                        <ul>
-                            <li><a href="#">기간별 재고현황</a></li>
-                            <li><a href="#">월별 재고현황</a></li>
-                        </ul>
-                    </div>
-                
-                    <div class="accordion-title">상품정보</div>
-                    <div class="panel">
-                        <ul>
-                            <li><a href="#">상품정보 관리</a></li>
-                            <li><a href="#">상품분류 관리</a></li>
-                        </ul>
-                    </div>
-                
-                    <div class="accordion-title">브랜드</div>
-                    <div class="panel">
-                        <ul>
-                            <li><a href="#">브랜드 관리</a></li>
-                            <li><a href="#">브랜드 등록</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <div data-include-path="../layout/lnb.html"></div>
 
                 <!-- page contents -->
                 <div class="page-wrap">
@@ -70,7 +38,18 @@
                         </div>
 
                         <!-- page title -->
-                        <h3 class="page-tit">상품 관리</h3>
+                        <div class="page-tit">
+                            <h3>상품 관리</h3>
+
+                            <!-- 즐겨찾기 메뉴 추가 button : off -->
+                            <a href="javascript:void(0);" class="add-quick">
+                                <img src="../../../static/bo/img/common/add_star_line.png" alt="퀵메뉴추가 off">
+                            </a>
+                            <!-- 즐겨찾기 메뉴 추가 button : on -->
+                            <a href="javascript:void(0);" class="add-quickon">
+                                <img src="../../../static/bo/img/common/add_star_object.png" alt="퀵메뉴추가 on">
+                            </a>
+                        </div>
                     </div>
 
                     <!-- contents area -->

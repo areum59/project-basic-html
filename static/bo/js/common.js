@@ -11,6 +11,20 @@ $(function(){
 	 */
      $("body").on("click", ".accordion-title", function () {
 		$(this).toggleClass('toggle');
-		$(this).next().slideToggle('300');
+		$(this).next().slideToggle('fast');
 	});
+
+
+    /** 
+	 * 즐겨찾기 아이콘 on/off
+	 */
+    $('.add-quick, .add-quickon').click(function() {
+        var addQuick = $(this).hasClass('add-quick');
+        $(this).toggle();
+        if (addQuick) {
+            $('.add-quickon').show();
+        } else {
+            $('.add-quick').show();
+        }
+    });
 });

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등록 페이지</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../../static/bo/css/common.css">
+    <link rel="stylesheet" href="../../../static/bo/css/contents.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div data-include-path="../layout/header.html"></div>
+
+        <!-- section -->
+        <section class="sect">
+            <div class="flex">
+                <!-- sub page lnb -->
+                <div data-include-path="../layout/lnb.html"></div>
+
+                <!-- page contents -->
+                <div class="page-wrap">
+                    <div class="title-area">
+                        <!-- page location -->
+                        <div class="location">
+                            <ul>
+                                <li>상품</li>
+                                <li class="current">상품 등록</li>
+                            </ul>
+                        </div>
+
+                        <!-- page title -->
+                        <div class="page-tit">
+                            <h3>상품 등록</h3>
+
+                            <!-- 즐겨찾기 메뉴 추가 button : off -->
+                            <a href="javascript:void(0);" class="add-quick">
+                                <img src="../../../static/bo/img/common/add_star_line.png" alt="퀵메뉴추가 off">
+                            </a>
+                            <!-- 즐겨찾기 메뉴 추가 button : on -->
+                            <a href="javascript:void(0);" class="add-quickon">
+                                <img src="../../../static/bo/img/common/add_star_object.png" alt="퀵메뉴추가 on">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- contents area -->
+                    <div class="cont-area">
+                        <!-- 상품 등록 form -->
+                        <form action="" id="" name="">
+                            <div class="box-wrap">
+                                <div class="box-tit accordion-title">
+                                    <h3>상품 기본 정보</h3>
+                                </div>
+
+                                <div class="cont panel">
+                                    <table class="basic-tbl">
+                                        <tr>
+                                            <th>상품 ID</th>
+                                            <td><p class="txt-red">자동입력</p></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="essential">상품명</th>
+                                            <td>
+                                                <input type="text" name="" id="">
+                                                <p class="info-txt">상품명은 최대 50자까지 입력 가능합니다.</p>
+                                            </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th class="essential">전시타입</th>
+                                            <td>
+                                                <ul class="inp-group">
+                                                    <li>
+                                                        <input type="radio" name="displayType" id="all" checked>
+                                                        <label for="all">전체</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="displayType" id="web">
+                                                        <label for="web">웹</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="displayType" id="mobile">
+                                                        <label for="mobile">모바일</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="displayType" id="app">
+                                                        <label for="app">앱 전용</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="essential">상품분류</th>
+                                            <td>
+                                                <option value="">선택해주세요</option>
+                                                    <option value="catg1">Category Name</option>
+                                                    <option value="catg2">Category Name</option>
+                                                    <option value="catg3">Category Name</option>
+                                                    <option value="catg4">Category Name</option>
+                                                    <option value="catg5">Category Name</option>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>브랜드</th>
+                                            <td>
+                                                <select name="" id="">
+                                                    <option value="">선택해주세요</option>
+                                                    <option value="brand1">Brand Name</option>
+                                                    <option value="brand2">Brand Name</option>
+                                                    <option value="brand3">Brand Name</option>
+                                                    <option value="brand4">Brand Name</option>
+                                                    <option value="brand5">Brand Name</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th class="essential">판매기간 제한 여부</th>
+                                            <td>
+                                                <ul class="inp-group">
+                                                    <li>
+                                                        <input type="radio" name="salesDate" id="no" checked>
+                                                        <label for="no">미적용</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="salesDate" id="ok">
+                                                        <label for="ok">적용</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                        <!-- 판매기간 제한 여부가 적용되지 않는경우 display: none -->
+                                        <tr>
+                                            <th>판매기간 설정</th>
+                                            <td><!-- datepicker area --></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>판매상태</th>
+                                            <td>
+                                                <ul class="inp-group">
+                                                    <li>
+                                                        <input type="radio" name="sales" id="state1" checked>
+                                                        <label for="state1">판매중</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="sales" id="state2">
+                                                        <label for="state2">품절</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="sales" id="state3">
+                                                        <label for="state3">승인대기</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="sales" id="state4">
+                                                        <label for="state4">승인거부</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="sales" id="state5">
+                                                        <label for="state5">판매중지</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="sales" id="state6">
+                                                        <label for="state6">단종</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="sales" id="state7">
+                                                        <label for="state7">삭제</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+
+                                        <th>전시상태</th>
+                                            <td>
+                                                <ul class="inp-group">
+                                                    <li>
+                                                        <input type="radio" name="displayState" id="on" checked>
+                                                        <label for="on">전시</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" name="displayState" id="off">
+                                                        <label for="off">전시하지 않음</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="btn-group"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <div data-include-path="../layout/footer.html"></div>
+    </div>
+
+    <!-- JS -->
+    <script src="../../../static/bo/js/common.js"></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>
