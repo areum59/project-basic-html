@@ -12,6 +12,7 @@
 input {accent-color: var(--accent);}
 input:focus {outline: none;}
 input[type="text"] {border: 1px solid var(--gray); font-size: 14px; height: 30px; padding: 0 10px;}
+input[type="number"] {border: 1px solid var(--gray); font-size: 14px; height: 30px; padding: 0 10px;}
 input[type="date"] {border: 1px solid var(--gray); font-size: 14px; height: 30px; padding: 0 10px;}
 
 input[type="checkbox"] {width: 16px; height: 16px;}
@@ -19,6 +20,10 @@ input[type="checkbox"] ~ label {font-size: 14px; line-height: 20px; vertical-ali
 
 input[type="radio"] {width: 17px; height: 17px;}
 input[type="radio"] ~ label {font-size: 14px; line-height: 20px; vertical-align: top; cursor: pointer;}
+
+/* textarea style */
+textarea {resize: none; border: 1px solid var(--gray); font-size: 14px; padding: 10px;}
+textarea:focus {outline: none;}
 
 /* selectbox style */
 select {border: 1px solid var(--gray); height: 30px; padding: 0 6px;}
@@ -185,7 +190,7 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 .cont-area .box-wrap {width: 100%; background-color: #fff; border: 1px solid var(--gray); }
 .cont-area .box-wrap:not(:last-child) {margin-bottom: 20px;}
 
-.cont-area .box-wrap .box-tit {width: 100%; height: 45px; background-color: var(--lgray); padding: 0 15px; display: flex; justify-content: space-between; align-items: center;}
+.cont-area .box-wrap .box-tit {width: 100%; height: 45px; background-color: #f1f3f5; padding: 0 15px; display: flex; justify-content: space-between; align-items: center;}
 .cont-area .box-wrap .box-tit h3 {font-size: 16px; font-weight: 500;}
 
 .cont-area .box-wrap .cont {padding: 15px;}
@@ -208,6 +213,21 @@ header .nav-bar .today .state  {font-weight: 700; color: var(--accent);}
 .deltails .tbl tr:not(:last-child) {border-bottom: 1px solid var(--gray);}
 .deltails .tbl th {width: 180px; font-weight: 400; color: var(--txt-gray); text-align: left; background-color: #f9f9f9; padding: 10px 15px; letter-spacing: -1px; border-right: 1px solid #ddd;}
 .deltails .tbl td {font-weight: 400; height: 40px; color: var(--dgray); padding: 10px 15px;}
+
+.deltails .img-upload {display: flex; justify-content: flex-start; align-items: flex-start;}
+.deltails .img-upload > li {width: 200px;}
+.deltails .img-upload > li:not(:last-child) {margin-right: 15px;}
+
+.deltails .img-upload .thumb-view {width: 200px; height: 200px; overflow: hidden; border: 1px solid var(--gray);}
+.deltails .img-upload .thumb-view img {width: 100%; height: 100%; object-fit: contain;}
+
+.deltails .img-upload .btn-group {display: flex; justify-content: space-between; align-items: flex-start;}
+.deltails .img-upload .btn-group .btn {line-height: 30px; margin-top: 6px; border: 1px solid var(--dgray);}
+.deltails .img-upload .btn-group .btn.insert {width: 100%; background-color: var(--dgray); color: #fff;}
+.deltails .img-upload .btn-group .btn.change {width: 49%; background-color: var(--dgray); color: #fff;}
+.deltails .img-upload .btn-group .btn.delete {width: 49%; background-color: #fff; color: var(--dgray);}
+
+.deltails .img-upload .guide-txt {margin: 10px 0; font-size: 13px;}
 
 .deltails .inp-group {display: flex; justify-content: flex-start; align-items: center;}
 .deltails .inp-group li:not(:last-child) {margin-right: 30px;}

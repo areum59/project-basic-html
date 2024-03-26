@@ -226,27 +226,49 @@
                                     <table class="tbl">
                                         <tr>
                                             <th>표시 아이콘</th>
-                                            <td></td>
+                                            <td>
+                                                <ul class="inp-group">
+                                                    <li>
+                                                        <input type="checkbox" name="nameTag" id="tag1">
+                                                        <label for="tag1">BEST</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="nameTag" id="tag2">
+                                                        <label for="tag2">NEW</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="nameTag" id="tag3">
+                                                        <label for="tag3">HIT</label>
+                                                    </li>
+                                                    <li>
+                                                        <input type="checkbox" name="nameTag" id="tag4">
+                                                        <label for="tag4">EVENT</label>
+                                                    </li>
+                                                </ul>
+                                            </td>
                                         </tr>
                                         
                                         <tr>
                                             <th>출력 순서</th>
-                                            <td></td>
-                                        </tr>
-
-                                        <tr>
-                                            <th>SET 상품</th>
-                                            <td></td>
+                                            <td>
+                                                <input type="number" name="" id="" class="w300">
+                                                <p class="info-txt">출력순서가 낮을 수록 먼저 출력 됩니다. (기본값 : 999)</p>
+                                            </td>
                                         </tr>
 
                                         <tr>
                                             <th>검색키워드</th>
-                                            <td></td>
+                                            <td>
+                                                <textarea name="" id="" cols="30" rows="10" class="w-full h100"></textarea>
+                                                <p class="info-txt">검색태그의 구분은 ‘; (세미클론)’ 입력하세요.</p>
+                                            </td>
                                         </tr>
 
                                         <tr>
                                             <th>상품 요약 설명</th>
-                                            <td></td>
+                                            <td>
+                                                <textarea name="" id="" cols="30" rows="10" class="w-full h100"></textarea>
+                                            </td>
                                         </tr>
                                     </table>
                                 </div>
@@ -281,12 +303,39 @@
                                         </tr>
 
                                         <tr>
-                                            <th>이미지 등록</th>
+                                            <th class="essential">이미지 등록</th>
                                             <td>
+                                                <ul class="img-upload">
+                                                    <!-- 처음 등록시 -->
+                                                    <li>
+                                                        <div class="thumb-view">
+                                                            <img src="../../../static/bo/img/common/thumb_img_icon.jpg" alt="" />
+                                                        </div>
+
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn insert">등록</button>
+                                                        </div>
+
+                                                        <p class="guide-txt">상세 이미지(600*600)</p>
+                                                    </li>
+
+                                                    <!-- 이미지 등록 후 변경/삭제 -->
+                                                    <li>
+                                                        <div class="thumb-view">
+                                                            <img src="../../../static/bo/img/common/thumb_img_icon.jpg" alt="" />
+                                                        </div>
+
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn change">변경</button>
+                                                            <button type="button" class="btn delete">삭제</button>
+                                                        </div>
+
+                                                        <p class="guide-txt">큰 목록 이미지(300*300)</p>
+                                                    </li>
+                                                </ul>
+
                                                 <p class="info-txt">
-                                                    등록 가능한 이미지 확장자는 gif, jpg, pnG이며, 추가이미지는 최대 4장까지 등록 가능합니다.
-                                                    업로드 가능 이미지 크기는 590 x 590(px), 용량 5mb 이하 입니다.
-                                                    만약 590 * 590 보다 클 경우 강제로 리사이즈 되며 화질 저하가 있을 수 있습니다.
+                                                    등록 가능한 이미지 확장자는 gif, jpg, png이며, 최대 용량 5mb 이하 입니다.
                                                 </p>
                                             </td>
                                         </tr>
