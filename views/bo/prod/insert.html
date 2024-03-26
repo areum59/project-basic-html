@@ -20,6 +20,7 @@
     <!-- jQuery UI - v1.12.0 -->
     <script src="/static/assets/js/library/jquery-ui.min.js"></script>
 </head>
+
 <body>
     <div class="container">
         <!-- header -->
@@ -61,6 +62,7 @@
                     <div class="cont-area">
                         <!-- 상품 등록 form -->
                         <form action="" id="" name="">
+                            <!-- 기본 정보 -->
                             <div class="box-wrap deltails">
                                 <div class="box-tit accordion-title">
                                     <h3>상품 기본 정보</h3>
@@ -70,8 +72,7 @@
                                     <table class="tbl">
                                         <tr>
                                             <th>상품 ID</th>
-                                            <!-- ID 자동입력 -->
-                                            <td>OCPO80</td>
+                                            <td>등록 후 자동생성 됩니다.</td>
                                         </tr>
 
                                         <tr>
@@ -215,6 +216,43 @@
                                 </div>
                             </div>
 
+                            <!-- 검색 정보 -->
+                            <div class="box-wrap deltails">
+                                <div class="box-tit accordion-title">
+                                    <h3>상품 검색 정보</h3>
+                                </div>
+
+                                <div class="cont panel">
+                                    <table class="tbl">
+                                        <tr>
+                                            <th>표시 아이콘</th>
+                                            <td></td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <th>출력 순서</th>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>SET 상품</th>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>검색키워드</th>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <th>상품 요약 설명</th>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <!-- 이미지 정보 -->
                             <div class="box-wrap deltails">
                                 <div class="box-tit accordion-title">
                                     <h3>상품 이미지 정보</h3>
@@ -264,6 +302,9 @@
                     </div>
                 </div>
             </div>
+
+            <!-- quick menu -->
+            <div data-include-path="../layout/quick-menu.html"></div>
         </section>
 
         <!-- footer -->
