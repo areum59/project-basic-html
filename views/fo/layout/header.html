@@ -2,62 +2,28 @@
     <!-- head top -->
     <div class="hd-top">
         <div class="inner">
-            <!-- left layout -->
-            <div class="left-layout">
-                <div class="top-menu toggle-menu">
-                    <a href="javascript:void(0);">
-                        <div class="icon-box">
-                            <img src="/static/fo/assets/img/common/icon-map.png" alt="">
-                        </div>
-                        <p>오프라인 매장</p>
-                    </a>
+            <ul class="uitill">
+                <li>
+                    <a href="/views/auth/login.html">로그인</a>
+                </li>
 
-                    <ul class="toggle-box">
-                        <li><a href="#">서울 강남구</a></li>
-                        <li><a href="#">성남 분당구</a></li>
-                        <li><a href="#">부산 해운대구</a></li>
-                    </ul>
-                </div>
-
-                <div class="top-menu">
-                    <!-- 마이페이지 > 주문내역 -->
-                    <a href="/views/mypage/shopping/order/list.html">
-                        <div class="icon-box">
-                            <img src="/static/fo/assets/img/common/icon-track.png" alt="">
-                        </div>
-                        <p>주문배송조회</p>
-                    </a>
-                </div>
-            </div>
-
-            <!-- right layout -->
-            <div class="right-layout">
-                <ul class="uitill">
-                    <li>
-                        <a href="/views/auth/login.html">로그인</a>
-                    </li>
-
-                    <!-- 로그인 상태에서는 '회원정보 수정'으로 변경 -->
-                    <li>
-                        <a href="/views/auth/signup/form.html">회원가입</a>
-                    </li>
-                    
-                    <li>
-                        <!-- 자주묻는 FAQ 페이지로 이동 -->
-                        <a href="/views/cscenter/faq/list.html">고객센터</a>
-                    </li>
-                </ul>
-            </div>
+                <!-- 로그인 상태에서는 '회원정보 수정'으로 변경 -->
+                <li>
+                    <a href="/views/auth/signup/form.html">회원가입</a>
+                </li>
+                
+                <li>
+                    <!-- 자주묻는 FAQ 페이지로 이동 -->
+                    <a href="/views/cscenter/faq/list.html">고객센터</a>
+                </li>
+            </ul>
         </div>
     </div>
 
     <div class="hd-center">
         <div class="inner">
             <!-- logo -->
-            <a href="/views/main/index.html" class="logo" style="font-size: 2rem; color: #333;">
-                LOGO
-                <!-- <img src="" alt="top-logo"> -->
-            </a>
+            <a href="../main/index.html" class="logo"">LOGO</a>
             
             <!-- search -->
             <div class="top-search">
@@ -99,16 +65,16 @@
                     <!-- 마이페이지 -->
                     <li>
                         <a href="/views/mypage/index.html">
-                            <img src="/static/fo/assets/img/common/user-icon.png" alt="">
+                            <i class="fa-regular fa-user"></i>
                         </a>
                     </li>
                 
                     <!-- 위시리스트 -->
                     <li>
                         <a href="javascript:void(0);" class="toggle-menu">
-                            <img src="/static/fo/assets/img/common/hart-icon.png" alt="">
+                            <i class="fa-regular fa-heart"></i>
                         </a>
-                        <div class="count">77</div>
+                        <sup>77</sup>
                 
                         <!-- 목록 : 최근 담은 상품 3개까지만 노출 -->
                         <ul class="wish-list toggle-box">
@@ -175,9 +141,9 @@
                     <!-- 장바구니 -->
                     <li>
                         <a href="/views/cart/list.html">
-                            <img src="/static/fo/assets/img/common/cart-icon.png" alt="">
+                            <i class="fa-solid fa-basket-shopping"></i>
                         </a>
-                        <div class="count">7</div>
+                        <sup>7</sup>
                     </li>
                 </ul>
             </div>
