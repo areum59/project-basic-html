@@ -20,42 +20,31 @@
 
 
 /* 회원가입 */
-.join-area .signup {width: 840px; padding: 65px 40px 40px 40px; margin: 0 auto; border: 1px solid var(--gray); border-radius: 15px; position: relative;} 
-.join-area .signup .tit {display: block; width: 180px; line-height: 50px; font-size: 18px; font-weight: 500; text-align: center; border-radius: 100px; border: 2px solid var(--black); background: #fff; position: absolute; top: -25px; left: 50%; transform: translateX(-50%);}
-.join-area .signup > p {font-size: 20px; font-weight: 500; color: var(--black);}
+.join-area {margin-bottom: 60px;} 
+.join-area .signup {width: 840px; padding: 40px; margin: 0 auto; border: 1px solid var(--gray);} 
+.join-area .signup .tit {font-size: 26px; font-weight: 500; text-align: center; margin-bottom: 30px;}
 
 .join-area .signup .form-wrap {width: 100%;}
 .join-area .signup .form-wrap > li:not(:last-child) {margin-bottom: 20px;}
+.join-area .signup .form-wrap .inp-group {display: flex; align-items: flex-end;}
+.join-area .signup .btn-group {margin-top: 30px; text-align: center;}
+.join-area .signup .btn-group .btn {width: 180px; line-height: 40px;}
 
-.join-area .signup .inp-group:not(:last-of-type) {margin-bottom: 8px;}
-.join-area .signup .inp-group label {display: block; font-size: 15px; font-weight: 500; color: var(--black); margin-bottom: 8px;}
-.join-area .signup .inp-group input {width: 100%; height: 46px; border: 1px solid var(--gray); border-radius: 8px}
+.join-area .signup .form-wrap label {display: block; font-size: 15px; font-weight: 400; color: var(--black); margin-bottom: 8px;}
+.join-area .signup .form-wrap input {height: 40px;}
 
-.join-area .signup ul.inp-group > li {display: inline-block; vertical-align: bottom;}
-.join-area .signup ul.inp-group > li:not(:last-child) {margin-right: 4px;}
-.join-area .signup ul.inp-group .input-email-1 {width: 200px;}
-.join-area .signup ul.inp-group .input-email-2 {width: 160px;}
-
-.join-area .signup ul.inp-group .selectric-wrapper {width: 200px; height: 46px;  border-radius: 8px; border: 1px solid var(--gray);}
-.join-area .signup ul.inp-group .selectric-wrapper .selectric {height: 100%;}
-.join-area .signup ul.inp-group .selectric-wrapper .selectric span {line-height: 44px;}
-.join-area .signup ul.inp-group .selectric-wrapper .selectric-items {border-radius: 8px; overflow: hidden;}
-
-.join-area .signup ul.inp-group .btn {width: 160px; line-height: 46px; border-radius: 8px;}
+.join-area .signup .selectric-wrapper {width: 180px; height: 40px;}
+.join-area .signup .selectric-wrapper .selectric .label {line-height: 38px;}
 
 .join-area .signup .chk-area {margin-top: 40px;}
 .join-area .signup .chk-area .chk-box:first-of-type {height: 36px; border-bottom: 1px solid var(--gray); margin-bottom: 20px;}
 .join-area .signup .chk-area .chk-box:first-of-type label {font-size: 16px; font-weight: 500;}
-
 .join-area .signup .chk-area .chk-box > label > span::before {content: '(';}
 .join-area .signup .chk-area .chk-box > label > span::after {content: ')';}
 
-.join-area .signup .chk-area .chk-box:not(:first-of-type) {margin-top: 10px;}
-.join-area .signup .chk-area .chk-box .view-more {font-size: 13px; font-weight: 400; color: var(--dgray); text-decoration: underline;}
-.join-area .signup .chk-area .error-msg {margin-top: 15px;}
+.join-area .signup .chk-area .chk-box:not(:first-of-type) {margin-top: 5px;}
+.join-area .signup .chk-area .chk-box .view-more {font-size: 13px; font-weight: 400; color: var(--txt-gray); text-decoration: underline;}
 
-.join-area .signup .btn-group {margin-top: 30px; text-align: center;}
-.join-area .signup .btn-group .btn {width: 280px; line-height: 56px; border-radius: 100px;}
 
 /* 회원가입 완료 */
 .join-area .signup-done {width: 1400px; margin: 0 auto; padding-bottom: 60px; text-align: center;}

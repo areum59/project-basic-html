@@ -6,11 +6,11 @@ $(function (){
      * 따라서 실제 프로젝트 진행시 선택자 수정 必
      */
 
-    /*
-     header
-     Scroll TOP
-    */
-     $(window).scroll(function() {
+    /**
+     * header
+     * Scroll TOP
+     */
+    $(window).scroll(function() {
         // 스크롤을 내리면 top이동 버튼 fadeIn/Out
         if ($(this).scrollTop() > 180) {
             $('.scroll-top').fadeIn();
@@ -58,9 +58,9 @@ $(function (){
         $(this).siblings('.toggle-box').toggleClass('open');
     });
 
-    /*
-    GNB
-    전체 카테고리 click 열기/닫기
+    /**
+     * GNB
+     * 전체 카테고리 click 열기/닫기
     */
     $("body").on("click", "header .category .menu-all-btn", function () {
         if ($(this).siblings(".menu-all").is(":visible")) {
@@ -71,31 +71,23 @@ $(function (){
     });
     
 
-    /*
-     radio button click event
-     contents toggle
-    */
-     $('.toggle-radio').change(function() {
+    /**
+     * radio button click event
+     * contents toggle
+     */
+    $('.toggle-radio').change(function() {
         $('.toggle-cont').hide();
         $(this).siblings('.toggle-label').next('.toggle-cont').show();
     });
     
 
-    /*
-     wishlist(관심상품 등록)
-     button event
+    /**
+     * wishlist(관심상품 등록)
+     * button event
     */
-    // 상품 위시리스트(찜) 버튼
-    const wishCheckboxes = $('.wish-chk');
+    const wishCheckboxes = $('.wish-chk'); // 상품 위시리스트(찜) 버튼
 
     $(wishCheckboxes).click(function() {
         $(this).toggleClass("chk-item");
     });
-
-
-    // wishCheckboxes.forEach(item => {
-    //     item.addEventListener('click', () => {
-    //         item.classList.toggle('chk-item');
-    //     });
-    // });
 });

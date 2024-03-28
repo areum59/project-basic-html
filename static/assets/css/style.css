@@ -98,6 +98,7 @@
 .w80 {width: 80px;}
 .w100 {width: 100px;}
 .w120 {width: 120px;}
+.w180 {width: 180px;}
 .w200 {width: 200px;}
 .w300 {width: 300px;}
 .w400 {width: 400px;}
@@ -121,8 +122,11 @@
 .h30 {height: 30px;}
 .h40 {height: 40px;}
 .h100 {height: 100px;}
+.h180 {height: 180px;}
 
 .h-10 {height: 10%;}
+
+.line-h40 {line-height: 40px;}
 
 .min-h10 {min-height: 10px;}
 .min-h500 {min-height: 500px;}
@@ -173,6 +177,8 @@
 .mb-10 {margin-bottom: 10%;}
 
 .mx {margin-left: 0; margin-right: 0;}
+.mx5 {margin-left: 5px; margin-right: 5px;}
+
 .my {margin-top: 0; margin-bottom: 0;}
 
 
