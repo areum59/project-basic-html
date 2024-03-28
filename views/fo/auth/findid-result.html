@@ -7,11 +7,14 @@
     <title>아이디 찾기 결과</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
 
     <!-- css -->
-    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
-    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+    <link rel="stylesheet" href="../../../static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="../../../static/fo/pc/css/contents.css">
+
+    <!-- library css -->
+    <!-- <link rel="stylesheet" href=""> -->
 
     <!-- fontawesome CDN -->
     <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
@@ -22,7 +25,7 @@
 <body>
     <div class="container">
         <!-- header -->
-        <div data-include-path="/views/layout/header.html"></div>
+        <div data-include-path="../layout/header.html"></div>
 
         <!-- contents -->
         <section class="contents">
@@ -30,7 +33,7 @@
             <!-- page location -->
             <div class="location">
                 <ul>
-                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="../main/index.html">Home</a></li>
                     <li class="current">로그인</li>
                 </ul>
             </div>
@@ -47,7 +50,7 @@
                             </div>
 
                             <!-- 로그인 화면으로 이동 -->
-                            <a href="/views/auth/login.html" class="btn btn-gradient">로그인</a>
+                            <a href="../auth/login.html" class="btn btn-primary">로그인</a>
                         </div>
                     </div>
                 </form>
@@ -56,11 +59,14 @@
         </section>
 
         <!-- footer -->
-        <div data-include-path="/views/layout/footer.html"></div>
+        <div data-include-path="../layout/footer.html"></div>
     </div>
 
     <!-- JS -->
-    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="../../../static/fo/pc/js/common.js"></script>
+
+    <!-- library -->
+    <!-- <script src=""></script> -->
 
     <script>
         window.addEventListener('load', function () {

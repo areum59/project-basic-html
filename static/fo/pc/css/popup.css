@@ -83,7 +83,7 @@
 .add-review-wrap .form-group input[type="text"]:focus {outline: none;} 
 
 .add-review-wrap .btn-group { width: 100%; text-align: center; } 
-.add-review-wrap .btn-group .btn-gradient { width: 100%; line-height: 46px; border-radius: 8px;} 
+.add-review-wrap .btn-group .btn-primary { width: 100%; line-height: 46px; border-radius: 8px;} 
 
 .add-review-wrap .add-rating .star { display: inline-block; width: 21px; height: 18px; object-fit: contain; cursor: pointer;} 
 .add-review-wrap .add-rating .star:hover,.star.filled {content: url("/static/fo/assets/img/common/star_filled.png");}

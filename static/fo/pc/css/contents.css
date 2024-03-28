@@ -92,19 +92,19 @@
 .login-area .account .find-list > li:not(:last-child) {border-bottom: 1px solid var(--gray); margin-bottom: 20px; padding-bottom: 20px;}
 .login-area .account .find-list > li > label {font-size: 15px; font-weight: 400;}
 
-.login-area .account .find-list .btn {width: 100%; line-height: 56px; border-radius: 8px;}
+.login-area .account .find-list .btn {width: 100%; line-height: 40px;}
 .login-area .account .find-list .toggle-cont {margin-top: 20px;}
 .login-area .account .find-list .inp-group:not(:last-of-type) {margin-bottom: 10px;}
 
-.login-area .account .find-list .phone-sec .btn {margin-top: 10px;}
-.login-area .account .find-list .email-sec .btn {margin-top: 15px;}
+.login-area .account .find-list .phone-sec .btn {margin-top: 8px;}
+.login-area .account .find-list .email-sec .btn {margin-top: 8px;}
 
 /* 아이디 찾기 결과 */
-.login-area .account .find-res .txt-box {width: 100%; margin: 40px 0 60px 0; text-align: center;}
+.login-area .account .find-res .txt-box {width: 100%; margin: 40px 0; text-align: center;}
 .login-area .account .find-res .txt-box p {font-size: 15px; font-weight: 400; color: var(--black);}
 .login-area .account .find-res .txt-box h3 {font-size: 20px; font-weight: 500; color: var(--brand); margin-top: 10px;}
 
-.login-area .account .find-res .btn {width: 100%; line-height: 56px; border-radius: 8px;}
+.login-area .account .find-res .btn {width: 100%; line-height: 40px;}
 
 
 /* 회원정보 수정 */

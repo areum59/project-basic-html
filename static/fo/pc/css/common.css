@@ -217,11 +217,11 @@ footer .foot-cont .copyright {font-size: 12px; font-weight: 400; color: var(--dg
 
 
 /* error message */
-.error-msg {font-size: 12px; font-weight: 400; color: var(--brand); margin-top: 8px;}
+.error-msg {font-size: 12px; font-weight: 400; color: var(--red); margin-top: 8px;}
 .error-msg::before {content: '\f06a'; font-family: 'FontAwesome'; margin-right: 4px;}
 
 /* info message */
-.info-msg {font-size: 12px; font-weight: 400; color: var(--dgray); margin-top: 8px;}
+.info-msg {font-size: 12px; font-weight: 400; color: var(--txt-gray); margin-top: 8px;}
 .info-msg::before {content: '\f06a'; font-family: 'FontAwesome'; margin-right: 4px;}
 
 

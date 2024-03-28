@@ -22,7 +22,7 @@
 <body>
     <div class="container">
         <!-- header -->
-        <div data-include-path="/views/layout/header.html"></div>
+        <div data-include-path="../layout/header.html"></div>
 
         <!-- contents -->
         <section class="contents">
@@ -30,7 +30,7 @@
             <!-- page location -->
             <div class="location">
                 <ul>
-                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="../main/index.html">Home</a></li>
                     <li class="current">로그인</li>
                 </ul>
             </div>
@@ -43,8 +43,8 @@
                         <ul class="find-list">
                             <!-- 휴대폰번호로 찾기 -->
                             <li class="phone-sec radio-toggle">
-                                <input type="radio" name="find" id="phoneNum" class="basic-radio toggle-radio" checked>
-                                <label for="phoneNum" class="basic-radio-label toggle-label">휴대전화로 찾기</label>
+                                <input type="radio" name="find" id="phoneNum" class="toggle-radio" checked>
+                                <label for="phoneNum" class="toggle-label">휴대전화로 찾기</label>
                             
                                 <div class="toggle-cont">
                                     <div class="inp-group">
@@ -53,14 +53,14 @@
                                         <div class="error-msg">이름을 입력해주세요.</div>
                                     </div>
                             
-                                    <button type="button" class="btn btn-gradient">휴대폰 인증</button>
+                                    <button type="button" class="btn btn-primary">휴대폰 인증</button>
                                 </div>
                             </li>
                             
                             <!-- 메일 주소로 찾기 -->
                             <li class="email-sec radio-toggle">
-                                <input type="radio" name="find" id="emailAddr" class="basic-radio toggle-radio">
-                                <label for="emailAddr" class="basic-radio-label toggle-label">이메일로 찾기</label>
+                                <input type="radio" name="find" id="emailAddr" class="toggle-radio">
+                                <label for="emailAddr" class="toggle-label">이메일로 찾기</label>
                             
                                 <div class="toggle-cont">
                                     <div class="inp-group">
@@ -71,7 +71,7 @@
                                         <input type="email" name="" id="" placeholder="이메일 주소">
                                     </div>
                             
-                                    <button type="submit" class="btn btn-gradient">확인</button>
+                                    <button type="submit" class="btn btn-primary">확인</button>
                                 </div>
                             </li>
                         </ul>
@@ -82,11 +82,14 @@
         </section>
 
         <!-- footer -->
-        <div data-include-path="/views/layout/footer.html"></div>
+        <div data-include-path="../layout/footer.html"></div>
     </div>
 
     <!-- JS -->
-    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="../../../static/fo/pc/js/common.js"></script>
+
+    <!-- library -->
+    <!-- <script src=""></script> -->
 
     <script>
         window.addEventListener('load', function () {
