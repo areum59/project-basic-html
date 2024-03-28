@@ -9,7 +9,7 @@
 .contents {min-height: 320px; padding-bottom: 80px;}
 
 /* input, checkbox, radio style */
-input {accent-color: var(--accent); border: 1px solid var(--gray); font-size: 13px; height: 30px; padding: 0 10px;}
+input {accent-color: var(--brand); border: 1px solid var(--gray); font-size: 13px; height: 30px; padding: 0 10px;}
 input.error {border-color: var(--red);}
 input:focus {outline: none;}
 input::placeholder {color: #999;}
@@ -31,11 +31,11 @@ select:focus {outline: none;}
 /* button style */
 button {cursor: pointer;}
 button:disabled {background-color: var(--lgray); color: #999; cursor: default;}
-.btn {display: inline-block;}
+.btn {display: inline-block; text-align: center;}
 .disabled {background-color: var(--lgray); color: #999; cursor: default;}
 
-.btn-primary {background-color: var(--accent); color: #fff;}
-.btn-outline {background-color: #fff; border: 1px solid currentColor; color: var(--accent);}
+.btn-primary {background-color: var(--brand); color: #fff;}
+.btn-outline {background-color: #fff; border: 1px solid currentColor; color: var(--brand);}
 .btn-secondary {background-color: #fff; border: 1px solid var(--gray); color: var(--dgray);}
 .btn-dark {background-color: var(--black); color: #fff;}
 .btn-dark-outline {background-color: #fff; border: 1px solid currentColor; color: var(--black);}
@@ -136,7 +136,7 @@ header nav .category .menu-all-btn > span::before {content: ''; display: inline-
 header nav .category .menu-all {display: none; width: 200px; min-height: 460px; padding: 15px 0; background-color: #fff; border: 1px solid var(--gray); position: absolute; top: 60px; left: 0; z-index: 9;}
 header nav .category .menu-all .menu-item:hover .menu-all {border-radius: 0 0 0 15px;}
 header nav .category .menu-all .menu-item > a {display: block; width: 100%; padding: 0 20px; line-height: 36px; font-size: 15px; font-weight: 500; color: var(--black); transition: all 0.25s;}
-header nav .category .menu-all .menu-item > a:hover {color: var(--color-accent);}
+header nav .category .menu-all .menu-item > a:hover {color: var(--brand);}
 
 header nav .category .menu-all .menu-item .depth2 {position: absolute; top: 0; left: 100%; width: 200px; opacity: 0; transform: translateX(20px); visibility: hidden; transition: all 0.35s;}
 header nav .category .menu-all .menu-item:hover .depth2 {opacity: 1; transform: translateX(0px); visibility: visible;}
@@ -146,7 +146,7 @@ header nav .category .menu-all .menu-item .depth2 .ctgy {width: 220px; height: 1
 header nav .category .menu-all .menu-item .depth2 .ctgy > li > h3 {font-size: 18px; font-weight: 500; color: var(--black); margin-bottom: 15px;}
 header nav .category .menu-all .menu-item .depth2 .ctgy > li > h3::after {content: ''; display: block; width: 50px; height: 2px; background: var(--brand); margin-top: 10px;}
 header nav .category .menu-all .menu-item .depth2 .ctgy > li > a {display: block; line-height: 24px; font-size: 14px; font-weight: 400; color: var(--black); transition: all 0.25s;}
-header nav .category .menu-all .menu-item .depth2 .ctgy > li > a:hover {color: var(--color-accent);}
+header nav .category .menu-all .menu-item .depth2 .ctgy > li > a:hover {color: var(--brand);}
 
 header nav .category .menu-all .menu-item .depth2 .promo-area {display: block; width: 300px; height: 100%; padding: 40px 25px; text-align: center; background-color: #fff; border-left: 1px solid var(--gray); position: absolute; top: 0; right: 0;}
 header nav .category .menu-all .menu-item .depth2 .promo-area .name-box {width: 100%; height: 84px;}
@@ -175,7 +175,7 @@ footer .foot-top .fnb > li:not(:last-child) {margin-right: 20px;}
 footer .foot-top .fnb > li:not(:last-child)::after {content: ''; display: inline-block; width: 1px; height: 12px; background-color: var(--gray); margin-left: 20px;}
 
 footer .foot-top .fnb > li > a {font-size: 15px; font-weight: 400; color: var(--black); line-height: 58px;}
-footer .foot-top .fnb > li > a > span {color: var(--color-accent);}
+footer .foot-top .fnb > li > a > span {color: var(--brand);}
 
 footer .foot-cont {width: 1400px; margin: 0 auto; padding: 40px 0;}
 footer .foot-cont article:not(:last-child) {margin-bottom: 20px;}
@@ -187,7 +187,7 @@ footer .foot-cont .cs-info .time {display: inline-block; vertical-align: middle;
 footer .foot-cont .cs-info .time dl {display: flex;} 
 footer .foot-cont .cs-info .time dl dt {font-size: 15px; font-weight: 500; color: var(--black); margin-right: 8px;} 
 footer .foot-cont .cs-info .time dl dd {font-size: 15px; font-weight: 400; color: var(--dgray); margin-right: 15px;} 
-footer .foot-cont .cs-info .time > p {font-size: 14px; font-weight: 400; color: var(--color-accent); margin-top: 6px;} 
+footer .foot-cont .cs-info .time > p {font-size: 14px; font-weight: 400; color: var(--brand); margin-top: 6px;} 
 
 footer .foot-cont .biz-info {font-size: 14px; font-weight: 400; text-align: left; color: var(--black); line-height: 1.6;}
 footer .foot-cont .biz-info strong {font-size: 15px; font-weight: 700;}
@@ -213,11 +213,11 @@ footer .foot-cont .copyright {font-size: 12px; font-weight: 400; color: var(--dg
 
 /* 입력 form 필수 값 표기 */
 .ess {font-size: 0;}
-.ess:after {content: '*'; font-size: 17px; color: var(--color-accent);}
+.ess:after {content: '*'; font-size: 17px; color: var(--brand);}
 
 
 /* error message */
-.error-msg {font-size: 12px; font-weight: 400; color: var(--color-accent); margin-top: 8px;}
+.error-msg {font-size: 12px; font-weight: 400; color: var(--brand); margin-top: 8px;}
 .error-msg::before {content: '\f06a'; font-family: 'FontAwesome'; margin-right: 4px;}
 
 /* info message */

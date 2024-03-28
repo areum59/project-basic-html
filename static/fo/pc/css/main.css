@@ -21,7 +21,7 @@
 .main-wrap {width: 100%; padding-top: 60px;}
 .main-wrap .tit {margin-bottom: 30px;}
 .main-wrap .tit h2 {font-size: 27px; font-weight: 500; color: var(--black);}
-.main-wrap .tit h2 span {color: var(--color-accent);}
+.main-wrap .tit h2 span {color: var(--brand);}
 .main-wrap .tit p {font-size: 15px; font-weight: 400; color: var(--dgray); margin-top: 10px;}
 
 .main-wrap .move-btn {display: block; width: 180px; line-height: 46px; margin: 0 auto; border-radius: 100px;}
@@ -32,7 +32,7 @@
 .main-wrap .popular-items {width: 1400px; margin: 0 auto; padding-bottom: 60px;}
 .main-wrap .popular-items .tabs {width: 100%; display: flex; flex-flow: row wrap; justify-content: flex-start; align-items: flex-start; margin-bottom: 35px;}
 .main-wrap .popular-items .tabs li {min-width: 100px; line-height: 46px; padding: 0 20px; font-size: 16px; font-weight: 400; text-align: center; color: var(--dgray); border-radius: 100px; outline: 1px solid var(--gray); margin: 0 10px 10px 0; cursor: pointer;} 
-.main-wrap .popular-items .tabs li.active {background: var(--color-bg-gradient); color: var(--color-white); outline: none; cursor: default; } 
+.main-wrap .popular-items .tabs li.active {background: var(--color-bg-gradient); color: #fff; outline: none; cursor: default; } 
 
 .main-wrap .popular-items .tab-cont {width: 100%;}
 .main-wrap .popular-items .tab-cont .prod-list {display: flex; flex-flow: row wrap; justify-content: flex-start; align-content: flex-start;}
@@ -52,7 +52,7 @@
 
 .main-wrap .best-items .tabs {width: 100%;}
 .main-wrap .best-items .tabs li {width: 100%; line-height: 54px; padding: 0 20px; font-size: 16px; font-weight: 400; text-align: center; color: var(--dgray); border-radius: 100px; outline: 1px solid var(--gray); margin: 0 10px 10px 0; cursor: pointer;} 
-.main-wrap .best-items .tabs li.active {background: var(--color-bg-gradient); color: var(--color-white); outline: none; cursor: default; } 
+.main-wrap .best-items .tabs li.active {background: var(--color-bg-gradient); color: #fff; outline: none; cursor: default; } 
 
 .main-wrap .best-items .tab-cont .bestSwiper {width: 100%; overflow: hidden; padding-bottom: 20px;}
 .main-wrap .best-items .tab-cont .bestSwiper .prod-list .item {width: 28%; margin-bottom: 20px;}
