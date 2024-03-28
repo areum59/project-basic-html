@@ -2,7 +2,7 @@
 
 /* common layout */
 * { font-family: 'Noto Sans KR', sans-serif; box-sizing: border-box; font-size: 12px; }
-a { color: var(--color-black); }
+a { color: var(--black); }
 .container { width:100%; padding: 0 15px; } 
 
 body { transition: all 0.3s ease; } 
@@ -17,8 +17,8 @@ body { transition: all 0.3s ease; }
 .btn-submit i { padding-left: 5px; border-radius: 999px; display: inline-block; font-size: 10px; color: #fefefe; line-height: 30px; text-align: center; cursor: pointer; } 
 
 /* showmore btn style */
-.btn-showmore { font-size: 12px; background-color: var(--color-white); border: 1px solid #eaeaea; color: var(--color-dgray); border-radius: 999px; text-align: center; }
-.btn-showmore i { padding-left: 10px; display: inline-block; font-size: 10px; color: var(--color-dgray); text-align: center; cursor: pointer; } 
+.btn-showmore { font-size: 12px; background-color: var(--color-white); border: 1px solid #eaeaea; color: var(--dgray); border-radius: 999px; text-align: center; }
+.btn-showmore i { padding-left: 10px; display: inline-block; font-size: 10px; color: var(--dgray); text-align: center; cursor: pointer; } 
 
 /* header */
 .push-left { transition: transform .4s ease, -webkit-transform .4s ease; display: block; width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 6; overflow-x: hidden; right: 0; transform: translate3d(95%, 0, 0); } 
@@ -80,7 +80,7 @@ footer .f-bottom { padding: 16px 15px; background: #272727; color: #6d6d6d; text
 
 /* 체크박스 */
 .checkbox-default { position: relative; display: block; margin-top: 10px; margin-bottom: 10px; } 
-.checkbox-default label { color: var(--color-dgray); padding-left: 24px; } 
+.checkbox-default label { color: var(--dgray); padding-left: 24px; } 
 .checkbox-default input { display: none; } 
 .checkbox-default label::before { border-radius: 50%; content: ""; display: inline-block; position: absolute; width: 12px; height: 12px; left: 24px; top: 1px; margin-left: -23px; border: 1px solid #d9d9d9; background-color: var(--color-white); transition: border 0.15s ease-in-out; cursor: pointer; } 
 .checkbox-default input[type="checkbox"]:checked + label::after { font-family: 'FontAwesome'; content: "\f00c"; display: inline-block; position: absolute; width: 16px; height: 16px; left: 24px; top: -3px; margin-left: -24px; padding-left: 3px; padding-top: 1px; font-size: 16px; color: #555555; cursor: pointer; } 

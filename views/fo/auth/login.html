@@ -7,11 +7,14 @@
     <title>로그인</title>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="/static/assets/favicon/favicon.png" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="" type="image/x-icon"> -->
 
     <!-- css -->
-    <link rel="stylesheet" href="/static/fo/pc/css/common.css">
-    <link rel="stylesheet" href="/static/fo/pc/css/contents.css">
+    <link rel="stylesheet" href="../../../static/fo/pc/css/common.css">
+    <link rel="stylesheet" href="../../../static/fo/pc/css/contents.css">
+
+    <!-- library css -->
+    <!-- <link rel="stylesheet" href=""> -->
 
     <!-- fontawesome CDN -->
     <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
@@ -22,7 +25,7 @@
 <body>
     <div class="container">
         <!-- header -->
-        <div data-include-path="/views/layout/header.html"></div>
+        <div data-include-path="../layout/header.html"></div>
 
         <!-- contents -->
         <section class="contents">
@@ -30,7 +33,7 @@
             <!-- page location -->
             <div class="location">
                 <ul>
-                    <li><a href="/views/main/index.html">Home</a></li>
+                    <li><a href="../main/index.html">Home</a></li>
                     <li class="current">로그인</li>
                 </ul>
             </div>
@@ -57,14 +60,14 @@
                             </div>
                             
                             <ul class="sep-list">
-                                <li><a href="/views/auth/findid.html">아이디 찾기</a></li>
-                                <li><a href="/views/auth/findpw.html">비밀번호 찾기</a></li>
+                                <li><a href="../auth/findid.html">아이디 찾기</a></li>
+                                <li><a href="../auth/findpw.html">비밀번호 찾기</a></li>
                             </ul>
                         </div>
 
                         <div class="btn-group">
                             <button type="submit" class="btn btn-gradient">로그인</button>
-                            <a href="/views/auth/signup/form.html" class="btn btn-basic">회원가입</a>
+                            <a href="../auth/signup/form.html" class="btn btn-basic">회원가입</a>
                         </div>
                     </div>
                 </form>
@@ -73,11 +76,14 @@
         </section>
 
         <!-- footer -->
-        <div data-include-path="/views/layout/footer.html"></div>
+        <div data-include-path="../layout/footer.html"></div>
     </div>
 
     <!-- JS -->
-    <script src="/static/fo/pc/js/common.js"></script>
+    <script src="../../../static/fo/pc/js/common.js"></script>
+
+    <!-- library -->
+    <!-- <script src=""></script> -->
 
     <script>
         window.addEventListener('load', function () {
