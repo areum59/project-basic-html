@@ -9,11 +9,10 @@
 .container {min-width: 1440px; overflow: hidden; color: var(--black);}
 
 /* input, checkbox, radio style */
-input {accent-color: var(--accent);}
+input {accent-color: var(--accent); border: 1px solid var(--gray); font-size: 13px; height: 30px; padding: 0 10px;}
+input.error {border-color: var(--red);}
 input:focus {outline: none;}
-input[type="text"] {border: 1px solid var(--gray); font-size: 14px; height: 30px; padding: 0 10px;}
-input[type="number"] {border: 1px solid var(--gray); font-size: 14px; height: 30px; padding: 0 10px;}
-input[type="date"] {border: 1px solid var(--gray); font-size: 14px; height: 30px; padding: 0 10px;}
+input::placeholder {color: #999;}
 
 input[type="checkbox"] {width: 16px; height: 16px;}
 input[type="checkbox"] ~ label {font-size: 14px; line-height: 20px; vertical-align: top; cursor: pointer;}

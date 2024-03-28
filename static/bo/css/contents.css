@@ -1,1 +1,20 @@
 @charset "utf-8";
+
+/* 로그인 */
+/* 관리자 로그인 */
+.login-wrap {width: 440px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); border: 1px solid var(--gray); padding: 40px; }
+.login-wrap label {display: block; font-size: 14px; color: var(--black); margin-bottom: 8px;}
+.login-wrap input {height: 40px;}
+
+.login-wrap .title {text-align: center;margin-bottom: 20px;}
+.login-wrap .title h1 {font-size: 28px; font-weight: 600; letter-spacing: -0.5px; color: var(--accent);}
+.login-wrap .title p {font-size: 16px; font-weight: 400; color: var(--accent); margin-top: 10px;}
+
+.login-wrap .inp-group:not(:last-child) {margin-bottom: 15px;}
+
+.login-wrap .certify-box {margin: 15px 0 15px 0;}
+.login-wrap .certify-box .inp-group {margin-bottom: 0;}
+.login-wrap .certify-box .certify-btn {display: block; width: 28%; line-height: 40px; text-align: center; font-size: 13px; background-color: var(--dgray); color: #fff; margin-top: 21px;}
+
+.login-wrap .foot-txt {margin-top: 20px; text-align: center; font-size: 13px; color: var(--dgray); line-height: 1.5;}
+.login-wrap .foot-txt .copyright {margin-top: 10px; font-size: 11px; color: var(--txt-gray);}

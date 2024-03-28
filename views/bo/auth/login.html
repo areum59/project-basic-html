@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../../../static/bo/css/common.css">
+    <link rel="stylesheet" href="../../../static/bo/css/contents.css">
+
+    <!-- fontawesome CDN -->
+    <script src="https://kit.fontawesome.com/20d055f060.js" crossorigin="anonymous"></script>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="login-wrap">
+            <div class="title">
+                <h1>동아제약 CONTROL CENTER</h1>
+                <p>관리자 로그인 페이지입니다.</p>
+            </div>
+    
+            <div class="login-form">
+                <form action="" name="" id="">
+                    <!-- 관리자 ID -->
+                    <div class="inp-group">
+                        <label for="loginId">아이디</label>
+                        <input type="text" name="" id="loginId" class="w-full error" placeholder="아이디를 입력해주세요." />
+
+                        <p class="error-txt">아이디를 입력하세요.</p>
+                    </div>
+
+                    <!-- 관리자 P/W -->
+                    <div class="inp-group">
+                        <label for="loginPassword">비밀번호</label>
+                        <input type="password" name="" id="loginPassword" class="w-full" placeholder="비밀번호를 입력해주세요." />
+                    </div>
+
+                    <!-- 인증번호 발송/입력 : ID, PW 모두 입력시 display block -->
+                    <div class="certify-box">
+                        <div class="flex justify-between">
+                            <div class="inp-group w-70">
+                                <label for="certificationNumbe">인증번호 받기</label>
+                                <input type="text" name="" id="certificationNumbe" class="w-full" placeholder="인증번호를 입력하세요." />
+                            </div>
+
+                            <!-- 인증번호 입력 남은시간 -->
+                            <!-- 남은시간이 00:00이 되면 '인증번로 재발급'으로 텍스트 교체 -->
+                            <a href="javascript:void(0);" class="certify-btn">MM:SS</a>
+                        </div>
+
+                        <p class="error-txt">정보가 일치하지 않습니다.</p>
+                    </div>
+                    
+                    <!-- 로그인 버튼 -->
+                    <button type="submit" class="btn btn-primary w-full h40">로그인</button>
+                </form>
+
+                <!-- login footer -->
+                <div class="foot-txt">
+                    <ul>
+                        <li>사용에 관한 문의는 Tel : 02-1004-1004</li>
+                        <li>E-mail : donga@donga.co.kr(으)로 문의바랍니다.</li>
+                    </ul>
+                    <p class="copyright">Copyright DONG-A PHARM All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="../../../static/bo/js/common.js"></script>
+
+    <script>
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        }); //includeHTML
+    </script>
+</body>
+</html>
